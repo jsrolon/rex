@@ -24,7 +24,7 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
   	</head>
-  	<body>
+  	<body class="proyectos">
     	<nav id="menu">
       		<header>
         		<a href="/">
@@ -53,11 +53,16 @@
                 </div>
       		</header>
     	</nav>
-
-        <main id="panel" class="proyectos">
-
+        <div class="title fixed">PROYECTOS</div>
+        <div id="menu-icon" class="black fixed">
+            <svg viewBox="0 0 24 24">
+                <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
+        </div>
+        <main id="panel">
+            <div class="padding-top"></div>
             <div class="page-content-wrapper center-vertical">
-                <div class="title">PROYECTOS</div>
+                
                 <div class="images-circle-wrapper">
                     <img src="/img/edificacion.png" id="edificacion_img"/>
                     <img src="/img/estabilizacion.png" id="estabilizacion_img"/>
@@ -109,11 +114,6 @@
                     <div>Carrera 27 No. 47A – 35</div>
                     <div>Bogotá D.C. - Colombia </div>
                 </div>
-            </div>
-            <div id="menu-icon" class="black">
-                <svg viewBox="0 0 24 24">
-                    <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                </svg>
             </div>
         </main>
         <script src="js/jquery.min.js"></script>

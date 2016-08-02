@@ -391,6 +391,10 @@ a {
     margin-left: 20px;
 }
 
+.proyectos .padding-top {
+    height: 0;
+}
+
 .proyects-list .proyect .info .date {
     font-size: 10px;
     position: relative;
@@ -531,6 +535,29 @@ a {
     height: 25%;
 }
 
+.proyectos .title {
+    background-color: transparent;
+}
+
+@media (min-width: 430px) {
+    .images-circle-wrapper {
+        height: 400px;
+        padding-top: 0 !important;
+    }
+
+    .proyectos .images-circle-wrapper #hidraulicas {
+        top: 57%;
+    }
+
+    .proyectos .images-circle-wrapper #restauracion {
+        top: 57%;
+    }
+
+    .proyectos .images-circle-wrapper #movimientos {
+        top: 88%;
+    }
+}
+
 @media (min-width: 900px) {
 
     .fixed {
@@ -554,6 +581,12 @@ a {
         text-decoration: underline;
         font-weight: normal;
     }
+
+    .proyectos .padding-top {
+        height: 0;
+    }
+
+
 
     #menu {
         width: 256px;
@@ -775,10 +808,12 @@ a {
 
     .proyectos .title {
         top: calc(34%);
-        z-index: 0;
+        margin-left: calc(256px + calc(50% - 178px));
+        width: 100px !important;
     }
 
 }
+
 
 @media (max-height: 480px) {
     .contact-form .contact-form-input-group {
