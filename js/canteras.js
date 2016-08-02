@@ -1,6 +1,6 @@
 window.onload = function() {
 
-     var slideout = new Slideout({
+    var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
         'padding': 256,
@@ -21,3 +21,14 @@ window.onload = function() {
         $('.fixed').removeClass('fixed-open');
     });
 }
+
+
+document.getElementById('panel').onscroll = function() {
+    if(this.scrollTop < 140) {
+        $('.quarry-header-image').height(200 - this.scrollTop);
+    }
+    else {
+        $('.quarry-header-image').height(62);
+    }
+}
+

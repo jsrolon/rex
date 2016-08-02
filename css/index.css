@@ -17,6 +17,18 @@ body, html {
     opacity: 1 !important;
 }
 
+.center {
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 .slideout-menu {
     position: fixed;
     left: 0;
@@ -314,13 +326,22 @@ a {
 }
 
 .title {
-    position: fixed;
-    top: 0;
     padding: 20px;
     padding-left: 57px;
     width: calc(100% - 77px);
     background-color: white;
     z-index: 1;
+    top: 0;
+}
+
+.fixed {
+    position: fixed;
+    transition: transform 300ms ease;
+    z-index: 10 !important;
+}
+
+.fixed-open {
+  transform: translate3d(256px, 0px, 0px);
 }
 
 .proyects-list {
@@ -421,7 +442,7 @@ a {
 
 .contact-header-image {
     width: 100%;
-    height: calc(100% - 320px);
+    height: 25%;
     background: url(/img/Rosi_009.JPG) center center;
     background-size: cover;
     -webkit-filter: brightness(0.7);
@@ -431,7 +452,7 @@ a {
 }
 
 .contact-form {
-    margin-top: 15px;
+    height: calc(100% - 25% - 114px)
 }
 
 .contacto .title {
@@ -487,10 +508,39 @@ a {
     padding: 0.5rem 0.75rem;
     cursor: pointer;
     margin-right: 10px;
+    margin-left: 10px;
+}
 
+.canteras .title {
+    background-color: transparent;
+    color: white;
+}
+
+.quarry-header-image {
+    width: 100%;
+    height: 200px;
+    background: url(/img/cantera.JPG) center center;
+    background-size: cover;
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+    position: fixed;
+    top: 0;
+}
+
+.contacto #panel .padding-top {
+    height: 25%;
 }
 
 @media (min-width: 900px) {
+
+    .fixed {
+       width: calc(100% - 256px) !important;
+       margin-left: 256px;
+    }
+
+    .contacto #panel .padding-top {
+        height: 26%;
+    }
 
     a:hover {
         font-weight: bold;
@@ -622,15 +672,11 @@ a {
         cursor: default;
     }
 
-    .contact-header-image {
-        width: 100%;
-        height: calc(100% - 350px);
-    }
-
     .contact-form {
         width: calc(100% - 100px);
         margin-left: 50px;
         white-space: nowrap;
+        height: calc(100% - 26% - 133px);
     }
 
     .contact-form .contact-form-input-group {
@@ -683,17 +729,8 @@ a {
         cursor: pointer;
         font-size: 1rem;
         font-family: 'Avenir Next';
-    }
-
-    .quarry-header-image {
-        width: 100%;
-        height: 15rem;
-    }
-
-    .quarry-header-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        margin-left: calc(100% - 100px);
+        width: 100px;
     }
 
     .quarry-item {
@@ -747,6 +784,18 @@ a {
     .contact-form .contact-form-input-group {
         padding-bottom: 0;
         padding-top: 0;
+    }
+
+    .contacto #panel .padding-top {
+        height: 62px;
+    }
+
+    .contact-form {
+        height: calc(100% - 26px - 133px);
+    }
+
+    .contact-header-image {
+        height: 26px;
     }
 }
 

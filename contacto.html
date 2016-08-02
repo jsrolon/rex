@@ -24,7 +24,7 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
   	</head>
-  	<body>
+  	<body class="contacto">
     	<nav id="menu">
       		<header>
         		<a href="/">
@@ -46,13 +46,18 @@
                 </div>
       		</header>
     	</nav>
+        <div class="contact-header-image fixed" ></div> 
+        <div class="title fixed">CONTACTO</div>
+        <div id="menu-icon" class="fixed">
+            <svg viewBox="0 0 24 24">
+                <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
+        </div>
 
-        <main id="panel" class="contacto">
-
-            <div class="page-content-wrapper">
-                <div class="title">CONTACTO</div>
-                <div class="contact-header-image" ></div> 
-                <form class="contact-form">
+        <main id="panel">
+            <div class="padding-top"></div>
+            <form class="contact-form center">
+                <div>
                     <div class="contact-form-input-group">
                         <label for="nombre">NOMBRE</label>
                         <input id="nombre" type="text">
@@ -61,31 +66,13 @@
                         <label for="email">EMAIL</label>
                         <input id="email" type="email">
                     </div>
-
-                    <label for="mensaje" class="label-mensaje">MENSAJE</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
-
-                    <button>ENVIAR</button>
-                </form> 
-                <!--<div class="contact-header-image" >
                 </div>
-                <form class="contact-form">
-                    <h2>CONTACTO</h2>
-                    
-                    <div class="contact-form-input-group">
-                        <label for="nombre">NOMBRE</label>
-                        <input id="nombre" type="text">
-                    </div><div class="contact-form-input-group">
-                        <label for="email">EMAIL</label>
-                        <input id="email" type="email">
-                    </div>
 
-                    <label for="mensaje">MENSAJE</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
+                <label for="mensaje" class="label-mensaje">MENSAJE</label>
+                <textarea name="mensaje" id="mensaje"></textarea>
 
-                    <button>ENVIAR</button>
-                </form>-->
-            </div>
+                <button>ENVIAR</button>
+            </form> 
 
             <div id="footer">
                 <img src="/img/rex_dinosaurio_blanco.png">
@@ -98,11 +85,7 @@
                     <div>Bogotá D.C. - Colombia </div>
                 </div>
             </div>
-            <div id="menu-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
-                </svg>
-            </div>
+            
         </main>
         <script src="js/jquery.min.js"></script>
         <script src="js/slideout.min.js"></script>
