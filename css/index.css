@@ -1,10 +1,6 @@
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url("/fonts/ffd0dcc47a9002be89cc7f900d4e144f.eot"); /* IE9*/
-    src: url("/fonts/ffd0dcc47a9002be89cc7f900d4e144f.woff2") format("woff2"); /* chrome firefox */
-    src: url("/fonts/ffd0dcc47a9002be89cc7f900d4e144f.woff") format("woff"); /* chrome firefox */
-    src: url("/fonts/ffd0dcc47a9002be89cc7f900d4e144f.ttf") format("truetype"); /* chrome firefox opera Safari, Android, iOS 4.2+*/
 }
 
 body, html {
@@ -97,11 +93,6 @@ body, html {
 
 #menu .options .sub a:last-of-type {
     padding-bottom: 10px;
-}
-
-#menu .options .sub a:hover {
-    text-decoration: underline;
-    font-weight: normal;
 }
 
 #menu .options .sub .selected {
@@ -210,7 +201,13 @@ body, html {
 }
 
 .page-content-wrapper {
-    min-height: calc(100% - 132px);
+    min-height: calc(100% - 102px);
+}
+
+.contacto .page-content-wrapper {
+    height: calc(100% - 102px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .center-vertical {
@@ -253,10 +250,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    font-weight: bold;
-}
-
 .proyectos .images-circle-wrapper {
     width: calc(100% - 40px);
     position: relative;
@@ -283,10 +276,6 @@ a:hover {
 
 .proyectos .images-circle-wrapper .hover {
     color: black !important;
-}
-
-.proyectos .images-circle-wrapper .name a:hover {
-    color: black;
 }
 
 .proyectos .images-circle-wrapper .hover-svg {
@@ -417,9 +406,9 @@ a:hover {
 }
 
 .proyects-list .proyect svg circle {
-    cx: -80;
-    cy: 100;
-    r: 200;
+    cx: -80px;
+    cy: 100px;
+    r: 200px;
 
     transition-property: transform;
     transition-duration: 0.5s;
@@ -430,7 +419,92 @@ a:hover {
     transform: translateX(80px);
 }
 
+.contact-header-image {
+    width: 100%;
+    height: calc(100% - 320px);
+    background: url(/img/Rosi_009.JPG) center center;
+    background-size: cover;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    max-height: 40%;
+    min-height: 62px;
+}
+
+.contact-form {
+    margin-top: 15px;
+}
+
+.contacto .title {
+    background-color: transparent;
+    color: white;
+}
+
+.contact-form .contact-form-input-group {
+    display: inline-block;
+    width: calc(100% - 10px);
+    padding: 0;
+    padding: 10px; 
+}
+
+.contact-form input {
+    border: 1px solid #7A8339;
+    width: calc(100% - 10px);
+    height: 2rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: 0;
+    padding: 0px 5px;
+    font-family: 'Avenir Next';
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.contact-form .label-mensaje {
+    margin-left: 10px;
+}
+
+.contact-form textarea {
+    width: calc(100% - 32px);
+    margin: 0 10px;
+    border: 1px solid #7A8339;
+    padding: 5px;
+    outline: 0;
+    font-size: 1rem;
+    resize: none;
+    height: 4rem;
+    font-family: 'Avenir Next';
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.contact-form button {
+    float: right;
+    margin-top: 0.5rem;
+    background-color: #7A8339;
+    color: #fff;
+    border: none;
+    font-weight: 100;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
 @media (min-width: 900px) {
+
+    a:hover {
+        font-weight: bold;
+    }
+
+    .proyectos .images-circle-wrapper .name a:hover {
+        color: black;
+    }
+
+    #menu .options .sub a:hover {
+        text-decoration: underline;
+        font-weight: normal;
+    }
+
     #menu {
         width: 256px;
         height: 100%;
@@ -480,6 +554,10 @@ a:hover {
 
     .page-content-wrapper {
         min-height: calc(100% - 132px);
+    }
+
+    .contacto .page-content-wrapper {
+        height: calc(100% - 132px);
     }
 
     .proyectos .images-circle-wrapper {
@@ -546,75 +624,65 @@ a:hover {
 
     .contact-header-image {
         width: 100%;
-        height: 25rem;
-    }
-
-    .contact-header-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: calc(100% - 350px);
     }
 
     .contact-form {
-        width: 80%;
-        margin-left: 10%;
+        width: calc(100% - 100px);
+        margin-left: 50px;
         white-space: nowrap;
-    }
-
-    .contact-form h2 {
-        margin-top: 2.5rem;
-        text-align: center;
     }
 
     .contact-form .contact-form-input-group {
         display: inline-block;
-        width: 50%;
+        width: calc(50% - 10px);
         padding: 0;
         margin-bottom: 1.5rem;
     }
 
     .contact-form .contact-form-input-group:first-of-type {
-        width: calc(50% - 1.5rem);
-        padding-right: 1.5rem;
+        padding-right: 16px;
     }
 
     .contact-form label {
         display: block;
         text-align: left;
-        margin-bottom: 1rem;
-        font-size: 1.25rem;
     }
 
     .contact-form input {
-        border: 2px solid #7A8339;
+        border: 1px solid #7A8339;
         width: 100%;
-        height: 2.5rem;
+        height: 2rem;
         box-sizing: border-box;
-        font-size: 1rem;
+        margin-right: -4px;
     }
 
     .contact-form textarea {
         display: block;
         width: 100%;
         height: 10rem;
-        border: 2px solid #7A8339;
-        padding: 0;
+        border: 1px solid #7A8339;
+        padding: 5px;
         margin: 0;
         box-sizing: border-box;
         font-size: 1rem;
-        font-family: 'Avenir Next';
+    }
+
+    .contact-form .label-mensaje {
+        margin-left: 0px;
     }
 
     .contact-form button {
         float: right;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
+        margin-right: 0;
         background-color: #7A8339;
         color: #fff;
         border: none;
-        font-size: 1.5rem;
-        font-weight: 100;
         padding: 0.5rem 0.75rem;
         cursor: pointer;
+        font-size: 1rem;
+        font-family: 'Avenir Next';
     }
 
     .quarry-header-image {
@@ -668,6 +736,18 @@ a:hover {
         transform: translateY(-25%);
     }
 
+    .proyectos .title {
+        top: calc(34%);
+        z-index: 0;
+    }
+
+}
+
+@media (max-height: 480px) {
+    .contact-form .contact-form-input-group {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -682,4 +762,8 @@ a:hover {
     .btn-hamburger {
         display: none;
     }
+}
+
+@media (max-resolution: 1dppx) {
+    
 }

@@ -1,1 +1,10 @@
 node_modules
+*.afdesign
+contacto.jpg
+contacto_1.jpg
+contacto_2.jpg
+index.jpg
+index_1.jpg
+movimientos_tierra.jpg
+proyectos.jpg
+.DS_Store

@@ -31,18 +31,11 @@
                     <img src="/img/rex_logo.png" class="rex-logo"/>
                 </a>
                 <div class="options">
-                    <div class="main selected-main"><a href="/proyectos.html">PROYECTOS</a></div>
-                    <div class="sub">
-                        <a href="/edificacion.html" id="edificacion_a">EDIFICACIÓN Y URBANIFICACIÓN</a>
-                        <a href="/hidraulicas.html" id="hidraulicas_a">OBRAS HIDRÁULICAS</a>
-                        <a href="/movimientos.html" id="movimientos_a">MOVIMIENTO DE TIERRAS</a>
-                        <a href="/restauracion.html" id="restauracion_a">RESTAURACIÓN AMBIENTAL</a>
-                        <a href="/estabilizacion.html" id="estabilizacion_a">OBRAS DE ESTABILIZACIÓN</a>
-                    </div>
+                    <div class="main"><a href="/proyectos.html">PROYECTOS</a></div>
                     <div class="main"><a href="/servicios.html">SERVICIOS</a></div>
                     <div class="main"><a href="/canteras.html">CANTERAS</a></div>
                     <div class="main"><a href="/empresa.html">EMPRESA</a></div>
-                    <div class="main"><a href="/contacto.html">CONTACTO</a></div>
+                    <div class="main selected-main"><a href="/contacto.html">CONTACTO</a></div>
                 </div>
                 <div class="info">
                     <div>CRA 27 # 47A - 35</div>
@@ -54,11 +47,27 @@
       		</header>
     	</nav>
 
-        <main id="panel" class="proyectos">
+        <main id="panel" class="contacto">
 
             <div class="page-content-wrapper">
-                <div class="contact-header-image">
-                    <img src="img/Rosi_009.JPG">
+                <div class="title">CONTACTO</div>
+                <div class="contact-header-image" ></div> 
+                <form class="contact-form">
+                    <div class="contact-form-input-group">
+                        <label for="nombre">NOMBRE</label>
+                        <input id="nombre" type="text">
+                    </div>
+                    <div class="contact-form-input-group">
+                        <label for="email">EMAIL</label>
+                        <input id="email" type="email">
+                    </div>
+
+                    <label for="mensaje" class="label-mensaje">MENSAJE</label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+
+                    <button>ENVIAR</button>
+                </form> 
+                <!--<div class="contact-header-image" >
                 </div>
                 <form class="contact-form">
                     <h2>CONTACTO</h2>
@@ -75,7 +84,7 @@
                     <textarea name="mensaje" id="mensaje"></textarea>
 
                     <button>ENVIAR</button>
-                </form>
+                </form>-->
             </div>
 
             <div id="footer">
@@ -89,7 +98,7 @@
                     <div>Bogotá D.C. - Colombia </div>
                 </div>
             </div>
-            <div id="menu-icon" class="black">
+            <div id="menu-icon">
                 <svg viewBox="0 0 24 24">
                     <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
                 </svg>

@@ -24,6 +24,7 @@ gulp.task('watch', function() {
 gulp.task('sync', function() {
     browserSync.init({
         injectChanges: true,
+        ghostMode: false,
         server: {
         	baseDir: './'
         }

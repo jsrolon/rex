@@ -16,7 +16,10 @@
     "url": "https://github.com/cps543/rex/issues"
   },
   "homepage": "https://github.com/cps543/rex#readme",
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.14.0",
+    "run-sequence": "^1.2.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
