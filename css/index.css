@@ -181,7 +181,7 @@ body, html {
 #rex_blanco {
     position: fixed;
     width: 100%;
-    bottom: 12%;
+    bottom: 100px;
     z-index: 1;
     text-align: center;
     color: white;
@@ -539,6 +539,11 @@ a {
     background-color: transparent;
 }
 
+.index #footer {
+    position: absolute;
+    padding: 2px 0;
+}
+
 @media (min-width: 430px) {
     .images-circle-wrapper {
         height: 400px;
@@ -559,6 +564,10 @@ a {
 }
 
 @media (min-width: 900px) {
+
+    .index #footer {
+        display: none;
+    }
 
     .fixed {
        width: calc(100% - 256px) !important;
@@ -815,7 +824,7 @@ a {
 }
 
 
-@media (max-height: 480px) {
+@media (max-height: 500px) {
     .contact-form .contact-form-input-group {
         padding-bottom: 0;
         padding-top: 0;
@@ -831,6 +840,28 @@ a {
 
     .contact-header-image {
         height: 26px;
+    }
+
+    #menu .rex-logo {
+        top: 15px;
+    }
+
+    #menu .options {
+        top: 75px;
+        height: calc(100% - 160px);
+    }
+
+    #menu .info {
+        bottom: 15px;
+        font-size: 10px;
+    }
+
+    #menu .options .main {
+        padding-bottom: 6px;
+    }
+
+    #menu .options .sub a {
+        padding-bottom: 6px;
     }
 }
 
