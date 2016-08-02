@@ -479,8 +479,7 @@ a:hover {
     }
 
     .page-content-wrapper {
-        max-height: calc(100% - 132px);
-        height: inherit;
+        min-height: calc(100% - 132px);
     }
 
     .proyectos .images-circle-wrapper {
@@ -547,7 +546,7 @@ a:hover {
 
     .contact-header-image {
         width: 100%;
-        height: 37.5%;
+        height: 25rem;
     }
 
     .contact-header-image img {
@@ -616,6 +615,57 @@ a:hover {
         font-weight: 100;
         padding: 0.5rem 0.75rem;
         cursor: pointer;
+    }
+
+    .quarry-header-image {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .quarry-header-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .quarry-item {
+        width: 100%;
+        height: 10rem;
+        background-color: green;
+        color: #fff;
+        margin: 5rem 0;
+        padding: 0 10%;
+    }
+
+    .quarry-item-info {
+        width: calc(80% - 20rem);
+        white-space: nowrap;
+        height: 100%;
+    }
+
+    .quarry-item-info-text, table {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+    }
+
+    .quarry-item-info-text p {
+        white-space: normal;
+        margin: 0;
+    }
+
+    .quarry-item-info-text h4 {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .quarry-item img, .quarry-item-info {
+        display: inline-block;
+    }
+
+    .quarry-item img {
+        width: 20rem;
+        vertical-align: top;
+        transform: translateY(-25%);
     }
 
 }
