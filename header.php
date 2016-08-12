@@ -33,11 +33,11 @@
                     <img src="<?php echo $image[0]; ?>" class="rex-logo"/>
                 </a>
                 <div class="options">
-                    <div class="main"><a href="/proyectos.html">PROYECTOS</a></div>
-                    <div class="main"><a href="/servicios.html">SERVICIOS</a></div>
-                    <div class="main"><a href="/canteras.html">CANTERAS</a></div>
-                    <div class="main"><a href="/empresa.html">EMPRESA</a></div>
-                    <div class="main"><a href="/contacto.html">CONTACTO</a></div>
+                    <div class="main"><a href="/proyectos">PROYECTOS</a></div>
+                    <div class="main"><a href="/servicios">SERVICIOS</a></div>
+                    <div class="main"><a href="/canteras">CANTERAS</a></div>
+                    <div class="main"><a href="/empresa">EMPRESA</a></div>
+                    <div class="main"><a href="/contacto">CONTACTO</a></div>
                 </div>
                 <div class="info">
                     <div>CRA 27 # 47A - 35</div>
