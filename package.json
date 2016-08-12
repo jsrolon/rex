@@ -23,6 +23,9 @@
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-sass": "^2.3.2",
+    "merge-stream": "^1.0.0",
     "run-sequence": "^1.2.2"
   }
 }

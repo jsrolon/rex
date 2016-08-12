@@ -13,8 +13,7 @@
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	    <title>Rex Ingenieria</title>
 
-	    <link href="css/index.css" rel="stylesheet">
-        <link href="css/slick.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	    <link rel="shortcut icon" type="image/png" href="/img/rex_icon.png"/>
 
 	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,7 +27,9 @@
     	<nav id="menu">
       		<header>
         		<a href="/">
-                    <img src="/img/rex_logo.png" class="rex-logo"/>
+                    <?php   $custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
+                    <img src="<?php echo $image[0]; ?>" class="rex-logo"/>
                 </a>
                 <div class="options">
                     <div class="main"><a href="/proyectos.html">PROYECTOS</a></div>
@@ -51,48 +52,3 @@
                 <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
             </svg>
         </div>
-        <main id="panel">
-            <div class="index-carousel">
-                <div>
-                    <div class="cover">
-                        <div style="background: url(/img/20150311_124551.jpg) center center; background-size: cover;" class="image">
-                            <div class="nombre">Circunvalar</div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="cover">
-                        <div style="background: url(/img/_MG_7748.jpg) center center; background-size: cover;" class="image">
-                            <div class="nombre">Rio Bogotá</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ver-mas">
-                Ver más
-            </div>
-            <img src="/img/circle_index.svg" class="circle"/>
-            <div id="rex_blanco">
-                <img src="/img/rex_logo_blanco.png" />
-                <div>Construyendo Futuro...</div>
-            </div>
-
-            <div id="footer">
-                <img src="/img/rex_dinosaurio_blanco.png">
-                <div class="info">
-                    <div>ING. FABIO RODRÍGUEZ L. / ING. LIGIA RODRÍGUEZ S.</div>
-                    <div>Teléfono: (57-1) 3378726 / 28 / 56 • Fax: (57-1) 3356530</div>
-                    <div>Cel: (57-3) 3107694302 - (57-3) 3108144241</div>
-                    <div>Email: administracion@rexingenieria.com • info@rexingenieria.com</div>
-                    <div>Carrera 27 No. 47A – 35</div>
-                    <div>Bogotá D.C. - Colombia </div>
-                </div>
-            </div>
-        </main>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/slideout.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/lodash.js"></script>
-        <script src="js/index.js"></script>
-    </body>
-</html>
