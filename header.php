@@ -11,7 +11,7 @@
 	    <meta property="og:description"        content="Participación en Concursos Nacionales (FEC) e Internacionales (FEI)" />
 	    <meta property="og:image"              content="http://www.jinetescolombianos.org/img/facebook_preview.png" />
 	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Rex Ingenieria</title>
+	    <title><?php echo get_bloginfo('name'); ?></title>
 
         <?php wp_head(); ?>
 

@@ -1,11 +1,21 @@
 <?php
 
 function theme_prefix_setup() {
+    // for the rex logo in the left (main) menu
     add_theme_support('custom-logo', array(
         'flex-width' => true,
     ));
 
+    // each post has a featured imaged
     add_theme_support('post-thumbnails');
+
+    // representative image
+    add_theme_support( 'custom-header', array(
+        'width'         => 500,
+        'height'        => 100,
+        'default-image' => get_template_directory_uri() . '/img/rex_logo_blanco.png',
+        'uploads' => true
+    ) );
 }
 
 function add_theme_scripts() {
