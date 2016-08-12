@@ -7,7 +7,7 @@ var images = [{
 }];
 
 window.onload = function() {
-    $('.index-carousel').slick({
+    jQuery('.index-carousel').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -31,16 +31,16 @@ window.onload = function() {
         'touch': false
     });
 
-    $('#menu-icon').click(function() {
+    jQuery('#menu-icon').click(function() {
         slideout.toggle();
     });
 
     slideout.on('beforeopen', function() {
-        $('.fixed').addClass('fixed-open');
-        console.log($('.fixed'));
+        jQuery('.fixed').addClass('fixed-open');
+        console.log(jQuery('.fixed'));
     });
 
     slideout.on('beforeclose', function() {
-        $('.fixed').removeClass('fixed-open');
+        jQuery('.fixed').removeClass('fixed-open');
     });
 }
