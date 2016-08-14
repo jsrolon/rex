@@ -40,24 +40,13 @@ window.onload = function() {
 
 
 function moveRightCircle() {
-    var circle = document.getElementById('circle_' + this.id);
-    var classCircle = circle.getAttribute("class");
-    if(classCircle !== 'move-right') {
-        _.each($('.proyect'), function(proyect) {
-            var circle = document.getElementById('circle_' + proyect.id);
-            circle.setAttribute("class", ""); 
-        });
-        circle.setAttribute("class", "move-right");
-        $('#view_' + this.id).addClass('ver-mas-proyect-show');
-    }
-    else {
-        circle.setAttribute("class", ""); 
-        //$('#view_' + this.id).removeClass('ver-mas-proyect-show');
-    }
+    var info = document.getElementById('info_' + this.id);
+    $('#info_' + this.id).addClass('info-tall');
+    $('#view_' + this.id).addClass('show-opacity');
 }
 
 function moveLeftCircle() {
-    var circle = document.getElementById('circle_' + this.id);
-    circle.setAttribute("class", ""); 
-    $('#view_' + this.id).removeClass('ver-mas-proyect-show');
+    var info = document.getElementById('info_' + this.id);
+    $('#info_' + this.id).removeClass('info-tall');
+    $('#view_' + this.id).removeClass('show-opacity');
 }

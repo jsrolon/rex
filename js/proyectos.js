@@ -6,7 +6,7 @@ var images = [{
     name: ''
 }];
 
-var ids_images = ['edificacion', 'estabilizacion', 'hidraulicas', 'restauracion', 'movimientos'];
+var ids_images = ['edificacion', 'estabilizacion', 'hidraulicas', 'restauracion', 'movimientos', 'quienes', 'hseq'];
 
 window.onload = function() {
 
