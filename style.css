@@ -383,6 +383,10 @@ a {
     top: 0;
 }
 
+.title {
+    text-transform: uppercase;
+}
+
 .proyecto .description {
     font-size: 13px;
     margin-top: 10px;
@@ -682,14 +686,14 @@ a {
 }
 
 .proyecto .section-div-top {
-    background: url(/img/proyecto_top.svg) center bottom no-repeat;
+    background: url(img/proyecto_top.svg) center bottom no-repeat;
     background-size: cover;
     width: 100%;
     height: 90px;
 }
 
 .proyecto .section-div-bottom {
-    background: url(/img/proyecto_bottom.svg) center bottom no-repeat;
+    background: url(img/proyecto_bottom.svg) center bottom no-repeat;
     background-size: cover;
     width: 100%;
     height: 90px;

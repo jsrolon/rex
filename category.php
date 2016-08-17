@@ -8,149 +8,45 @@
 
 get_header(); ?>
 
-<div class="title fixed">MOVIMIENTO DE TIERRAS</div>
+<div class="title fixed"><?php single_cat_title(); ?></div>
 <div id="menu-icon" class="black fixed">
     <svg viewBox="0 0 24 24">
         <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
     </svg>
 </div>
+
+<?php
+// the query
+$the_query = new WP_Query(array('cat' => get_cat_ID(single_cat_title('', false)))); ?>
+
 <main id="panel">
     <div class="padding-top"></div>
     <div class="page-content-wrapper proyects-list">
-        <a href="/proyectos/1.html">
-            <div class="proyect" style="background: url(/img/P1020325.jpg) center center; background-size: cover;"
-                 id="1">
-                <div class="info" id="info_1">
-                    <div class="name">
-                        CAMPO DE GOLF KARIBANA
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-                <div class="ver-mas-proyect" id="view_1">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/2">
-            <div class="proyect"
-                 style="background: url(/img/20160310_075037.jpg) center center; background-size: cover;" id="2">
-                <div class="info" id="info_2">
-                    <div class="name">
-                        IPIALES
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
 
-                <div class="ver-mas-proyect" id="view_2">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/3">
-            <div class="proyect" style="background: url(/img/DSC07848.jpg) center center; background-size: cover;"
-                 id="3">
-                <div class="info" id="info_3">
-                    <div class="name">
-                        DERSA
+        <?php if ($the_query->have_posts()) : ?>
+            <?php while ($the_query->have_posts()) : $the_query->the_post();
+                $post_number = $the_query->current_post + 1; ?>
+                <a href="<?php echo get_permalink(); ?>">
+                    <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID(), 'medium')); ?>
+                    <div class="proyect"
+                         style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
+                         id="<?php echo $post_number; ?>">
+                        <div class="info" id="info_<?php echo $post_number; ?>">
+                            <div class="name">
+                                <?php echo get_the_title(); ?>
+                            </div>
+                            <div class="date"><?php echo get_the_date(); ?></div>
+                        </div>
+                        <div class="ver-mas-proyect" id="view_<?php echo $post_number; ?>">
+                            Ver más
+                        </div>
                     </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
+                </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
 
-                <div class="ver-mas-proyect" id="view_3">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/4">
-            <div class="proyect"
-                 style="background: url(/img/20150311_124551.jpg) center center; background-size: cover;" id="4">
-                <div class="info" id="info_4">
-                    <div class="name">
-                        DOÑA JUANA
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_4">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/5">
-            <div class="proyect" style="background: url(/img/SAM_0823.jpg) center center; background-size: cover;"
-                 id="5">
-                <div class="info" id="info_5">
-                    <div class="name">
-                        LA FELICIDAD
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_5">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/6">
-            <div class="proyect" style="background: url(/img/P1020630.jpg) center center; background-size: cover;"
-                 id="6">
-                <div class="info" id="info_6">
-                    <div class="name">
-                        SAN ANTONIO
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_6">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/7">
-            <div class="proyect" style="background: url(/img/P1020325.jpg) center center; background-size: cover;"
-                 id="7">
-                <div class="info" id="info_7">
-                    <div class="name">
-                        CAMPO DE GOLF KARIBANA
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_7">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/8">
-            <div class="proyect"
-                 style="background: url(/img/20160310_075037.jpg) center center; background-size: cover;" id="8">
-                <div class="info" id="info_8">
-                    <div class="name">
-                        IPIALES
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_8">
-                    Ver más
-                </div>
-            </div>
-        </a>
-        <a href="/proyectos/9">
-            <div class="proyect" style="background: url(/img/DSC07848.jpg) center center; background-size: cover;"
-                 id="9">
-                <div class="info" id="info_9">
-                    <div class="name">
-                        DERSA
-                    </div>
-                    <div class="date">abril 15, 2010</div>
-                </div>
-
-                <div class="ver-mas-proyect" id="view_9">
-                    Ver más
-                </div>
-            </div>
-        </a>
+        <?php else : ?>
+            <p><?php _e('Lo sentimos, no encontramos proyectos con esta categoría.'); ?></p>
+        <?php endif; ?>
     </div>
-
     <?php get_footer(); ?>

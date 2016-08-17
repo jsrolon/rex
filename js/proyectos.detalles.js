@@ -9,7 +9,7 @@ var images = [{
 window.onload = function() {
 
     var w = window.innerWidth;
-     var slideout = new Slideout({
+    var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
         'padding': 256,
@@ -17,47 +17,36 @@ window.onload = function() {
         'touch': false
     });
 
-    $('#menu-icon').click(function() {
+    jQuery('#menu-icon').click(function() {
         slideout.toggle();
     });
 
     slideout.on('beforeopen', function() {
-        $('.fixed').addClass('fixed-open');
-        console.log($('.fixed'));
+        jQuery('.fixed').addClass('fixed-open');
+        console.log(jQuery('.fixed'));
     });
 
     slideout.on('beforeclose', function() {
-        $('.fixed').removeClass('fixed-open');
+        jQuery('.fixed').removeClass('fixed-open');
     });
 
-    _.each($('.proyect'), function(proyect) {
+    _.each(jQuery('.proyect'), function(proyect) {
         if(w >= 900) {
-            $('#' + proyect.id).mouseenter(moveRightCircle); 
-            $('#' + proyect.id).mouseleave(moveLeftCircle); 
+            jQuery('#' + proyect.id).mouseenter(moveRightCircle);
+            jQuery('#' + proyect.id).mouseleave(moveLeftCircle);
         }
     });
 }
 
 
 function moveRightCircle() {
-    var circle = document.getElementById('circle_' + this.id);
-    var classCircle = circle.getAttribute("class");
-    if(classCircle !== 'move-right') {
-        _.each($('.proyect'), function(proyect) {
-            var circle = document.getElementById('circle_' + proyect.id);
-            circle.setAttribute("class", ""); 
-        });
-        circle.setAttribute("class", "move-right");
-        $('#view_' + this.id).addClass('ver-mas-proyect-show');
-    }
-    else {
-        circle.setAttribute("class", ""); 
-        //$('#view_' + this.id).removeClass('ver-mas-proyect-show');
-    }
+    var info = document.getElementById('info_' + this.id);
+    jQuery('#info_' + this.id).addClass('info-tall');
+    jQuery('#view_' + this.id).addClass('show-opacity');
 }
 
 function moveLeftCircle() {
-    var circle = document.getElementById('circle_' + this.id);
-    circle.setAttribute("class", ""); 
-    $('#view_' + this.id).removeClass('ver-mas-proyect-show');
+    var info = document.getElementById('info_' + this.id);
+    jQuery('#info_' + this.id).removeClass('info-tall');
+    jQuery('#view_' + this.id).removeClass('show-opacity');
 }

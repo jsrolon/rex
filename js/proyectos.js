@@ -6,11 +6,11 @@ var images = [{
     name: ''
 }];
 
-var ids_images = ['edificacion', 'estabilizacion', 'hidraulicas', 'restauracion', 'movimientos'];
+var ids_images = ['edificacion', 'estabilizacion', 'hidraulicas', 'restauracion', 'movimientos', 'quienes', 'hseq'];
 
 window.onload = function() {
 
-     var slideout = new Slideout({
+    var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
         'padding': 256,
@@ -30,7 +30,7 @@ window.onload = function() {
     slideout.on('beforeclose', function() {
         jQuery('.fixed').removeClass('fixed-open');
     });
-    
+
     _.each(ids_images, function(id) {
         jQuery('#' + id).mouseenter(changeOpacityImages);
         jQuery('#' + id).mouseleave(changeOpacityImagesOriginal);
