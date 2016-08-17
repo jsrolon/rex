@@ -1,6 +1,14 @@
 
 @font-face {
     font-family: 'Avenir Next';
+    src: url('/fonts/AvenirNextLTPro-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('/fonts/AvenirNextLTPro-Bold.otf');
+    font-weight: bold;
 }
 
 body, html {
@@ -365,6 +373,12 @@ a {
     top: 0;
 }
 
+.proyecto .description {   
+    font-size: 13px;
+    padding-top: 10px;
+    overflow-y: hidden;
+}
+
 .fixed {
     position: fixed;
     transition: transform 300ms ease;
@@ -644,9 +658,238 @@ a {
     padding: 20px 0px;
 }
 
+.proyecto .title {
+    background-color: #7A8339;
+    color: white;
+}
+
+.proyecto .quarry-header-image {
+    width: calc(100% + 77px);
+    margin-left: -57px;
+    height: 58px;
+    position: relative;
+    margin-bottom: -77px;
+}
+
+.proyecto .section-div-top {
+    background: url(/img/proyecto_top.svg) center bottom no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+}
+
+.proyecto .section-div-bottom {
+    background: url(/img/proyecto_bottom.svg) center bottom no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+    margin-top: -2px;
+    z-index: 1;
+    position: absolute;
+}
+
+.proyecto .section {
+    background-color: #EBEBEB;
+    margin-top: -2px;
+}
+
+.proyecto .general-info .group {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.proyecto .general-info .group .label {
+    font-weight: bold;
+}
+
+.proyecto .general-info .group .carousel {
+    width: calc(100% - 20px);
+    //height: 300px;
+    margin: 20px 0;
+}
+
+.proyecto .general-info .group .carousel .img-container {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+
+.proyecto .general-info .group #left {
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 16px);
+    cursor: pointer;
+}
+
+.proyecto .general-info .group #right {
+    position: absolute;
+    right: 25px;
+    top: calc(50% - 16px);
+    cursor: pointer;
+}
+
+.proyecto .general-info .group #full {
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.proyecto .general-info .group .control {
+    width: 32px;
+    height: auto;
+}
+
+.proyecto .general-info .group .center {
+    display: inline-block;
+    width: calc(50% - 48px);
+    //width: calc(50% - 65px);
+}
+
+.proyecto .section {
+    padding-bottom: 10px;
+}
+
+.proyecto .section .title {
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.proyecto .section table {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.proyecto .section table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.proyecto .section th, td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.proyecto .section th {
+    background-color: #9FA14E;
+    width: 95px;
+}
+
+.proyecto .section .impar td {
+    background-color: white;
+}
+
+.proyecto .control {
+    cursor: pointer;
+}
+
+.proyecto #map {
+    width: 100%;
+    height: 350px;
+    //margin-top: -80px;
+    z-index: -1;
+    margin-bottom: -109px;
+    position: absolute;
+}
+
+.proyecto .leaflet-bottom {
+    bottom: 108px;
+}
+
+.proyecto .leaflet-right {
+    display: none;
+}
+
+.proyecto .leaflet-top {
+    display: none;
+}
+
+.proyecto #footer {
+    z-index: 2;
+}
+
+.proyecto .popup .group {
+    margin-left: 0px !important;
+    text-align: center;
+}
+
+.proyecto .popup .carousel {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.proyecto .popup .carousel img{
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+.proyecto .popup .carousel .carousel-slide {
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+
+.proyecto .popup .img-container {
+    width: 100%;
+    height: 500px;
+    background-color: red;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -100px;
+    z-index: -1;
+}
+
+.hide-z-index {
+    z-index: -1 !important;
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.6);
+
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 @media (min-width: 430px) {
     .images-circle-wrapper {
-        height: 400px;
+        height: 300px;
         padding-top: 0 !important;
     }
 
@@ -985,6 +1228,99 @@ a {
         padding: 20px 0px;
     }
 
+    .proyecto .description {   
+        width: calc(100% - 100px);
+        padding-left: 50px;
+    }
+
+    .proyecto .quarry-header-image {
+        margin-left: 0;
+        height: 71px;
+        margin-bottom: -90px;
+    }
+
+    .proyecto .section-div-top {
+        height: 120px;
+    }
+
+    .proyecto .section-div-bottom {
+        height: 120px;
+    }
+
+    .proyecto .general-info .group {
+        width: calc(100% - 100px);
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    .proyecto .general-info .group .label {
+        display: inline-block;
+        width: 35%;
+        margin-right: 50px;
+        text-align: end;
+    }
+
+    .proyecto .general-info .group .info {
+        display: inline-block;
+        width: calc(64% - 50px);
+        vertical-align: top;
+    }
+
+    .proyecto .general-info .group .carousel {
+        width: calc(100% - 200px);
+        margin: 50px 0;
+        margin-left: 100px;
+    }
+
+    .proyecto .general-info .group .carousel .img-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .proyecto .general-info .group #left {
+        left: 0;
+        top: calc(50% - 16px);
+    }
+
+    .proyecto .general-info .group #right {
+        right: 0;
+        top: calc(50% - 16px);
+    }
+
+    .proyecto .general-info .group #full {
+        right: 110px;
+        bottom: 10px;
+    }
+
+    .proyecto .section table {
+        width: calc(100% - 100px);
+        margin-left: 50px;
+    }
+
+    .proyecto .section th {
+        width: 25%;
+    }
+
+    .proyecto #map {
+        width: 100%;
+        height: 400px;
+        //margin-top: -107px;
+        margin-bottom: -109px;
+    }
+
+    .proyecto .popup .carousel img{
+        width: auto;
+        height: 100%;
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 1460px) {
+    .proyecto .quarry-header-image {
+        margin-left: 0;
+        height: 96px;
+        margin-bottom: -115px;
+    }
 }
 
 
