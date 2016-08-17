@@ -18,39 +18,39 @@ window.onload = function() {
         'touch': false
     });
 
-    $('#menu-icon').click(function() {
+    jQuery('#menu-icon').click(function() {
         slideout.toggle();
     });
 
     slideout.on('beforeopen', function() {
-        $('.fixed').addClass('fixed-open');
-        console.log($('.fixed'));
+        jQuery('.fixed').addClass('fixed-open');
+        console.log(jQuery('.fixed'));
     });
 
     slideout.on('beforeclose', function() {
-        $('.fixed').removeClass('fixed-open');
+        jQuery('.fixed').removeClass('fixed-open');
     });
     
     _.each(ids_images, function(id) {
-        $('#' + id).mouseenter(changeOpacityImages);
-        $('#' + id).mouseleave(changeOpacityImagesOriginal);
-        $('#' + id + '_path').mouseenter(changeOpacityImages);
-        $('#' + id + '_path').mouseleave(changeOpacityImagesOriginal);
-        $('#' + id + '_a').mouseenter(changeOpacityImages);
-        $('#' + id + '_a').mouseleave(changeOpacityImagesOriginal);
+        jQuery('#' + id).mouseenter(changeOpacityImages);
+        jQuery('#' + id).mouseleave(changeOpacityImagesOriginal);
+        jQuery('#' + id + '_path').mouseenter(changeOpacityImages);
+        jQuery('#' + id + '_path').mouseleave(changeOpacityImagesOriginal);
+        jQuery('#' + id + '_a').mouseenter(changeOpacityImages);
+        jQuery('#' + id + '_a').mouseleave(changeOpacityImagesOriginal);
     })
 }
 
 function changeOpacityImages() {
     var id = this.id.split('_')[0];
-    $('#' + id).addClass('hover');
-    $('#' + id + '_a').addClass('selected');
-    $('#' + id + '_img').addClass('show-opacity');
+    jQuery('#' + id).addClass('hover');
+    jQuery('#' + id + '_a').addClass('selected');
+    jQuery('#' + id + '_img').addClass('show-opacity');
 }
 
 function changeOpacityImagesOriginal() {
     var id = this.id.split('_')[0];
-    $('#' + id).removeClass('hover');
-    $('#' + id + '_a').removeClass('selected');
-    $('#' + id + '_img').removeClass('show-opacity');
+    jQuery('#' + id).removeClass('hover');
+    jQuery('#' + id + '_a').removeClass('selected');
+    jQuery('#' + id + '_img').removeClass('show-opacity');
 }

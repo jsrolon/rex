@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="panel">
+<main id="panel" class="index">
     <div class="index-carousel">
         <?php
         $categories = get_categories();

@@ -17,28 +17,14 @@ var concatCss = require('gulp-concat-css');
 var merge = require('merge-stream');
 
 var paths = {
-	css: ['css/**/*.css'],
+	css: ['**/*.css'],
 	js: ['js/**/*.js'],
 	html: ['./*.html'],
     php: ['./*.php'],
-    sass: ['sass/**/*.scss']
 };
 
-gulp.task('sass', function () {
-    var sassStream = gulp.src(paths.sass)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concatCss('sass.css'))
-
-    var cssStream = gulp.src(paths.css)
-        .pipe(concatCss('css.css'))
-
-    return merge(sassStream, cssStream)
-        .pipe(concatCss("style.css"))
-        .pipe(gulp.dest('./'))
-});
-
 gulp.task('watch', function() {
-    gulp.watch(paths.sass, ['sass', reload]);
+    gulp.watch(paths.css, reload);
     gulp.watch(paths.js, reload);
     gulp.watch(paths.html, reload);
     gulp.watch(paths.php, reload);
@@ -54,5 +40,5 @@ gulp.task('sync', function() {
 });
 
 gulp.task('default', function() {
-    runSequence('sass', 'sync', 'watch');
+    runSequence('sync', 'watch');
 });

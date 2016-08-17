@@ -24,11 +24,22 @@ function add_theme_scripts() {
     wp_enqueue_script('slideout', get_template_directory_uri() . '/js/slideout.min.js', NULL, '', true);
     wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', NULL, '', true);
     wp_enqueue_script('lodash', get_template_directory_uri() . '/js/lodash.js', NULL, '', true);
+
+    // proyectos
+    if(is_page('proyectos')) {
+        wp_enqueue_script('proyectos', get_template_directory_uri() . '/js/proyectos.js', NULL, '', true);
+    }
 }
+
+function register_menus() {
+    register_nav_menu( 'main-menu', 'Main Menu' );
+}
+
+// functions to be executed on init
+add_action( 'init', 'register_menus' );
 
 // functions to execute in the enqueue scripts stage
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
 
 // functions that are executed after theme setup
 add_action('after_setup_theme', 'theme_prefix_setup');
-

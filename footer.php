@@ -1,5 +1,5 @@
 <div id="footer">
-<!--                <img src="/img/rex_dinosaurio_blanco.png">-->
+                <img src="<?php echo get_template_directory_uri(); ?>/img/rex_dinosaurio_blanco.png">
                 <div class="info">
                     <div>ING. FABIO RODRÍGUEZ L. / ING. LIGIA RODRÍGUEZ S.</div>
                     <div>Teléfono: (57-1) 3378726 / 28 / 56 • Fax: (57-1) 3356530</div>
