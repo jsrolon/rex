@@ -40,6 +40,8 @@ if (is_single()) {
     $page_class = 'canteras';
 } else if (is_home()) {
     $page_class = 'index';
+} else if(is_category()) {
+    $page_class = 'proyectos-detalles';
 }
 
 ?>
@@ -53,7 +55,7 @@ if (is_single()) {
             <img src="<?php echo $image[0]; ?>" class="rex-logo"/>
         </a>
         <div class="options">
-            <?php wp_nav_menu(array('menu_class' => 'menu', 'container_class' => 'options',
+            <?php wp_nav_menu(array('container_class' => 'menu',
                 'theme_location' => 'main-menu')); ?>
         </div>
         <div class="info">

@@ -176,6 +176,42 @@ body, html {
     text-decoration: underline;
 }
 
+/*
+CHILDREN STYLES FOR WHEN MENU IS CUSTOM
+*/
+.options .menu ul li ul.sub-menu {
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    padding-top: 8px;
+    display: none;
+}
+
+.options .menu ul li.current_page_item ul.sub-menu {
+    display: block;
+}
+
+.options .menu ul li.current_page_ancestor ul.sub-menu {
+    display: block;
+}
+
+.options .menu ul li ul.sub-menu > li {
+    font-size: 11px;
+}
+
+.options .menu ul li ul.sub-menu > li a {
+    /*padding-bottom: 8px;*/
+    display: block;
+}
+
+.options .menu ul li ul.sub-menu > li a:last-of-type {
+    /*padding-bottom: 10px;*/
+}
+
+.options .menu ul li ul.sub-menu > li.current-menu-item {
+    text-decoration: underline;
+}
+
 #menu .info {
     color: #636B2E;
     width: 256px;
@@ -990,6 +1026,11 @@ a {
     }
 
     .options .menu ul li ul.children > li a:hover {
+        text-decoration: underline;
+        font-weight: normal;
+    }
+
+    .options .menu ul li ul.sub-menu > li a:hover {
         text-decoration: underline;
         font-weight: normal;
     }

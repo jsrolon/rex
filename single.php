@@ -10,7 +10,8 @@ get_header(); ?>
 
 <div class="title fixed">
     <?php the_title(); ?>
-    <div class="description"><?php the_excerpt(); ?>
+    <div class="description">CONSTRUCCIÓN DE LAS OBRAS DE ESTABILIZACIÓN, EN EL SECTOR ALTOS DE LA ESTANCIA, SECTOR
+        SUPERIOR EL ESPINO, ETAPA II, FASE I, LOCALIDAD DE CIUDAD BOLÍVAR BOGOTA D.C.
     </div>
     <div class="quarry-header-image"
          style=" background: url(<?php echo get_template_directory_uri(); ?>/img/proyecto.svg) center bottom no-repeat; background-size: cover;"></div>

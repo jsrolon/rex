@@ -26,12 +26,12 @@
                 </a>
             </svg>
             <div id="hseq" class="name">
-                <a href="/hseq.html">GESTIÓN INTEGRAL
+                <a href="/hseq">GESTIÓN INTEGRAL
                     <div>HSEQ</div>
                 </a>
             </div>
             <div id="quienes" class="name">
-                <a href="/quienes_somos.html">QUIENES
+                <a href="/quienes-somos">QUIENES
                     <div>SOMOS</div>
                 </a>
             </div>
