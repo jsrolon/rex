@@ -40,6 +40,11 @@ function add_theme_scripts() {
         wp_enqueue_script('proyectos', get_template_directory_uri() . '/js/proyectos.js', NULL, '', true);
     }
 
+    // quienes etc
+    if(is_page('hseq')) {
+        wp_enqueue_script('quienes', get_template_directory_uri() . '/js/quienes.js', NULL, '', true);
+    }
+
     if (is_category()) {
         wp_enqueue_script('proyectos-detalles', get_template_directory_uri() . '/js/proyectos.detalles.js', NULL, '', true);
     }

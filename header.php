@@ -25,7 +25,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+
+<?php
+
+if(is_page('hseq')) {
+    $page_class = 'quienes';
+}
+
+?>
+
+<body class="<?php echo $page_class ?>">
 <nav id="menu">
     <header>
         <a href="/">
