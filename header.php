@@ -28,7 +28,7 @@
 
 <?php
 
-if(is_page('hseq')) {
+if(is_page('hseq') || is_page('quienes-somos')) {
     $page_class = 'quienes';
 } else if(is_page('contacto')) {
     $page_class = 'contacto';

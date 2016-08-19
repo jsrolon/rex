@@ -41,7 +41,7 @@ function add_theme_scripts() {
     }
 
     // quienes etc
-    if(is_page('hseq')) {
+    if(is_page('hseq') || is_page('quienes-somos')) {
         wp_enqueue_script('quienes', get_template_directory_uri() . '/js/quienes.js', NULL, '', true);
     }
 
