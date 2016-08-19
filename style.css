@@ -1203,12 +1203,6 @@ a {
         width: 100px !important;
     }
 
-    #empresa-title {
-        top: calc(31%);
-        margin-left: calc(50% + 78px);
-        width: 100px !important;
-    }
-
     .page-content-wrapper .text {
         font-size: 12px;
         width: calc(100% - 100px);

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div id="empresa-title" class="title fixed">EMPRESA</div>
+<div class="title fixed">EMPRESA</div>
 <div id="menu-icon" class="black fixed">
     <svg viewBox="0 0 24 24">
         <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
     </svg>
 </div>
-<main id="panel" class="proyectos">
+<main id="panel">
     <div class="padding-top"></div>
     <div class="page-content-wrapper center-vertical">
 

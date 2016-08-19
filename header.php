@@ -30,6 +30,12 @@
 
 if(is_page('hseq')) {
     $page_class = 'quienes';
+} else if(is_page('contacto')) {
+    $page_class = 'contacto';
+} else if(is_page('proyectos') || is_page('empresa')) {
+    $page_class = 'proyectos';
+} else if(is_page('produccion')) {
+    $page_class = 'canteras';
 }
 
 ?>
