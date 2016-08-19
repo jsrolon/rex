@@ -11,7 +11,8 @@
 <main id="panel">
     <div class="page-content-wrapper">
         <div class="padding-top"></div>
-        <div class="text">La Firma REX INGENIERIA S.A. fue fundada en el año 2000 por los ingenieros socios Ligia
+        <div class="text">
+            La Firma REX INGENIERIA S.A. fue fundada en el año 2000 por los ingenieros socios Ligia
             Eugenia Rodríguez y Fabio Arturo Rodríguez quienes a su vez tienen una experiencia individual de 35 años
             en el campo de la construcción y los servicios de ingeniería.
 
@@ -42,7 +43,8 @@
                       style="font-family:'Avenir-Book', 'Avenir';font-size:18px;fill:#fff;">MISIÓN
                 </text>
             </svg>
-            <div class="text">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
+            <div class="text">
+                Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
                 interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su
                 experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un
                 sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes,
@@ -59,7 +61,8 @@
                       style="font-family:'Avenir-Book', 'Avenir';font-size:18px;fill:#fff;">VISIÓN
                 </text>
             </svg>
-            <div class="text">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
+            <div class="text">
+                Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
                 interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su
                 experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un
                 sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes,
@@ -71,7 +74,8 @@
 
         <div class="subtitle">NUESTRO COMPROMISO</div>
 
-        <div class="text last">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
+        <div class="text last">
+            Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño,
             interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su
             experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un
             sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes, con

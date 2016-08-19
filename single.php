@@ -8,46 +8,43 @@
 
 get_header(); ?>
 
-<div class="proyecto">
-    <div class="title fixed">
-        OBRAS DE ESTABILIDAD EL ESPINO
-        <div class="description">CONSTRUCCIÓN DE LAS OBRAS DE ESTABILIZACIÓN, EN EL SECTOR ALTOS DE LA ESTANCIA, SECTOR
-            SUPERIOR EL ESPINO, ETAPA II, FASE I, LOCALIDAD DE CIUDAD BOLÍVAR BOGOTA D.C.
-        </div>
-        <div class="quarry-header-image"
-             style=" background: url(<?php echo get_template_directory_uri(); ?>/img/proyecto.svg) center bottom no-repeat; background-size: cover;"></div>
+<div class="title fixed">
+    <?php the_title(); ?>
+    <div class="description"><?php the_excerpt(); ?>
     </div>
-    <div id="menu-icon" class="fixed">
-        <svg viewBox="0 0 24 24">
-            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
-        </svg>
-    </div>
-    <div class="popup general-info hide-z-index" id="full-carousel">
-        <div class="group">
-            <div class="carousel">
-                <div class="carousel-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/20150311_124551.jpg">
-                </div>
-                <div class="carousel-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/20160310_075037.jpg">
-                </div>
-                <div class="carousel-slide">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/_MG_7748.jpg">
-                </div>
+    <div class="quarry-header-image"
+         style=" background: url(<?php echo get_template_directory_uri(); ?>/img/proyecto.svg) center bottom no-repeat; background-size: cover;"></div>
+</div>
+<div id="menu-icon" class="fixed">
+    <svg viewBox="0 0 24 24">
+        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
+    </svg>
+</div>
+<div class="popup general-info hide-z-index" id="full-carousel">
+    <div class="group">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/20150311_124551.jpg">
             </div>
-            <!--<img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left" onclick="goLeft()">
+            <div class="carousel-slide">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/20160310_075037.jpg">
+            </div>
+            <div class="carousel-slide">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/_MG_7748.jpg">
+            </div>
+        </div>
+        <!--<img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left" onclick="goLeft()">
         <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" id="right" onclick="goRight()">
         <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" id="full" onclick="exitFull()">-->
-        </div>
-        <div class="group">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" onclick="goLeft()">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" onclick="exitFull()">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" onclick="goRight()">
-        </div>
+    </div>
+    <div class="group">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" onclick="goLeft()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" onclick="exitFull()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" onclick="goRight()">
     </div>
 </div>
 
-<main id="panel" class="proyecto">
+<main id="panel">
     <div class="page-content-wrapper">
         <div class="padding-top"></div>
         <div class="general-info">
