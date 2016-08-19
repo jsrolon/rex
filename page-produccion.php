@@ -40,11 +40,11 @@
                     </tr>
                 </table>
             </div>
-            <img src="img/piedra_loma.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/piedra_loma.png">
         </div>
 
         <div class="quarry-item">
-            <img src="img/piedras_rio.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/piedras_rio.png">
             <div class="quarry-item-info">
                 <div class="quarry-item-info-text">
                     <h4>AGREGADOS DE RÍO</h4>
