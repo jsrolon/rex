@@ -36,7 +36,7 @@ function add_theme_scripts() {
     }
 
     // proyectos
-    if (is_page('proyectos')) {
+    if (is_page('proyectos') || is_page('empresa')) {
         wp_enqueue_script('proyectos', get_template_directory_uri() . '/js/proyectos.js', NULL, '', true);
     }
 

@@ -1199,7 +1199,13 @@ a {
 
     .proyectos .title {
         top: calc(31%);
-        margin-left: calc(256px + calc(50% - 178px));
+        margin-left: calc(50% + 78px);
+        width: 100px !important;
+    }
+
+    #empresa-title {
+        top: calc(31%);
+        margin-left: calc(50% + 78px);
         width: 100px !important;
     }
 
