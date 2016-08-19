@@ -100,40 +100,50 @@ body, html {
 }
 
 /*#menu .options .main {*/
-    /*padding-bottom: 10px;*/
+/*padding-bottom: 10px;*/
 /*}*/
 
 /*#menu .options .selected-main {*/
-    /*font-weight: bold;*/
-    /*padding-bottom: 8px;*/
+/*font-weight: bold;*/
+/*padding-bottom: 8px;*/
 /*}*/
 
 /*#menu .options div:last-of-type {*/
-    /*padding-bottom: 0px;*/
+/*padding-bottom: 0px;*/
 /*}*/
 
 /*#menu .options .sub {*/
-    /*font-size: 11px;*/
+/*font-size: 11px;*/
 /*}*/
 
 /*#menu .options .sub a {*/
-    /*padding-bottom: 8px;*/
-    /*display: block;*/
+/*padding-bottom: 8px;*/
+/*display: block;*/
 /*}*/
 
 /*#menu .options .sub a:last-of-type {*/
-    /*padding-bottom: 10px;*/
+/*padding-bottom: 10px;*/
 /*}*/
 
 /*#menu .options .sub .selected {*/
-    /*text-decoration: underline;*/
+/*text-decoration: underline;*/
 /*}*/
 
 .options .menu ul li {
     padding-bottom: 10px;
 }
 
-.options .menu ul li.selected-main {
+.options .menu > ul > li.current_page_item > a {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.options .menu > ul > li.current_page_ancestor > a {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.options .menu > ul > li.current_page_parent > a {
     font-weight: bold;
     padding-bottom: 8px;
 }
@@ -162,7 +172,7 @@ body, html {
     /*padding-bottom: 10px;*/
 }
 
-.options .menu ul li ul.children > li.selected {
+.options .menu ul li ul.children > li.current_page_item {
     text-decoration: underline;
 }
 
