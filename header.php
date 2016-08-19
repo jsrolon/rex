@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>"/>
-    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,14 +28,16 @@
 
 <?php
 
-if(is_page('hseq') || is_page('quienes-somos')) {
+if (is_page('hseq') || is_page('quienes-somos')) {
     $page_class = 'quienes';
-} else if(is_page('contacto')) {
+} else if (is_page('contacto')) {
     $page_class = 'contacto';
-} else if(is_page('proyectos') || is_page('empresa')) {
+} else if (is_page('proyectos') || is_page('empresa')) {
     $page_class = 'proyectos';
-} else if(is_page('produccion')) {
+} else if (is_page('produccion')) {
     $page_class = 'canteras';
+} else if (is_home()) {
+    $page_class = 'index';
 }
 
 ?>
@@ -49,7 +51,8 @@ if(is_page('hseq') || is_page('quienes-somos')) {
             <img src="<?php echo $image[0]; ?>" class="rex-logo"/>
         </a>
         <div class="options">
-            <?php wp_nav_menu(array('container_class' => 'options', 'theme_location' => 'main-menu')); ?>
+            <?php wp_nav_menu(array('menu_class' => 'menu', 'container_class' => 'options',
+                'theme_location' => 'main-menu')); ?>
         </div>
         <div class="info">
             <div>CRA 27 # 47A - 35</div>

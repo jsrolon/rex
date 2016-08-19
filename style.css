@@ -99,33 +99,70 @@ body, html {
     overflow-y: auto;
 }
 
-#menu .options .main {
+/*#menu .options .main {*/
+    /*padding-bottom: 10px;*/
+/*}*/
+
+/*#menu .options .selected-main {*/
+    /*font-weight: bold;*/
+    /*padding-bottom: 8px;*/
+/*}*/
+
+/*#menu .options div:last-of-type {*/
+    /*padding-bottom: 0px;*/
+/*}*/
+
+/*#menu .options .sub {*/
+    /*font-size: 11px;*/
+/*}*/
+
+/*#menu .options .sub a {*/
+    /*padding-bottom: 8px;*/
+    /*display: block;*/
+/*}*/
+
+/*#menu .options .sub a:last-of-type {*/
+    /*padding-bottom: 10px;*/
+/*}*/
+
+/*#menu .options .sub .selected {*/
+    /*text-decoration: underline;*/
+/*}*/
+
+.options .menu ul li {
     padding-bottom: 10px;
 }
 
-#menu .options .selected-main {
+.options .menu ul li.selected-main {
     font-weight: bold;
     padding-bottom: 8px;
 }
 
-#menu .options div:last-of-type {
+.options .menu ul li:last-of-type {
     padding-bottom: 0px;
 }
 
-#menu .options .sub {
+.options .menu ul li ul.children {
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+    padding-top: 8px;
+}
+
+.options .menu ul li ul.children > li {
     font-size: 11px;
 }
 
-#menu .options .sub a {
-    padding-bottom: 8px;
+.options .menu ul li ul.children > li a {
+    /*padding-bottom: 8px;*/
     display: block;
 }
 
-#menu .options .sub a:last-of-type {
-    padding-bottom: 10px;
+.options .menu ul li ul.children > li a:last-of-type {
+    /*padding-bottom: 10px;*/
 }
 
-#menu .options .sub .selected {
+.options .menu ul li ul.children > li.selected {
     text-decoration: underline;
 }
 
@@ -943,7 +980,7 @@ a {
         color: black;
     }
 
-    #menu .options .sub a:hover {
+    .options .menu ul li ul.children > li a:hover {
         text-decoration: underline;
         font-weight: normal;
     }
@@ -1380,12 +1417,16 @@ a {
         font-size: 10px;
     }
 
-    #menu .options .main {
+    .options .menu ul li {
         padding-bottom: 6px;
     }
 
-    #menu .options .sub a {
-        padding-bottom: 6px;
+    .options .menu ul li ul.children {
+        padding-top: 8px !important;
+    }
+
+    .options .menu ul li ul.children > li a {
+        /*padding-bottom: 6px;*/
     }
 }
 
