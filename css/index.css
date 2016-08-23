@@ -11,6 +11,10 @@
     font-weight: bold;
 }
 
+.hidden {
+    display: none;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -379,6 +383,12 @@ a {
     overflow-y: hidden;
 }
 
+.materiales .description {   
+    font-size: 13px;
+    margin-top: 10px;
+    overflow-y: hidden;
+}
+
 .fixed {
     position: fixed;
     transition: transform 300ms ease;
@@ -663,7 +673,20 @@ a {
     color: white;
 }
 
+.materiales .title {
+    background-color: #7A8339;
+    color: white;
+}
+
 .proyecto .quarry-header-image {
+    width: calc(100% + 77px);
+    margin-left: -57px;
+    height: 58px;
+    position: relative;
+    margin-bottom: -77px;
+}
+
+.materiales .quarry-header-image {
     width: calc(100% + 77px);
     margin-left: -57px;
     height: 58px;
@@ -853,6 +876,194 @@ a {
     background-color: red;
 }
 
+.materiales .section-div-top {
+    background: url(/img/proyecto_top.svg) center bottom no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+}
+
+.materiales .section-div-bottom {
+    background: url(/img/proyecto_bottom.svg) center bottom no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90px;
+    margin-top: -2px;
+    z-index: 1;
+}
+
+.materiales .section {
+    background-color: #EBEBEB;
+    margin-top: -2px;
+}
+
+.materiales span {
+    color: #9fa14e;
+}
+
+.materiales .general-info .group {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.materiales .general-info .group .label {
+    font-weight: bold;
+}
+
+.materiales .general-info .group .carousel {
+    width: calc(100% - 20px);
+    //height: 300px;
+    margin: 20px 0;
+}
+
+.materiales .general-info .group .carousel .img-container {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+
+.materiales .general-info .group #left {
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 16px);
+    cursor: pointer;
+}
+
+.materiales .general-info .group #right {
+    position: absolute;
+    right: 25px;
+    top: calc(50% - 16px);
+    cursor: pointer;
+}
+
+.materiales .general-info .group #full {
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.materiales .general-info .group .control {
+    width: 32px;
+    height: auto;
+}
+
+.materiales .general-info .group .center {
+    display: inline-block;
+    width: calc(50% - 48px);
+    //width: calc(50% - 65px);
+}
+
+.materiales .section {
+    padding-bottom: 10px;
+}
+
+.materiales .section .title {
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.materiales .section table {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.materiales .section table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.materiales .section th, td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.materiales .section th {
+    background-color: #9FA14E;
+    width: 95px;
+}
+
+.materiales .section .impar td {
+    background-color: white;
+}
+
+.materiales .control {
+    cursor: pointer;
+}
+
+.materiales #map {
+    width: 100%;
+    height: 350px;
+    //margin-top: -80px;
+    margin-bottom: -109px;
+    position: absolute;
+}
+
+.materiales .leaflet-bottom {
+    bottom: 108px;
+}
+
+.materiales .leaflet-right {
+    display: none;
+}
+
+.materiales .leaflet-top {
+    display: none;
+}
+
+.materiales #footer {
+    z-index: 2;
+}
+
+.materiales .popup .group {
+    margin-left: 0px !important;
+    text-align: center;
+}
+
+.materiales .popup .carousel {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.materiales .popup .carousel img{
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+}
+.materiales .popup .carousel .carousel-slide {
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+
+.materiales .popup .img-container {
+    width: 100%;
+    height: 500px;
+    background-color: red;
+}
+
+.materiales .section-white {
+    background-color: white;
+}
+
 #map-container {
     width: 100%;
     height: 100%;
@@ -885,6 +1096,75 @@ a {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+}
+
+.materiales .padding-top {
+    height: 100px;
+}
+
+.materiales #map-container {
+    z-index: 1;
+}
+
+.materiales #map {
+    position: relative;
+    margin-top: 43px;
+}
+
+.materiales .tab-container {
+    margin-top: 10px;
+    
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.materiales .tab {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+    color: #999999;
+    max-width: 300px;
+
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.materiales .selected {
+    color: black;
+}
+
+.materiales .subtitle {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.materiales .selected::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+}
+
+.materiales .selected-hover::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
 }
 
 @media (min-width: 430px) {
@@ -1055,7 +1335,7 @@ a {
     }
 
     .proyects-list .proyect {
-        width: calc(calc(100% - 40px)/3);
+        width: calc(33% - 13.33px);
         margin-right: 0;
         margin-right: -4px;
         font-weight: 400 !important;
@@ -1313,6 +1593,93 @@ a {
         height: 100%;
         max-height: 600px;
     }
+
+    .materiales .description {   
+        width: calc(100% - 100px);
+        padding-left: 50px;
+    }
+
+    .materiales .quarry-header-image {
+        margin-left: 0;
+        height: 71px;
+        margin-bottom: -90px;
+    }
+
+    .materiales .section-div-top {
+        height: 120px;
+    }
+
+    .materiales .section-div-bottom {
+        height: 120px;
+    }
+
+    .materiales .general-info .group {
+        width: calc(100% - 100px);
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    .materiales .general-info .group .label {
+        display: inline-block;
+        width: 35%;
+        margin-right: 50px;
+        text-align: end;
+    }
+
+    .materiales .general-info .group .info {
+        display: inline-block;
+        width: calc(64% - 50px);
+        vertical-align: top;
+    }
+
+    .materiales .general-info .group .carousel {
+        width: calc(100% - 200px);
+        margin: 50px 0;
+        margin-left: 100px;
+    }
+
+    .materiales .general-info .group .carousel .img-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .materiales .general-info .group #left {
+        left: 0;
+        top: calc(50% - 16px);
+    }
+
+    .materiales .general-info .group #right {
+        right: 0;
+        top: calc(50% - 16px);
+    }
+
+    .materiales .general-info .group #full {
+        right: 110px;
+        bottom: 10px;
+    }
+
+    .materiales .section table {
+        width: calc(100% - 100px);
+        margin-left: 50px;
+    }
+
+    .materiales .section th {
+        width: 25%;
+    }
+
+    .materiales #map {
+        width: 100%;
+        height: 400px;
+        //margin-top: -107px;
+        margin-bottom: -109px;
+        margin-top: 43px;
+    }
+
+    .materiales .popup .carousel img{
+        width: auto;
+        height: 100%;
+        max-height: 600px;
+    }
 }
 
 @media (min-width: 1460px) {
@@ -1331,6 +1698,24 @@ a {
     }
 
     .proyecto .section-div-bottom {
+        height: 167px;
+    }
+
+    .materiales .quarry-header-image {
+        margin-left: 0;
+        height: 96px;
+        margin-bottom: -115px;
+    }
+
+    .materiales .general-info .group .carousel .img-container {
+        height: 500px;
+    }
+
+    .materiales .section-div-top {
+        height: 167px;
+    }
+
+    .materiales .section-div-bottom {
         height: 167px;
     }
 }
