@@ -1,17 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: jsrolon
- * Date: 17-08-2016
- * Time: 1:07 AM
- */
-
-get_header(); ?>
-
+<?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) :
+the_post(); ?>
 <div class="title fixed">
     <?php the_title(); ?>
-    <div class="description">CONSTRUCCIÓN DE LAS OBRAS DE ESTABILIZACIÓN, EN EL SECTOR ALTOS DE LA ESTANCIA, SECTOR
-        SUPERIOR EL ESPINO, ETAPA II, FASE I, LOCALIDAD DE CIUDAD BOLÍVAR BOGOTA D.C.
+    <div class="description"><?php the_excerpt(); ?>
     </div>
     <div class="quarry-header-image"
          style=" background: url(<?php echo get_template_directory_uri(); ?>/img/proyecto.svg) center bottom no-repeat; background-size: cover;"></div>
@@ -51,36 +43,33 @@ get_header(); ?>
         <div class="general-info">
             <div class="group">
                 <div class="label">ENTIDAD CONTRATANTE</div>
-                <div class="info">Unidad Administrativa Especial de Rehabilitación y Mantenimiento Vial – UAERMV
+                <div class="info"><?php the_field('entidad_contratante'); ?>
                 </div>
             </div>
             <div class="group">
                 <div class="label">CONTRATISTA</div>
-                <div class="info">Consorcio Obras de Estabilidad El Espino</div>
+                <div class="info"><?php the_field('contratista'); ?></div>
             </div>
             <div class="group">
                 <div class="label">UBICACIÓN</div>
-                <div class="info">Ciudad Bolívar, Bogotá D.C</div>
+                <div class="info"><?php echo get_field('ubicacion')['address']; ?></div>
             </div>
             <div class="group">
                 <div class="label">FECHA DE EJECUCIÓN</div>
-                <div class="info">noviembre 2011 – noviembre 2012</div>
+                <div class="info"><?php the_field('fecha_de_ejecucion'); ?></div>
             </div>
             <div class="group">
                 <div class="label">ACTIVIDADES EJECUTADAS</div>
-                <div class="info">Gerencia y ejecucuón integral del proyecto</div>
+                <div class="info"><?php the_field('actividades_ejecutadas'); ?></div>
             </div>
             <div class="group">
+                <?php $images = get_attached_media('image'); ?>
                 <div class="carousel">
+                    <?php foreach($images as $image) { ?>
                     <div class="img-container"
-                         style="background: url(<?php echo get_template_directory_uri(); ?>/img/20150311_124551.jpg) center center no-repeat; background-size: cover;">
+                         style="background: url(<?php echo $image->guid; ?>) center center no-repeat; background-size: cover;">
                     </div>
-                    <div class="img-container"
-                         style="background: url(<?php echo get_template_directory_uri(); ?>/img/20160310_075037.jpg) center center no-repeat; background-size: cover;">
-                    </div>
-                    <div class="img-container"
-                         style="background: url(<?php echo get_template_directory_uri(); ?>/img/_MG_7748.jpg) center center no-repeat; background-size: cover;">
-                    </div>
+                    <?php } ?>
                 </div>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
                      onclick="goLeft()">
@@ -101,64 +90,21 @@ get_header(); ?>
 
         <div class="section-div-top"></div>
         <div class="section">
-            <div class="title">CANTIDADES DE OBRA</div>
-            <table>
-                <tr class="impar">
-                    <th>Pantallas ancladas de 9 m de ancho y 10,75 m de altura</th>
-                    <td>Anclajes de 40 Ton, longitud 40 metros</td>
-                    <td>4.800 mL</td>
-                </tr>
-                <tr>
-                    <th rowspan="6">Vigas sobre pilotes preexcavados de 2.5 m de ancho y 0.75 m de altura</th>
-                    <td>Anclajes de 50 Ton, longitud 40 metros</td>
-                    <td>1.980 mL</td>
-                </tr>
-                <tr class="impar">
-                    <td>Acero de refuerzo 60.000 psi</td>
-                    <td>164.821 Kg</td>
-                </tr>
-                <tr>
-                    <td>Concreto bombeado 3.000 psi</td>
-                    <td>1.637 m³</td>
-                </tr>
-                <tr class="impar">
-                    <td>Micropilotes diámetro 0.15 m de longitud variable</td>
-                    <td>13.878 mL</td>
-                </tr>
-                <tr>
-                    <td>Sistema drenante con geodrén planar para las pantallas</td>
-                    <td>2.268 m2</td>
-                </tr>
-                <tr class="impar">
-                    <td>Drenes horizontales diámetro de 2″, longitud por dren 15 metros</td>
-                    <td>1.200 mL</td>
-                </tr>
-                <tr>
-                    <th rowspan="4">Sistema de drenaje</th>
-                    <td>Filtros en espina de pescado tipo francés</td>
-                    <td>1.219.5 mL</td>
-                </tr>
-                <tr class="impar">
-                    <td>Suelo Cemento e=0.15m con base granular y cemento al 5%</td>
-                    <td>1.545 m³</td>
-                </tr>
-                <tr>
-                    <td>Conformación mecánica</td>
-                    <td>24.080 m³</td>
-                </tr>
-                <tr class="impar">
-                    <td>Canal en concha gavión</td>
-                    <td>250 m³</td>
-                </tr>
-                <tr>
-                    <th>Obras de Impacto Urbano</th>
-                    <td>Empradización con grama</td>
-                    <td>43.468 m2</td>
-                </tr>
-            </table>
+
+            <?php the_content(); ?>
+
         </div>
         <div class="section-div-bottom"></div>
         <div id="map">
+            <script type="text/javascript">
+                var selectedLocation = {
+                    lat: <?php echo get_field('ubicacion')['lat']; ?>,
+                    lng: <?php echo get_field('ubicacion')['lng']; ?>
+                };
+            </script>
             <div id="map-container"></div>
-            <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+            <?php endwhile;
+            else: ?>
+                <?php _e('Sorry, no pages matched your criteria.', 'textdomain'); ?>
+            <?php endif; ?>
             <?php get_footer(); ?>

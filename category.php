@@ -17,7 +17,12 @@ get_header(); ?>
 
 <?php
 // the query
-$the_query = new WP_Query(array('cat' => get_cat_ID(single_cat_title('', false)))); ?>
+$the_query = new WP_Query(
+    array(
+        'cat' => get_cat_ID(single_cat_title('', false)),
+        'post_type' => 'rex-project'
+    )
+); ?>
 
 <main id="panel">
     <div class="padding-top"></div>

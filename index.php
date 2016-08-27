@@ -7,7 +7,7 @@
         foreach ($categories as $category) {
             $args = array(
                 'cat' => $category->term_id,
-                'post_type' => 'post',
+                'post_type' => 'rex-project',
                 'posts_per_page' => '1',
             );
 

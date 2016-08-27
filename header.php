@@ -16,7 +16,9 @@
     <?php wp_head(); ?>
 
     <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>"/>
-    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+    <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +39,7 @@ if (is_single()) {
 } else if (is_page('proyectos') || is_page('empresa')) {
     $page_class = 'proyectos';
 } else if (is_page('produccion')) {
-    $page_class = 'canteras';
+    $page_class = 'materiales';
 } else if (is_home()) {
     $page_class = 'index';
 } else if(is_category()) {

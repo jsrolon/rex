@@ -47,7 +47,7 @@
             </svg>
             <div id="edificacion" class="name">
                 <a href="<?php echo get_category_link(get_cat_ID('Edificación')); ?>">EDIFICACIÓN Y
-                    <div>URBANIFICACIÓN</div>
+                        <div>URBANIZACIÓN</div>
                 </a>
             </div>
             <div id="estabilizacion" class="name">

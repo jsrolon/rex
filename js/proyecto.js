@@ -61,7 +61,7 @@ window.onload = function () {
     var mymap = L.map('map-container', {
         touchZoom: false,
         scrollWheelZoom: false
-    }).setView([4.536383123316907, -74.15239334106447], 13);
+    }).setView([selectedLocation['lat'], selectedLocation['lng']], 13);
     L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         subdomains: 'abcd',
@@ -75,7 +75,7 @@ window.onload = function () {
         iconAnchor: [14, 40] // point of the icon which will correspond to marker's location
     });
 
-    L.marker([4.536383123316907, -74.15239334106447], {icon: greenIcon}).addTo(mymap);
+    L.marker([selectedLocation['lat'], selectedLocation['lng']], {icon: greenIcon}).addTo(mymap);
 
     function onMapClick(e) {
         console.log(e.latlng);
