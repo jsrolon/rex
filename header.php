@@ -64,7 +64,7 @@ if (is_single()) {
             <div>CRA 27 # 47A - 35</div>
             <div>TEL: (571) 337 87 26/28/56</div>
             <div>FAX: (571) 335 35 30</div>
-            <div>info@rexingenieria.com</div>
+            <div><a href="mailto:info@rexingenieria.com">info@rexingenieria.com</a></div>
             <div>BOGOTÁ D.C - COLOMBIA</div>
         </div>
     </header>

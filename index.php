@@ -38,7 +38,7 @@
         Ver más
     </div>
 
-<!--        <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/img/circle_index.svg" class="circle"/>-->
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/circle_index.svg" class="circle"/>
         <div id="rex_blanco">
             <img src="<?php header_image(); ?>"/>
             <div><?php echo get_bloginfo('description'); ?></div>

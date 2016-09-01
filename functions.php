@@ -96,6 +96,15 @@ function rex_register_required_plugins() {
             'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
         ),
+        array(
+            'name' => 'Tiny MCE Advanced', // The plugin name.
+            'slug' => 'tinymce-advanced', // The plugin slug (typically the folder name).
+            'source' => get_template_directory() . '/libraries/plugins/tinymce-advanced.4.4.1.zip', // The plugin source.
+            'required' => true, // If false, the plugin is only 'recommended' instead of required.
+            'version' => '4.4.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+        )
     );
 
     /*
