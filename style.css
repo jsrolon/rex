@@ -537,14 +537,26 @@ a {
 }
 .quienes .mision-vision {
 	width: 100%;
-	height: 414px;
+	padding-top: 150px;
+	padding-bottom: 100px;
+}
+.quienes .mision-vision .dark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	z-index: -1;
 }
 .quienes #mision {
 	position: relative;
+	-webkit-clip-path: polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+	clip-path:         polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
 }
 .quienes #mision img {
 	position: absolute;
-	top: 55px;
+	top: 65px;
 	left: 20px;
     width: 234px;
 }
@@ -552,13 +564,16 @@ a {
 	width: 220px;
 	fill: rgba(124, 126, 46, 0.9);
 	position: absolute;
-	top: 45px;
+	top: 65px;
 	right: 20px;
 }
 .quienes #vision {
 	position: relative;
-	top: -52px;
-	margin-bottom: -30px;
+	margin-top: -30px;
+	/*top: -52px;
+	margin-bottom: -30px;*/
+	-webkit-clip-path: polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+	clip-path:         polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
 }
 .quienes .padding-top {
 	height: 212px;
