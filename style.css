@@ -605,6 +605,11 @@ a {
 .quienes #section .text {
 	color: black;
 }
+.quienes .quarry-header-image {
+	-webkit-clip-path: polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+	clip-path:         polygon(0% 0%, 100% 0%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+}
+}
 .page-content-wrapper .text img {
 	padding: 20px 0px;
 }
@@ -1382,12 +1387,12 @@ a {
 	cursor: pointer;
 }
 .materiales #map {
-	margin-top: 43px;
+	margin-top: 9px;
 	margin-bottom: -109px;
 	position: relative;
 }
 .materiales .leaflet-bottom {
-	bottom: 108px;
+	bottom: 10px;
 }
 .materiales .leaflet-right {
 	display: none;
@@ -1438,6 +1443,8 @@ a {
 }
 .materiales #map-container {
 	z-index: 1;
+	height: 500px;
+
 }
 .materiales .tab-container {
 	margin-top: 10px;

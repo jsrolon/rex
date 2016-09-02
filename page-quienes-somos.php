@@ -4,7 +4,7 @@
 the_post(); ?>
 
 <div class="quarry-header-image fixed"
-     style=" background: url(<?php echo get_template_directory_uri(); ?>/img/quienes.png) center bottom no-repeat; background-size: cover;"></div>
+     style=" background: url(<?php the_field('imagen_de_cabecera'); ?>) center bottom no-repeat; background-size: cover;"></div>
 
 <div class="title fixed"><?php the_title(); ?></div>
 <div id="menu-icon" class="fixed">
