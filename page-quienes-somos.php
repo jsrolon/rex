@@ -15,6 +15,20 @@ the_post(); ?>
 <main id="panel">
     <div class="page-content-wrapper">
         <div class="padding-top"></div>
+        <div class="text"><?php the_field('descripcion'); ?></div>
+
+            <div class="mision-vision" id="mision" style=" background: url(/img/mision.png) center  no-repeat; background-size: cover;">
+                <img src="/wp-content/themes/rex/img/mision_title.svg" />
+                <div class="text">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño, interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes, con la más alta calidad técnica, garantizando que para esto se protegerá la integridad personal de todos los que intervienen en el proceso, con el firme compromiso de preservar los recursos naturales y extender una cultura ambiental responsable y ejemplar.</div>
+            </div>
+            <div class="mision-vision" id="vision" style=" background: url(/img/vision.png) center  no-repeat; background-size: cover;">
+                <img src="/wp-content/themes/rex/img/vision_title.svg" />
+                <div class="text">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño, interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes, con la más alta calidad técnica, garantizando que para esto se protegerá la integridad personal de todos los que intervienen en el proceso, con el firme compromiso de preservar los recursos naturales y extender una cultura ambiental responsable y ejemplar.</div>
+            </div>
+
+            <div class="subtitle">NUESTRO COMPROMISO</div>
+
+            <div class="text last">Constituirse en una compañía líder en las áreas de ingeniería, construcción, diseño, interventoría de proyectos y explotación y comercialización de agregados pétreos; fundamentada en su experiencia, en la aplicación de tecnologías de avanzada, en la implementación y mantenimiento de un sistema de gestión integral, con el fin de satisfacer plenamente los requerimientos de los clientes, con la más alta calidad técnica, garantizando que para esto se protegerá la integridad personal de todos los que intervienen en el proceso, con el firme compromiso de preservar los recursos naturales y extender una cultura ambiental responsable y ejemplar.</div>
         <?php the_content(); ?>
 
         <?php
