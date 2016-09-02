@@ -90,7 +90,6 @@ function rex_register_required_plugins() {
         array(
             'name' => 'Advanced Custom Fields', // The plugin name.
             'slug' => 'advanced-custom-fields', // The plugin slug (typically the folder name).
-            'source' => get_template_directory() . '/libraries/plugins/advanced-custom-fields.4.4.8.zip', // The plugin source.
             'required' => true, // If false, the plugin is only 'recommended' instead of required.
             'version' => '4.4.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -99,9 +98,16 @@ function rex_register_required_plugins() {
         array(
             'name' => 'Tiny MCE Advanced', // The plugin name.
             'slug' => 'tinymce-advanced', // The plugin slug (typically the folder name).
-            'source' => get_template_directory() . '/libraries/plugins/tinymce-advanced.4.4.1.zip', // The plugin source.
             'required' => true, // If false, the plugin is only 'recommended' instead of required.
             'version' => '4.4.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+        ),
+        array(
+            'name' => 'qTranslate X', // The plugin name.
+            'slug' => 'qtranslate-x', // The plugin slug (typically the folder name).
+            'required' => true, // If false, the plugin is only 'recommended' instead of required.
+            'version' => '3.4.6.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
         )
