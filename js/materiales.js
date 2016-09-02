@@ -82,8 +82,8 @@ window.onload = function() {
         popupAnchor:  [0, -40]
     });
 
-    var marker2 = L.marker([4.1011504, -73.6392484], {icon: greyIcon}).addTo(mymap);
-    marker2.bindPopup("<b>Dirección:</b> Km 9 Vía del Amor, Villavicencio, Meta. <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80").openPopup();
+    var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
+    marker2.bindPopup("<b>Dirección:</b> " + selectedLocations[1]['address'] + " <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80").openPopup();
     marker2.addTo(mymap);
     marker2.on('click', function(e) {
         marker2.setIcon(greenIcon);
@@ -99,8 +99,8 @@ window.onload = function() {
 
     //4.1011504, -73.6392484
 
-    var marker = L.marker([4.7023443, -74.2370281], {icon: greenIcon}).addTo(mymap);
-    marker.bindPopup("<b>Dirección:</b> Mosquera Km 5. Vía La Mesa, Cundinamarca. Sector Mondoñedo.<hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 312 235 34 19").openPopup();
+    var marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
+    marker.bindPopup("<b>Dirección:</b> " + selectedLocations[0]['address'] + "<hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 312 235 34 19").openPopup();
     marker.addTo(mymap);
     marker.on('click', function(e) {
         marker.setIcon(greenIcon);

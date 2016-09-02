@@ -15,6 +15,17 @@ the_post(); ?>
 </div>
 <main id="panel">
     <div class="page-content-wrapper">
+        <script type="text/javascript">
+            var selectedLocations = [{
+                lat: <?php echo get_field('ubicacion_1')['lat']; ?>,
+                lng: <?php echo get_field('ubicacion_1')['lng']; ?>,
+                address: "<?php echo get_field('ubicacion_1')['address']; ?>"
+            }, {
+                lat: <?php echo get_field('ubicacion_2')['lat']; ?>,
+                lng: <?php echo get_field('ubicacion_2')['lng']; ?>,
+                address: "<?php echo get_field('ubicacion_2')['address']; ?>"
+            }];
+        </script>
         <div id="map">
             <div id="map-container"></div>
         </div>
@@ -24,53 +35,53 @@ the_post(); ?>
         <div class="section">
             <div class="general-info">
                 <div class="tab-container">
-                    <div class="tab selected" id="1">CANTERA LOMA PELADA</div>
-                    <div class="tab" id="2">CANTERA GUAYURIBA</div>
+                    <div class="tab selected" id="1"><?php the_field('nombre_1'); ?></div>
+                    <div class="tab" id="2"><?php the_field('nombre_2'); ?></div>
                 </div>
-                <?php for($i = 1; $i <= 2; $i++) { ?>
-                <div id="desc_<?php echo $i; ?>" class="tab-content <?php echo $i === 2 ? 'hidden' : '' ?>">
-                    <div class="group subtitle"><?php the_field('descripcion_' . $i); ?>
+                <?php for ($i = 1; $i <= 2; $i++) { ?>
+                    <div id="desc_<?php echo $i; ?>" class="tab-content <?php echo $i === 2 ? 'hidden' : '' ?>">
+                        <div class="group subtitle"><?php the_field('descripcion_' . $i); ?>
+                        </div>
+                        <div class="group">
+                            <div class="label">ENTIDAD CONTRATANTE</div>
+                            <div class="info"><?php the_field('entidad_contratante_' . $i); ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">CONTRATISTA</div>
+                            <div class="info"><?php the_field('contratista_' . $i); ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">UBICACIÓN</div>
+                            <div class="info"><?php echo get_field('ubicacion_' . $i)['address']; ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">FECHA DE EJECUCIÓN</div>
+                            <div class="info"><?php the_field('fecha_de_ejecucion_' . $i); ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">TOTAL A EJECUTAR</div>
+                            <div class="info"><?php the_field('total_a_ejecutar_' . $i); ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">TOTAL EJECUTADO</div>
+                            <div class="info"><?php the_field('total_ejecutado_' . $i); ?></div>
+                        </div>
+                        <div class="group">
+                            <div class="label">ACTIVIDADES EJECUTADAS</div>
+                            <div class="info"><?php the_field('actividades_ejecutadas_' . $i); ?></div>
+                        </div>
                     </div>
-                    <div class="group">
-                        <div class="label">ENTIDAD CONTRATANTE</div>
-                        <div class="info"><?php the_field('entidad_contratante_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">CONTRATISTA</div>
-                        <div class="info"><?php the_field('contratista_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">UBICACIÓN</div>
-                        <div class="info"><?php the_field('ubicacion_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">FECHA DE EJECUCIÓN</div>
-                        <div class="info"><?php the_field('fecha_de_ejecucion_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">TOTAL A EJECUTAR</div>
-                        <div class="info"><?php the_field('total_a_ejecutar_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">TOTAL EJECUTADO</div>
-                        <div class="info"><?php the_field('total_ejecutado_' . $i); ?></div>
-                    </div>
-                    <div class="group">
-                        <div class="label">ACTIVIDADES EJECUTADAS</div>
-                        <div class="info"><?php the_field('actividades_ejecutadas_' . $i); ?></div>
-                    </div>
-                </div>
                 <?php } ?>
             </div>
 
         </div>
         <div class="section-div-bottom"></div>
 
-        <?php for($j = 1; $j <= 2; $j++) { ?>
-        <div class="section section-white <?php echo $j === 2 ? 'hidden' : '' ?>" id="table_<?php echo $j; ?>">
-            <div class="title">PRODUCTOS</div>
-            <?php the_field('productos_' . $j); ?>
-        </div>
+        <?php for ($j = 1; $j <= 2; $j++) { ?>
+            <div class="section section-white <?php echo $j === 2 ? 'hidden' : '' ?>" id="table_<?php echo $j; ?>">
+                <div class="title">PRODUCTOS</div>
+                <?php the_field('productos_' . $j); ?>
+            </div>
         <?php } ?>
 
         <?php
