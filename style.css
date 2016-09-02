@@ -540,7 +540,7 @@ a {
 	padding-top: 150px;
 	padding-bottom: 100px;
 }
-.quienes .mision-vision .dark {
+.dark {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -551,8 +551,8 @@ a {
 }
 .quienes #mision {
 	position: relative;
-	-webkit-clip-path: polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
-	clip-path:         polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+	-webkit-clip-path: polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 100%);
+	clip-path:         polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 100%);
 }
 .quienes #mision img {
 	position: absolute;
@@ -576,7 +576,7 @@ a {
 	clip-path:         polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
 }
 .quienes .padding-top {
-	height: 212px;
+	height: 215px;
 }
 .quienes .mision-vision .text {
 	color: white;
@@ -606,9 +606,15 @@ a {
 	color: black;
 }
 .quienes .quarry-header-image {
-	-webkit-clip-path: polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
-	clip-path:         polygon(0% 0%, 100% 0%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
+	clip-path:         polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
 }
+.quienes .quarry-header-image-background {
+	background-color: white;
+	width: 100%;
+	height: 225px;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
+	clip-path:         polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
 }
 .page-content-wrapper .text img {
 	padding: 20px 0px;

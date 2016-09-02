@@ -26,9 +26,11 @@ window.onload = function() {
 document.getElementById('panel').onscroll = function() {
     if(this.scrollTop < 122) {
         jQuery('.quarry-header-image').height(200 - this.scrollTop);
+        jQuery('.quarry-header-image-background').height(215 - this.scrollTop);
     }
     else {
         jQuery('.quarry-header-image').height(80);
+        jQuery('.quarry-header-image-background').height(95);
     }
 }
 

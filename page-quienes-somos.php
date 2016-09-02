@@ -3,8 +3,11 @@
 <?php while (have_posts()) :
 the_post(); ?>
 
+<div class="quarry-header-image-background fixed"></div>
 <div class="quarry-header-image fixed"
-     style=" background: url(<?php the_field('imagen_de_cabecera'); ?>) center bottom no-repeat; background-size: cover;"></div>
+     style=" background: url(<?php the_field('imagen_de_cabecera'); ?>) center bottom no-repeat; background-size: cover;">
+         <div class="dark"></div>
+     </div>
 
 <div class="title fixed"><?php the_title(); ?></div>
 <div id="menu-icon" class="fixed">
