@@ -63,12 +63,14 @@ the_post(); ?>
                 <div class="info"><?php the_field('actividades_ejecutadas'); ?></div>
             </div>
             <div class="group">
-                <?php $images = get_attached_media('image'); ?>
+                <?php if (function_exists('easy_image_gallery_get_image_ids')) {
+                    $images = easy_image_gallery_get_image_ids();
+                } ?>
                 <div class="carousel">
-                    <?php foreach($images as $image) { ?>
-                    <div class="img-container"
-                         style="background: url(<?php echo $image->guid; ?>) center center no-repeat; background-size: cover;">
-                    </div>
+                    <?php foreach ($images as $image) { ?>
+                        <div class="img-container"
+                             style="background: url(<?php echo wp_get_attachment_url($image); ?>) center center no-repeat; background-size: cover;">
+                        </div>
                     <?php } ?>
                 </div>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
@@ -78,14 +80,6 @@ the_post(); ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
                      onclick="goFull()">
             </div>
-            <!--<div class="group">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/left.svg" class="control">
-                    <div class="center"></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control">
-                    <div class="center"></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/right.svg" class="control">
-
-                </div>-->
         </div>
 
         <div class="section-div-top"></div>
@@ -103,8 +97,10 @@ the_post(); ?>
                 };
             </script>
             <div id="map-container"></div>
-            <?php endwhile;
-            else: ?>
-                <?php _e('Sorry, no pages matched your criteria.', 'textdomain'); ?>
-            <?php endif; ?>
-            <?php get_footer(); ?>
+        </div>
+        <?php endwhile;
+        else: ?>
+            <?php _e('Sorry, no pages matched your criteria.', 'textdomain'); ?>
+        <?php endif; ?>
+
+        <?php get_footer(); ?>

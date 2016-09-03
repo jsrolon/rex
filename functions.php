@@ -237,3 +237,6 @@ add_action('wp_enqueue_scripts', 'rex_add_theme_styles');
 
 // functions that are executed after theme setup
 add_action('after_setup_theme', 'rex_theme_prefix_setup');
+
+// remove the gallery
+remove_filter( 'the_content', 'easy_image_gallery_append_to_content' );
