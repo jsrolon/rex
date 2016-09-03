@@ -297,6 +297,18 @@ a {
 	padding-top: 100%;
 	top: 20px;
 }
+.proyectos .svgContainer {
+	width: 100%;
+	height: 100%;
+}
+.proyectos .svgContainer svg {
+	width: 100%;
+	height: 100%;
+}
+.proyectos .svgContainer svg image {
+	opacity: 0.5;
+	cursor: pointer;
+}
 .proyectos .images-circle-wrapper img {
 	width: 100%;
 	height: auto;
@@ -307,7 +319,7 @@ a {
 .proyectos .images-circle-wrapper .name {
 	text-align: center;
 	position: absolute;
-	width: 100%;
+	width: auto;
 }
 .proyectos .images-circle-wrapper .hover {
 	color: black !important;
@@ -906,81 +918,30 @@ a {
 	.proyectos .images-circle-wrapper .name {
 		color: #999999;
 	}
+	.proyectos .images-circle-wrapper #name_1 {
+		top: 2px;
+    	left: 302px;
+	}
+	.proyectos .images-circle-wrapper #name_2 {
+		top: 180px;
+    	left: 408px;
+	}
+	.proyectos .images-circle-wrapper #name_3 {
+		top: 354px;
+    	left: 338px;
+	}
+	.proyectos .images-circle-wrapper #name_4 {
+		 top: 354px;
+    	right: 338px;
 
-	.proyectos .images-circle-wrapper .imagesCircle{
-		position: absolute;
-    	opacity: 0.5;
 	}
-	.proyectos .images-circle-wrapper #img1  {
-	    left: 200px;
-	    top: 0;
-	    width: 174px;
-	    height: 150px;
-	    -webkit-clip-path: url(#svgPath1);
-	    clip-path: url(#svgPath1);
+	.proyectos .images-circle-wrapper #name_5 {
+		top: 180px;
+		right: 408px;
 	}
-	.proyectos .images-circle-wrapper #img2  {
-	    left: 286.6px;
-	    top: 100px;
-	    width: 114px;
-	    height: 200px;
-	    -webkit-clip-path: url(#svgPath2);
-	    clip-path: url(#svgPath2);
-	}
-	.proyectos .images-circle-wrapper #img3  {
-	    left: 200px;
-	    top: 250px;
-	    width: 174px;
-	    height: 150px;
-	    -webkit-clip-path: url(#svgPath3);
-	    clip-path: url(#svgPath3);
-	}
-	.proyectos .images-circle-wrapper #img4  {
-	    left: 26.8px;
-	    top: 250px;
-	    width: 174px;
-	    height: 150px;
-	    -webkit-clip-path: url(#svgPath4);
-	    clip-path: url(#svgPath4);
-	}
-	.proyectos .images-circle-wrapper #img5  {
-	    left: 0px;
-	    top: 100px;
-	    width: 114px;
-	    height: 200px;
-	    -webkit-clip-path: url(#svgPath5);
-	    clip-path: url(#svgPath5);
-	}
-	.proyectos .images-circle-wrapper #img6  {
-	    left: 26.8px;
-	    top: 0px;
-	    width: 174px;
-	    height: 150px;
-	    -webkit-clip-path: url(#svgPath6);
-	    clip-path: url(#svgPath6);
-	}
-	.proyectos .images-circle-wrapper #edificacion {
-		top: 25px;
-		left: 200px;
-	}
-	.proyectos .images-circle-wrapper #estabilizacion {
-		top: 25px;
-		right: 200px;
-	}
-	.proyectos .images-circle-wrapper #hidraulicas {
-		top: 250px;
-		left: 235px;
-	}
-	.proyectos .images-circle-wrapper #restauracion {
-		top: 250px;
-		right: 250px;
-	}
-	.proyectos .images-circle-wrapper #movimientos {
-		top: 410px;
-	}
-	.proyectos .images-circle-wrapper #quienes {
-		top: 200px;
-		right: 250px;
+	.proyectos .images-circle-wrapper #name_6 {
+		top: 2px;
+    	right: 308px;
 	}
 	.proyectos .images-circle-wrapper #hseq {
 		top: 200px;
