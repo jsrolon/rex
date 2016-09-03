@@ -289,12 +289,10 @@ a {
 	text-decoration: none;
 }
 .proyectos .images-circle-wrapper {
-	width: calc(100% - 40px);
 	position: relative;
 	max-width: 400px;
 	font-size: 12px;
 	font-weight: bold;
-	padding-top: 100%;
 	top: 20px;
 }
 .proyectos .svgContainer {
@@ -333,24 +331,29 @@ a {
 .proyectos .images-circle-wrapper path {
 	cursor: pointer;
 }
-.proyectos .images-circle-wrapper #edificacion {
-	top: 12%;
-	left: 30%;
+.proyectos .images-circle-wrapper #name_1 {
+	top: 38px;
+    left: 164px;
 }
-.proyectos .images-circle-wrapper #estabilizacion {
-	top: 12%;
-	right: 30%;
+.proyectos .images-circle-wrapper #name_2 {
+	top: 137px;
+    left: 218px;
 }
-.proyectos .images-circle-wrapper #hidraulicas {
-	top: 50%;
-	left: 40%;
+.proyectos .images-circle-wrapper #name_3 {
+	top: 244px;
+    left: 164px;
 }
-.proyectos .images-circle-wrapper #restauracion {
-	top: 50%;
-	right: 40%;
+.proyectos .images-circle-wrapper #name_4 {
+	top: 244px;
+    right: 164px;
 }
-.proyectos .images-circle-wrapper #movimientos {
-	top: 76%;
+.proyectos .images-circle-wrapper #name_5 {
+	top: 137px;
+    right: 206px;
+}
+.proyectos .images-circle-wrapper #name_6 {
+	   top: 38px;
+    right: 164px;
 }
 .proyectos .images-circle-wrapper #quienes {
 	top: 50%;
