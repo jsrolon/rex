@@ -89,6 +89,8 @@ body,html {
 }
 .options .menu ul li {
 	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .options .menu > ul > li.current_page_item > a {
 	font-weight: bold;
