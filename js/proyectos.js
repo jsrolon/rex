@@ -39,13 +39,36 @@ window.onload = function() {
         jQuery('#' + id + '_a').mouseenter(changeOpacityImages);
         jQuery('#' + id + '_a').mouseleave(changeOpacityImagesOriginal);
     })
+
+    jQuery('.imagesCircle').mouseenter(function() {
+        jQuery(this).fadeTo("fast",1);
+        var id = this.id.split('_')[1];
+        jQuery('#name_' + id).addClass('hover');
+    });
+
+    jQuery('.name').mouseenter(function() {
+        jQuery(this).addClass('hover');
+        var id = this.id.split('_')[1];
+        jQuery('#image_' + id).fadeTo("fast",1);
+    });
+
+    jQuery('.imagesCircle').mouseleave(function() {
+        jQuery(this).fadeTo("fast",0.5);
+        var id = this.id.split('_')[1];
+        jQuery('#name_' + id).removeClass('hover');
+    });
+
+    jQuery('.name').mouseleave(function() {
+        jQuery(this).removeClass('hover');
+        var id = this.id.split('_')[1];
+        jQuery('#image_' + id).fadeTo("fast",0.5);
+    });
 }
 
 function changeOpacityImages() {
     var id = this.id.split('_')[0];
-    jQuery('#' + id).addClass('hover');
-    jQuery('#' + id + '_a').addClass('selected');
-    jQuery('#' + id + '_img').addClass('show-opacity');
+    jQuery('#name_' + id).addClass('hover');
+    jQuery('#image_' + id).addClass('show-opacity');
 }
 
 function changeOpacityImagesOriginal() {
