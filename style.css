@@ -18,12 +18,17 @@ Version: 0.1
 	src: url('fonts/AvenirNextLTPro-Bold.otf');
 	font-weight: bold;
 }
+@font-face {
+	font-family: 'Pirulen';
+	src: url('fonts/pirulen.ttf');
+	font-weight: normal;
+}
 body,html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	font-family: "Avenir Next";
+	font-family: "Calibri";
 	font-weight: 400;
 	overflow: hidden;
 }
@@ -387,6 +392,7 @@ a {
 	z-index: 1;
 	top: 0;
 	text-transform: uppercase;
+	font-family: 'Pirulen';
 }
 .proyecto .description {
 	font-size: 13px;
