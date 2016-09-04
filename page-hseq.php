@@ -28,7 +28,7 @@ the_post(); ?>
     <div class="page-content-wrapper">
         <div class="padding-top"></div>
 
-        <div class="text">
+        <div class="section">
             <img src="<?php the_field('imagen_certificado'); ?>"/>
             <div class="right">
                 <?php the_field('primera_seccion'); ?>
@@ -42,9 +42,9 @@ the_post(); ?>
             </div>
         </div>
 
-        <div class="text">
+        <div class="section">
             <div class="left">
-                <?php the_field('tercera_seccion'); ?>
+                <?php the_field('primera_seccion'); ?>
             </div>
             <img src="<?php the_field('imagen_premio'); ?>"/>
         </div>

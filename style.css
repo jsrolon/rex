@@ -244,13 +244,26 @@ body,html {
 	padding-left: 20px;
 	text-align: justify;
 	display: flex;
-	-ms-flex-direction: column;
+	/*-ms-flex-direction: column;
 	-webkit-flex-direction: column;
 	flex-direction: column;
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	align-items: center;
-	white-space: pre-wrap;
+	white-space: pre-wrap;*/
+}
+.quienes .section {
+	width: calc(100% - 40px);
+	margin-left: 20px;
+	text-align: justify;
+	font-size: 14px;
+}
+.quienes .section img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.quienes .section .right, .quienes .section .left {
+	margin: 20px 0;
 }
 .page-content-wrapper .text p {
 	margin: 0;
@@ -1116,8 +1129,7 @@ table tr:nth-child(even) td {
 		width: calc(100% - 100px);
 		padding-left: 50px;
 		text-align: justify;
-		white-space: pre-wrap;
-		-ms-flex-direction: row;
+		/*-ms-flex-direction: row;
 		-webkit-flex-direction: row;
 		flex-direction: row;
 		-ms-flex-align: center;
@@ -1125,7 +1137,7 @@ table tr:nth-child(even) td {
 		align-items: center;
 		-ms-flex-pack: center;
 		-webkit-justify-content: center;
-		justify-content: center;
+		justify-content: center;*/
 	}
 	.quienes .title {
 		width: 100%;
@@ -1829,9 +1841,8 @@ table tr:nth-child(even) td {
 		width: calc(100% - 100px);
 		padding-left: 50px;
 		text-align: justify;
-		white-space: pre-wrap;
 		display: block;
-		-ms-flex-direction: row;
+		/*-ms-flex-direction: row;
 		-webkit-flex-direction: row;
 		flex-direction: row;
 		-ms-flex-align: center;
@@ -1839,7 +1850,7 @@ table tr:nth-child(even) td {
 		align-items: center;
 		-ms-flex-pack: center;
 		-webkit-justify-content: center;
-		justify-content: center;
+		justify-content: center;*/
 	}
 	.quienes .title {
 		width: 100%;
@@ -1988,6 +1999,28 @@ table tr:nth-child(even) td {
 		width: auto;
 		height: 100%;
 		max-height: 600px;
+	}
+	.quienes .section {
+		width: calc(100% - 100px);
+		margin-left: 50px;
+	}
+	.quienes .section img {
+		width: calc(50% - 29px);
+		vertical-align: middle;
+	}
+	.quienes .section .right {
+		width: calc(50% - 25px);
+		margin: 0;
+		margin-left: 50px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.quienes .section .left {
+		width: calc(50% - 25px);
+		margin: 0;
+		margin-right: 50px;
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 
