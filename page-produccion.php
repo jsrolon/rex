@@ -80,7 +80,9 @@ the_post(); ?>
         <?php for ($j = 1; $j <= 2; $j++) { ?>
             <div class="section section-white <?php echo $j === 2 ? 'hidden' : '' ?>" id="table_<?php echo $j; ?>">
                 <div class="title">PRODUCTOS</div>
-                <?php the_field('productos_' . $j); ?>
+                <div class="tableContainer">
+                    <?php the_field('productos_' . $j); ?>
+                </div>
             </div>
         <?php } ?>
 

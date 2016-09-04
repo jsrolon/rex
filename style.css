@@ -734,11 +734,17 @@ a {
 	text-align: center;
 	padding-bottom: 10px;
 }
-.proyecto .section .tableContainer {
+.tableContainer {
 	width: calc(100% - 40px);
 	margin-left: 20px;
 }
-.proyecto .section table {
+.tableFirst {
+    background-color: #9FA14E !important;
+    font-weight: bold !important;
+    text-align: left;
+    width: 23vw !important;
+}
+table {
 	width: 100% !important;
 	font-size: 14px;
 	table-layout: fixed;
@@ -749,8 +755,8 @@ table,th,td {
 	height: auto !important;
 	text-align: center;
 }
-table tr td:first-child {
-	background-color: #9FA14E;
+table tr td[rowspan] {
+	background-color: #9FA14E !important;
 	font-weight: bold;
 	text-align: left;
 	width: 23vw !important;
@@ -758,8 +764,13 @@ table tr td:first-child {
 table tr td:nth-child(3), table tr td:nth-child(4) {
 	width: 36px !important;
 }
+table tr:nth-child(odd) td {
+    background-color: #EBEBEB;
+    font-weight: normal;
+    text-align: center;
+}
 table tr:nth-child(even) td {
-    background-color: white !important;
+    background-color: white;
     font-weight: normal;
     text-align: center;
 }

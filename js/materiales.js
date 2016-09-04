@@ -149,6 +149,14 @@ window.onload = function() {
     jQuery('.tab').mouseleave(function(event) {
         jQuery(this).removeClass("selected-hover");
     });
+
+    var rows = jQuery('tbody').children();
+    var firstLenght = jQuery(jQuery('tbody').children()[0]).children().length;
+    for(var i = 0; i < rows.length; i++) {
+        if(jQuery(rows[i]).children().length == firstLenght) {
+            jQuery(jQuery(rows[i]).children()[0]).addClass('tableFirst');
+        }
+    }
 }
 
 function goLeft() {
