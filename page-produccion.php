@@ -13,6 +13,59 @@ the_post(); ?>
         <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
     </svg>
 </div>
+<?php
+if (class_exists('Envira_Gallery_Lite')) {
+    $gallery_1_imgs = $envira_gallery_lite->get_gallery_by_slug('cantera-1')['gallery'];
+    $gallery_2_imgs = $envira_gallery_lite->get_gallery_by_slug('cantera-2')['gallery'];
+}
+?>
+<div class="proyecto">
+    <div class="popup general-info hide-z-index" id="full-carousel-1">
+        <div class="group">
+            <div class="carousel carouselFull">
+                <?php foreach ($gallery_1_imgs as $image) { ?>
+                    <div class="carousel-slide">
+                        <img data-lazy="<?php echo $image['src']; ?>">
+                    </div>
+                <?php } ?>
+            </div>
+            <!--<img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left" onclick="goLeft()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" id="right" onclick="goRight()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" id="full" onclick="exitFull()">-->
+        </div>
+        <div class="group">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
+                 onclick="goLeft()">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
+                 onclick="exitFull()">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                 onclick="goRight()">
+        </div>
+    </div>
+
+    <div class="popup general-info hide-z-index" id="full-carousel-2">
+        <div class="group">
+            <div class="carousel carouselFull">
+                <?php foreach ($gallery_2_imgs as $image) { ?>
+                    <div class="carousel-slide">
+                        <img data-lazy="<?php echo $image['src']; ?>">
+                    </div>
+                <?php } ?>
+            </div>
+            <!--<img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left" onclick="goLeft()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" id="right" onclick="goRight()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" id="full" onclick="exitFull()">-->
+        </div>
+        <div class="group">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
+                 onclick="goLeft()">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
+                 onclick="exitFull()">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                 onclick="goRight()">
+        </div>
+    </div>
+</div>
 <main id="panel">
     <div class="page-content-wrapper">
         <script type="text/javascript">
@@ -85,6 +138,52 @@ the_post(); ?>
                 </div>
             </div>
         <?php } ?>
+
+        <div class="proyecto">
+            <div class="general-info">
+                <div id="carousel-1" class="group">
+                    <div class="carousel">
+                        <?php
+                        foreach ($gallery_1_imgs as $img) {
+                            ?>
+                            <div class="img-container"
+                                 style="background: url(<?php echo $img['src']; ?>) center center no-repeat; background-size: cover;">
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
+                         onclick="goLeft()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                         id="right"
+                         onclick="goRight()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                         onclick="goFull()">
+                </div>
+
+                <div id="carousel-2" class="group">
+                    <div class="carousel">
+                        <?php
+                        foreach ($gallery_2_imgs as $img) {
+                            ?>
+                            <div class="img-container"
+                                 style="background: url(<?php echo $img['src']; ?>) center center no-repeat; background-size: cover;">
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
+                         onclick="goLeft()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                         id="right"
+                         onclick="goRight()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                         onclick="goFull()">
+                </div>
+            </div>
+        </div>
 
         <?php
         endwhile; //resetting the page loop
