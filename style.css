@@ -228,7 +228,7 @@ body,html {
 	fill: black !important;
 }
 .page-content-wrapper {
-	min-height: calc(100% - 170px);
+	min-height: calc(100% - 133px);
 }
 .contacto .page-content-wrapper {
 	height: calc(100% - 102px);
@@ -274,8 +274,8 @@ body,html {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	height: 100px;
-	padding-top: 70px;
+	height: 65px;
+	padding-top: 68px;
 }
 #footer img {
 	display: none;
@@ -920,12 +920,12 @@ table tr:nth-child(even) td {
 		top: 20px;
 	}
 	#footer {
-		height: 100px;
+		height: 80px;
 		padding: 0;
-		padding-top: 80px;
+		padding-top: 64px;
 	}
 	#footer img {
-		width: 110px;
+		width: 90px;
 		height: auto;
 		display: inline-block;
 	}
@@ -935,7 +935,7 @@ table tr:nth-child(even) td {
 		vertical-align: 15px;
 	}
 	.page-content-wrapper {
-		min-height: calc(100% - 180px);
+		min-height: calc(100% - 143px);
 	}
 	.contacto .page-content-wrapper {
 		height: calc(100% - 132px);
@@ -1100,7 +1100,7 @@ table tr:nth-child(even) td {
 		transform: translateY(-25%);
 	}
 	.proyectos .title {
-		top: calc(31%);
+		top: calc(50% - 116px);
 		margin-left: calc(50% + 78px);
 		width: 100px !important;
 	}
@@ -1626,12 +1626,12 @@ table tr:nth-child(even) td {
 		top: 20px;
 	}
 	#footer {
-		height: 100px;
+		height: 80px;
 		padding: 0;
-		padding-top: 80px;
+		padding-top: 64px;
 	}
 	#footer img {
-		width: 110px;
+		width: 90px;
 		height: auto;
 		display: inline-block;
 	}
@@ -1641,7 +1641,7 @@ table tr:nth-child(even) td {
 		vertical-align: 15px;
 	}
 	.page-content-wrapper {
-		min-height: calc(100% - 180px);
+		min-height: calc(100% - 143px);
 	}
 	.contacto .page-content-wrapper {
 		height: calc(100% - 132px);
@@ -1800,7 +1800,7 @@ table tr:nth-child(even) td {
 		transform: translateY(-25%);
 	}
 	.proyectos .title {
-		top: calc(31%);
+		top: calc(50% - 116px);
 		margin-left: calc(256px + calc(50% - 178px));
 		width: 100px !important;
 	}
