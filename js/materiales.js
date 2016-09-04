@@ -100,7 +100,7 @@ window.onload = function() {
     //4.1011504, -73.6392484
 
     var marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
-    marker.bindPopup("<b>Dirección:</b> " + selectedLocations[0]['address'] + "<hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 312 235 34 19").openPopup();
+    marker.bindPopup("<b>Dirección:</b> " + selectedLocations[0]['address'] + "<hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 312 235 34 19<hr><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[0]['lat'] + "+" + selectedLocations[0]['lng'] + "/@" + selectedLocations[0]['lat'] + "," + selectedLocations[0]['lng'] + ",15z'>Ver en Google Maps</a>").openPopup();
     marker.addTo(mymap);
     marker.on('click', function(e) {
         marker.setIcon(greenIcon);
