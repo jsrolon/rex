@@ -64,7 +64,7 @@ jQuery("document").ready(function () {
     });
 
     var h = jQuery('.title').height() + 40 + jQuery('.quarry-header-image').height();
-    jQuery('.padding-top').height(h);
+    //jQuery('.padding-top').height(h);
 
     jQuery('.carousel-slide').height(jQuery('.slick-track').height());
     //jQuery('#full-carousel').hide();
