@@ -51,7 +51,7 @@ $the_query = new WP_Query(
             <?php wp_reset_postdata(); ?>
 
         <?php else : ?>
-            <p><?php _e('Lo sentimos, no encontramos proyectos con esta categoría.'); ?></p>
+            <p class="emptyProjectsList"><?php _e('Lo sentimos, no encontramos proyectos con esta categoría.'); ?></p>
         <?php endif; ?>
     </div>
     <?php get_footer(); ?>

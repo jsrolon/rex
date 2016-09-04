@@ -93,6 +93,12 @@
 
                 </svg>
             </div>
+            <div class="facts" id="fact_1"><?php the_field('dato_rehabilitaciones_ambientales'); ?></div>
+            <div class="facts" id="fact_2"><?php the_field('dato_obras_hidraulicas'); ?></div>
+            <div class="facts" id="fact_3"><?php the_field('dato_movimientos_tierra'); ?></div>
+            <div class="facts" id="fact_4"><?php the_field('dato_excavaciones_profundas'); ?></div>
+            <div class="facts" id="fact_5"><?php the_field('dato_obras_estabilizacion'); ?></div>
+            <div class="facts" id="fact_6"><?php the_field('dato_edificacion_urbanismo'); ?></div>
         </div>
 
     </div>
