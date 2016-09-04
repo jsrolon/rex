@@ -37,7 +37,7 @@ if (class_exists('Envira_Gallery_Lite')) {
             <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
                  onclick="goLeft()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
-                 onclick="exitFull()">
+                 onclick="exitFull1()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
                  onclick="goRight()">
         </div>
@@ -60,7 +60,7 @@ if (class_exists('Envira_Gallery_Lite')) {
             <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
                  onclick="goLeft()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
-                 onclick="exitFull()">
+                 onclick="exitFull2()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
                  onclick="goRight()">
         </div>
@@ -141,7 +141,7 @@ if (class_exists('Envira_Gallery_Lite')) {
 
         <div class="proyecto">
             <div class="general-info">
-                <div id="carousel-1" class="group">
+                <div id="carousel_1" class="group carousels">
                     <div class="carousel">
                         <?php
                         foreach ($gallery_1_imgs as $img) {
@@ -159,10 +159,10 @@ if (class_exists('Envira_Gallery_Lite')) {
                          id="right"
                          onclick="goRight()">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                         onclick="goFull()">
+                         onclick="goFull1()">
                 </div>
 
-                <div id="carousel-2" class="group">
+                <div id="carousel_2" class="group carousels hidden">
                     <div class="carousel">
                         <?php
                         foreach ($gallery_2_imgs as $img) {
@@ -180,7 +180,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                          id="right"
                          onclick="goRight()">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                         onclick="goFull()">
+                         onclick="goFull2()">
                 </div>
             </div>
         </div>

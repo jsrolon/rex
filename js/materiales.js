@@ -4,6 +4,9 @@
 
 window.onload = function() {
 
+    var h = window.innerHeight - 100;
+    jQuery('.carouselFull').height(h);
+
     /*var w = window.innerWidth;
      var h = window.innerHeight;
      _.each(jQuery('.popup-img'), function(img) {
@@ -128,7 +131,10 @@ window.onload = function() {
         jQuery(this).addClass("selected");
         jQuery('.tab-content').addClass('hidden');
         jQuery('#desc_' + event.target.id).removeClass('hidden');
+        jQuery('.carousels').addClass('hidden');
+        jQuery('#carousel_' + event.target.id).removeClass('hidden');
         jQuery('.section-white').addClass('hidden');
+        setTimeout(function() {jQuery('.carousel').slick('slickPrev');},0);
         jQuery('#table_' + event.target.id).removeClass('hidden');
         if(event.target.id == 1) {
             marker.setIcon(greenIcon);
@@ -167,10 +173,18 @@ function goRight() {
     jQuery('.carousel').slick('slickNext');
 }
 
-function exitFull() {
-    jQuery('#full-carousel').addClass('hide-z-index');
+function exitFull1() {
+    jQuery('#full-carousel-1').addClass('hide-z-index');
 }
 
-function goFull() {
-    jQuery('#full-carousel').removeClass('hide-z-index');
+function exitFull2() {
+    jQuery('#full-carousel-2').addClass('hide-z-index');
+}
+
+function goFull1() {
+    jQuery('#full-carousel-1').removeClass('hide-z-index');
+}
+
+function goFull2() {
+    jQuery('#full-carousel-2').removeClass('hide-z-index');
 }
