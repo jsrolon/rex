@@ -80,9 +80,9 @@ the_post(); ?>
 
         <div class="section-div-top"></div>
         <div class="section">
-
-            <?php the_content(); ?>
-
+            <div class="tableContainer">
+                <?php the_content(); ?>
+            </div>
         </div>
         <div class="section-div-bottom"></div>
         <div id="map">

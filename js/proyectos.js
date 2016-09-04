@@ -35,23 +35,27 @@ window.onload = function() {
         jQuery(this).fadeTo("fast",1);
         var id = this.id.split('_')[1];
         jQuery('#name_' + id).addClass('hover');
+        jQuery('#fact_' + id).fadeTo("fast",1);
     });
 
     jQuery('.name').mouseenter(function() {
         jQuery(this).addClass('hover');
         var id = this.id.split('_')[1];
         jQuery('#image_' + id).fadeTo("fast",1);
+        jQuery('#fact_' + id).fadeTo("fast",1);
     });
 
     jQuery('.imagesCircle').mouseleave(function() {
         jQuery(this).fadeTo("fast",0.5);
         var id = this.id.split('_')[1];
         jQuery('#name_' + id).removeClass('hover');
+        jQuery('#fact_' + id).fadeTo("fast",0);
     });
 
     jQuery('.name').mouseleave(function() {
         jQuery(this).removeClass('hover');
         var id = this.id.split('_')[1];
         jQuery('#image_' + id).fadeTo("fast",0.5);
+        jQuery('#fact_' + id).fadeTo("fast",0);
     });
 }

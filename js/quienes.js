@@ -1,4 +1,4 @@
-window.onload = function() {
+jQuery("document").ready(function() {
 
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
@@ -8,7 +8,13 @@ window.onload = function() {
         'touch': false
     });
 
+    console.log(slideout);
+    document.addEventListener('click', function() {
+        
+    })
+
     jQuery('#menu-icon').click(function() {
+        console.log(':)');
         slideout.toggle();
     });
 
@@ -20,7 +26,7 @@ window.onload = function() {
     slideout.on('beforeclose', function() {
         jQuery('.fixed').removeClass('fixed-open');
     });
-}
+});
 
 
 document.getElementById('panel').onscroll = function() {
