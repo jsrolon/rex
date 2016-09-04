@@ -1194,8 +1194,10 @@ a {
 		width: 25%;
 	}
 	.proyecto #map {
-		margin-top: -107px;
-		margin-bottom: -109px;
+        width: 100%;
+        height: 500px;
+        margin-top: -107px;
+        margin-bottom: -109px;
 	}
 	.proyecto .popup .carousel img {
 		width: auto;

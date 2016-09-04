@@ -96,7 +96,7 @@ the_post(); ?>
                     lng: <?php echo get_field('ubicacion')['lng']; ?>
                 };
             </script>
-            <div id="map-container"></div>
+            <div id="map-container">
         </div>
         <?php endwhile;
         else: ?>
