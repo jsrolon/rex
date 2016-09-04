@@ -32,7 +32,7 @@
 
 if (is_single()) {
     $page_class = 'proyecto';
-} else if (is_page('hseq') || is_page('quienes-somos')) {
+} else if (is_page('hseq') || is_page('quienes-somos') || is_page('empresas-asociadas')) {
     $page_class = 'quienes';
 } else if (is_page('contacto')) {
     $page_class = 'contacto';
