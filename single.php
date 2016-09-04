@@ -13,18 +13,17 @@ the_post(); ?>
         <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
     </svg>
 </div>
+<?php if (function_exists('easy_image_gallery_get_image_ids')) {
+    $images = easy_image_gallery_get_image_ids();
+} ?>
 <div class="popup general-info hide-z-index" id="full-carousel">
     <div class="group">
         <div class="carousel">
-            <div class="carousel-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/20150311_124551.jpg">
-            </div>
-            <div class="carousel-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/20160310_075037.jpg">
-            </div>
-            <div class="carousel-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/_MG_7748.jpg">
-            </div>
+            <?php foreach ($images as $image) { ?>
+                <div class="carousel-slide">
+                    <img data-lazy="<?php echo wp_get_attachment_url($image); ?>">
+                </div>
+            <?php } ?>
         </div>
         <!--<img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left" onclick="goLeft()">
         <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" id="right" onclick="goRight()">
@@ -63,13 +62,10 @@ the_post(); ?>
                 <div class="info"><?php the_field('actividades_ejecutadas'); ?></div>
             </div>
             <div class="group">
-                <?php if (function_exists('easy_image_gallery_get_image_ids')) {
-                    $images = easy_image_gallery_get_image_ids();
-                } ?>
                 <div class="carousel">
                     <?php foreach ($images as $image) { ?>
                         <div class="img-container"
-                             style="background: url(<?php echo wp_get_attachment_url($image); ?>) center center no-repeat; background-size: cover;">
+                             style="background: url(<?php echo wp_get_attachment_image_src($image, 'medium_large')[0]; ?>) center center no-repeat; background-size: cover;">
                         </div>
                     <?php } ?>
                 </div>

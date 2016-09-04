@@ -32,7 +32,7 @@ $the_query = new WP_Query(
             <?php while ($the_query->have_posts()) : $the_query->the_post();
                 $post_number = $the_query->current_post + 1; ?>
                 <a href="<?php echo get_permalink(); ?>">
-                    <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID(), 'medium')); ?>
+                    <?php $url = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID(), 'medium_large'), 'medium_large')[0]; ?>
                     <div class="proyect"
                          style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
                          id="<?php echo $post_number; ?>">

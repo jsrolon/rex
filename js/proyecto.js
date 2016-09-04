@@ -32,7 +32,8 @@ window.onload = function () {
         pauseOnHover: false,
         swipe: false,
         swipeToSlide: false,
-        touchMove: false
+        touchMove: false,
+        lazyLoad: 'ondemand',
     });
 
     var slideout = new Slideout({

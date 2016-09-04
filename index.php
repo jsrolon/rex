@@ -2,6 +2,7 @@
 <main id="panel" class="index">
     <div class="index-carousel">
         <?php
+        $do_not_duplicate = array();
         $categories = get_categories();
 
         foreach ($categories as $category) {
@@ -9,6 +10,7 @@
                 'cat' => $category->term_id,
                 'post_type' => 'rex-project',
                 'posts_per_page' => '1',
+                'post__not_in' => $do_not_duplicate
             );
 
             $query = new WP_Query($args);
@@ -18,6 +20,7 @@
                 <?php while ($query->have_posts()) {
 
                     $query->the_post();
+                    $do_not_duplicate[] = $post->ID;
                     ?>
                     <div class="cover">
                         <div
