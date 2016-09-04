@@ -715,11 +715,40 @@ a {
 	width: 100%;
 	text-align: center;
 }
-.proyecto .section table {
-	width: calc(100% - 40px) !important;
+.proyecto .section .tableContainer {
+	width: calc(100% - 40px);
 	margin-left: 20px;
+}
+.proyecto .section table {
+	width: 100% !important;
 	font-size: 14px;
-	margin-top: 20px;
+	table-layout: fixed;
+}
+table,th,td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	height: auto !important;
+	text-align: center;
+}
+table tr td:first-child {
+	background-color: #9FA14E;
+	font-weight: bold;
+	text-align: left;
+	width: 23vw !important;
+}
+table tr td:nth-child(3), table tr td:nth-child(4) {
+	width: 36px !important;
+}
+table tr:nth-child(even) td {
+    background-color: white !important;
+    font-weight: normal;
+    text-align: center;
+}
+/*.proyecto .section table tr, .proyecto .section table tbody {
+	width: 100% !important;
+}
+.proyecto .section table td {
+	width: 33% !important;
 }
 .proyecto .section table,th,td {
 	border: 1px solid black;
@@ -736,7 +765,7 @@ a {
 }
 .proyecto .section .impar td {
 	background-color: white;
-}
+}*/
 .proyecto .control {
 	cursor: pointer;
 }
@@ -1050,7 +1079,7 @@ a {
 		white-space: nowrap;
 		height: 100%;
 	}
-	.quarry-item-info-text,table {
+	.quarry-item-info-text {
 		display: inline-block;
 		vertical-align: top;
 		width: 50%;
@@ -1154,13 +1183,13 @@ a {
 		right: 110px;
 		bottom: 10px;
 	}
-	.proyecto .section table {
+	/*.proyecto .section table {
 		width: calc(100% - 100px) !important;
 		margin-left: 50px;
 	}
 	.proyecto .section th {
 		width: 25%;
-	}
+	}*/
 	.proyecto #map {
         width: 100%;
         height: 500px;
@@ -1171,6 +1200,9 @@ a {
 		width: auto;
 		height: 100%;
 		max-height: 600px;
+	}
+	table tr td:first-child {
+		width: 6vw !important;
 	}
 }
 
@@ -1389,7 +1421,7 @@ a {
 	width: 100%;
 	text-align: center;
 }
-.materiales .section table {
+/*.materiales .section table {
 	width: calc(100% - 40px) !important;
 	margin-left: 20px;
 	font-size: 14px;
@@ -1410,7 +1442,7 @@ a {
 }
 .materiales .section .impar td {
 	background-color: white;
-}
+}*/
 .materiales .control {
 	cursor: pointer;
 }
@@ -1747,7 +1779,7 @@ a {
 		white-space: nowrap;
 		height: 100%;
 	}
-	.quarry-item-info-text,table {
+	.quarry-item-info-text {
 		display: inline-block;
 		vertical-align: top;
 		width: 50%;
@@ -1852,13 +1884,13 @@ a {
 		right: 110px;
 		bottom: 10px;
 	}
-	.proyecto .section table {
+	/*.proyecto .section table {
 		width: calc(100% - 100px) !important;
 		margin-left: 50px;
 	}
 	.proyecto .section th {
 		width: 25%;
-	}
+	}*/
 	.proyecto #map {
 		margin-top: -107px;
 		margin-bottom: -109px;
@@ -1920,13 +1952,13 @@ a {
 		right: 110px;
 		bottom: 10px;
 	}
-	.materiales .section table {
+	/*.materiales .section table {
 		width: calc(100% - 100px) !important;
 		margin-left: 50px;
 	}
 	.materiales .section th {
 		width: 25%;
-	}
+	}*/
 	.materiales #map {
 		margin-top: -107px;
 		margin-bottom: -109px;
