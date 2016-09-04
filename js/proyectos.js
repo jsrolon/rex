@@ -31,15 +31,6 @@ window.onload = function() {
         jQuery('.fixed').removeClass('fixed-open');
     });
 
-    _.each(ids_images, function(id) {
-        jQuery('#' + id).mouseenter(changeOpacityImages);
-        jQuery('#' + id).mouseleave(changeOpacityImagesOriginal);
-        jQuery('#' + id + '_path').mouseenter(changeOpacityImages);
-        jQuery('#' + id + '_path').mouseleave(changeOpacityImagesOriginal);
-        jQuery('#' + id + '_a').mouseenter(changeOpacityImages);
-        jQuery('#' + id + '_a').mouseleave(changeOpacityImagesOriginal);
-    })
-
     jQuery('.imagesCircle').mouseenter(function() {
         jQuery(this).fadeTo("fast",1);
         var id = this.id.split('_')[1];
@@ -63,17 +54,4 @@ window.onload = function() {
         var id = this.id.split('_')[1];
         jQuery('#image_' + id).fadeTo("fast",0.5);
     });
-}
-
-function changeOpacityImages() {
-    var id = this.id.split('_')[0];
-    jQuery('#name_' + id).addClass('hover');
-    jQuery('#image_' + id).addClass('show-opacity');
-}
-
-function changeOpacityImagesOriginal() {
-    var id = this.id.split('_')[0];
-    jQuery('#' + id).removeClass('hover');
-    jQuery('#' + id + '_a').removeClass('selected');
-    jQuery('#' + id + '_img').removeClass('show-opacity');
 }
