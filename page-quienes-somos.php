@@ -5,7 +5,6 @@ the_post(); ?>
 
 <!--<div class="quarry-header-image-background fixed"></div>-->
 <div class="quarry-header-image fixed" style="width: 100%; height: 215px; overflow: hidden; position: relative;">
-<div>hola</div>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 1185px; height: 215px; position:absolute; transform: translateX(-50%); bottom: 0px; left: 50%;" viewbox="0 0 1185 238">
         <defs>
         <clipPath id="svgPath10">
