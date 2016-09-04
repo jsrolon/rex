@@ -71,7 +71,7 @@ the_post(); ?>
         <div class="padding-top"></div>
 
         <div class="text">
-            <div class="subtitle"><b>REX CARGO</b></div>
+            <h2 style="width:100%; text-align: center;">REX CARGO</h2>
         </div>
         <div class="section">
             <img src="<?php the_field('logo'); ?>"/>
