@@ -555,8 +555,8 @@ a {
 }
 .quienes .mision-vision {
 	width: 100%;
-	padding-top: 150px;
-	padding-bottom: 100px;
+	/*padding-top: 150px;
+	padding-bottom: 100px;*/
 }
 .dark {
 	position: absolute;
@@ -569,8 +569,6 @@ a {
 }
 .quienes #mision {
 	position: relative;
-	-webkit-clip-path: polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 100%);
-	clip-path:         polygon(0% 0%, 14% 10%, 33% 2%, 49% 16%, 79% 0%, 100% 6%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 100%);
 }
 .quienes #mision img {
 	position: absolute;
@@ -590,8 +588,6 @@ a {
 	margin-top: -30px;
 	/*top: -52px;
 	margin-bottom: -30px;*/
-	-webkit-clip-path: polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
-	clip-path:         polygon(0% 15%, 14% 6%, 34% 13%, 56% 0%, 76% 15%, 100% 5%, 100% 90%, 76% 100%, 56% 85%, 34% 98%, 14% 91%, 0% 97%);
 }
 .quienes .padding-top {
 	height: 215px;
@@ -600,6 +596,8 @@ a {
 	color: white;
 	height: 100%;
 	display: flex;
+	position: absolute;
+    top: 25px;
 	-ms-flex-direction: row;
 	-webkit-flex-direction: row;
 	flex-direction: row;
@@ -622,10 +620,6 @@ a {
 }
 .quienes #section .text {
 	color: black;
-}
-.quienes .quarry-header-image {
-	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
-	clip-path:         polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 76% 100%, 46% calc(100% - 30px), 34% calc(100% - 10px), 10% calc(100% - 40px), 0% calc(100% - 10px));
 }
 .quienes .quarry-header-image-background {
 	background-color: white;
@@ -717,6 +711,7 @@ a {
 	padding: 0;
 	width: 100%;
 	text-align: center;
+	padding-bottom: 10px;
 }
 .proyecto .section .tableContainer {
 	width: calc(100% - 40px);
@@ -847,6 +842,9 @@ table tr:nth-child(even) td {
 	-ms-flex-pack: center;
 	-webkit-justify-content: center;
 	justify-content: center;
+}
+.quienes #footer {
+    margin-bottom: 79px;
 }
 
 @media (min-width: 430px) {
@@ -1209,6 +1207,9 @@ table tr:nth-child(even) td {
 	}
 	table tr td:first-child {
 		width: 6vw !important;
+	}
+	.quienes #footer {
+    	margin-bottom: 80px;
 	}
 }
 

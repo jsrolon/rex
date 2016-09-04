@@ -80,6 +80,7 @@ the_post(); ?>
 
         <div class="section-div-top"></div>
         <div class="section">
+            <div class="title">CANTIDADES DE OBRA</div>
             <div class="tableContainer">
                 <?php the_content(); ?>
             </div>

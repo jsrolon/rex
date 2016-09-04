@@ -8,11 +8,6 @@ jQuery("document").ready(function() {
         'touch': false
     });
 
-    console.log(slideout);
-    document.addEventListener('click', function() {
-        
-    })
-
     jQuery('#menu-icon').click(function() {
         console.log(':)');
         slideout.toggle();

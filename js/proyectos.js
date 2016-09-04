@@ -58,4 +58,8 @@ window.onload = function() {
         jQuery('#image_' + id).fadeTo("fast",0.5);
         jQuery('#fact_' + id).fadeTo("fast",0);
     });
+
+    jQuery('.imagesCircle').click(function() {
+        window.location.href = jQuery(this).parent().attr("href");
+    });
 }
