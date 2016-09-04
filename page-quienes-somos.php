@@ -70,7 +70,6 @@ the_post(); ?>
             <div class="subtitle">NUESTRO COMPROMISO</div>
 
             <div class="text last"><?php the_field('nuestro_compromiso'); ?></div>
-        <?php the_content(); ?>
 
         <?php
         endwhile; //resetting the page loop
