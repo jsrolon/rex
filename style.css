@@ -615,16 +615,12 @@ a {
 }
 .quienes .mision-vision .text {
 	color: white;
-	height: 100%;
+	height: calc(100% - 200px);
 	display: flex;
 	position: absolute;
-    top: 25px;
-	-ms-flex-direction: row;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
+    top: 140px;
+    overflow-y: auto;
+
 }
 .quienes .subtitle {
 	text-align: center;
@@ -684,7 +680,7 @@ a {
 	padding-bottom: 10px;
 }
 .proyecto .general-info .group {
-	width: calc(100% - 20px);
+	width: calc(100% - 40px);
 	margin-left: 20px;
 	margin-bottom: 10px;
 	position: relative;
@@ -698,8 +694,8 @@ a {
 }
 .proyecto .general-info .group .carousel .img-container {
 	width: 100%;
-	height: 200px;
-	background-color: red;
+	/*height: 200px;
+	background-color: red;*/
 }
 .proyecto .general-info .group #left {
 	position: absolute;
@@ -709,13 +705,13 @@ a {
 }
 .proyecto .general-info .group #right {
 	position: absolute;
-	right: 25px;
+	right: 5px;
 	top: calc(50% - 16px);
 	cursor: pointer;
 }
 .proyecto .general-info .group #full {
 	position: absolute;
-	right: 25px;
+	right: 5px;
 	bottom: 5px;
 	cursor: pointer;
 }
