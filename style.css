@@ -844,9 +844,12 @@ table tr:nth-child(even) td {
 	justify-content: center;
 }
 .quienes #footer {
-    margin-bottom: 79px;
+    /*margin-bottom: 79px;*/
 }
-
+.quienes #panel {
+	margin-top: -215px;
+	height: calc(100% + 135px);
+}
 @media (min-width: 430px) {
 
 	.images-circle-wrapper {
