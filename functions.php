@@ -33,7 +33,7 @@ function rex_add_theme_scripts() {
         wp_enqueue_script('index-script', get_template_directory_uri() . '/js/index.js', NULL, '', true);
     }
 
-    if (is_home() || is_single() || is_page('produccion')) {
+    if (is_home() || is_single() || is_page('produccion') || is_page('empresas-asociadas')) {
         wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', NULL, '', true);
     }
 
@@ -43,8 +43,12 @@ function rex_add_theme_scripts() {
     }
 
     // quienes etc
-    if (is_page('hseq') || is_page('quienes-somos') || is_page('empresas-asociadas')) {
+    if (is_page('hseq') || is_page('quienes-somos')) {
         wp_enqueue_script('quienes', get_template_directory_uri() . '/js/quienes.js', NULL, '', true);
+    }
+
+    if (is_page('empresas-asociadas')) {
+        wp_enqueue_script('empresas-asociadas', get_template_directory_uri() . '/js/empresasAsociadas.js', NULL, '', true);
     }
 
     if (is_category()) {
@@ -223,12 +227,12 @@ function rex_register_required_plugins() {
     tgmpa($plugins, $config);
 }
 
-function action_function_name( $field ) {
+function action_function_name($field) {
     echo '<p>Some extra HTML</p>';
 }
 
 // after each one of the fields are rendered
-add_action( 'acf/render_field', 'action_function_name', 10, 1 );
+add_action('acf/render_field', 'action_function_name', 10, 1);
 
 // add theme plugin requirements
 add_action('tgmpa_register', 'rex_register_required_plugins');
@@ -247,4 +251,4 @@ add_action('wp_enqueue_scripts', 'rex_add_theme_styles');
 add_action('after_setup_theme', 'rex_theme_prefix_setup');
 
 // remove the gallery
-remove_filter( 'the_content', 'easy_image_gallery_append_to_content' );
+remove_filter('the_content', 'easy_image_gallery_append_to_content');
