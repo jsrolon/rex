@@ -355,13 +355,13 @@ a {
 	   top: 38px;
     right: 164px;
 }
-.proyectos .images-circle-wrapper #quienes {
-	top: 50%;
-	right: 42%;
+.proyectos .images-circle-wrapper #name_7 {
+	top: 137px;
+	right: 234px;
 }
-.proyectos .images-circle-wrapper #hseq {
-	top: 50%;
-	left: 42%;
+.proyectos .images-circle-wrapper #name_8 {
+	top: 137px;
+	left: 218px;
 }
 .title {
 	padding: 20px;
@@ -946,9 +946,13 @@ a {
 		top: 2px;
     	right: 308px;
 	}
-	.proyectos .images-circle-wrapper #hseq {
+	.proyectos .images-circle-wrapper #name_7 {
 		top: 200px;
-		left: 270px;
+		right: 410px;
+	}
+	.proyectos .images-circle-wrapper #name_8 {
+		top: 200px;
+		left: 410px;
 	}
 	.title {
 		padding: 0;
