@@ -4,6 +4,9 @@
 
 jQuery("document").ready(function () {
 
+    var h = window.innerHeight - 100;
+    jQuery('.carouselFull').height(h);
+
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),

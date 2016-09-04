@@ -4,6 +4,9 @@
 
 window.onload = function () {
 
+    var h = window.innerHeight - 100;
+    jQuery('.carouselFull').height(h);
+
     /*var w = window.innerWidth;
      var h = window.innerHeight;
      _.each(jQuery('.popup-img'), function(img) {

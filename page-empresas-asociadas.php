@@ -44,7 +44,7 @@ the_post(); ?>
 <div class="proyecto">
     <div class="popup general-info hide-z-index" id="full-carousel">
         <div class="group">
-            <div class="carousel">
+            <div class="carousel carouselFull">
                 <?php foreach ($images as $image) { ?>
                     <div class="carousel-slide">
                         <img data-lazy="<?php echo wp_get_attachment_url($image); ?>">
