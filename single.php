@@ -68,7 +68,10 @@ the_post(); ?>
                 <div class="carousel">
                     <?php foreach ($images as $image) { ?>
                         <div class="img-container"
-                             style="background: url(<?php echo wp_get_attachment_image_src($image, 'medium_large')[0]; ?>) center center no-repeat; background-size: cover;">
+                             style="background: url(<?php
+                             $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
+                             $imgurl = $imgsrc[0];
+                             echo $imgurl; ?>) center center no-repeat; background-size: cover;">
                         </div>
                     <?php } ?>
                 </div>
