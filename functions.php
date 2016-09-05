@@ -83,7 +83,9 @@ function rex_register_project_post_type() {
         'description' => 'Engineering projects performed by Rex.',
         'public' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-        'taxonomies' => array('category'),
+        'taxonomies' => array(
+            'category',
+        ),
     ));
     flush_rewrite_rules();
 }
