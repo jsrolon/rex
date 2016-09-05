@@ -165,51 +165,56 @@ if (class_exists('Envira_Gallery_Lite')) {
 
         <div class="proyecto">
             <div class="general-info">
-                <div id="carousel_1" class="group carousels">
-                    <div class="carousel">
-                        <?php
-                        foreach ($gallery_1_imgs as $img) {
-                            ?>
-                            <div class="img-container"
-                                 style="background: url(<?php
-                                 $imgsrc = $img['src'];
-                                 echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
-                            </div>
+                <?php if (count($gallery_1_imgs) > 0) { ?>
+                    <div id="carousel_1" class="group carousels">
+                        <div class="carousel">
                             <?php
-                        }
-                        ?>
-                    </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
-                         onclick="goLeft()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
-                         id="right"
-                         onclick="goRight()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                         onclick="goFull1()">
-                </div>
-
-                <div id="carousel_2" class="group carousels hidden">
-                    <div class="carousel">
-                        <?php
-                        foreach ($gallery_2_imgs as $img) {
+                            foreach ($gallery_1_imgs as $img) {
+                                ?>
+                                <div class="img-container"
+                                     style="background: url(<?php
+                                     $imgsrc = $img['src'];
+                                     echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
+                                </div>
+                                <?php
+                            }
                             ?>
-                            <div class="img-container"
-                                 style="background: url(<?php
-                                 $imgsrc = $img['src'];
-                                 echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
-                            </div>
-                            <?php
-                        }
-                        ?>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
+                             id="left"
+                             onclick="goLeft()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                             id="right"
+                             onclick="goRight()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                             onclick="goFull1()">
                     </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
-                         onclick="goLeft()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
-                         id="right"
-                         onclick="goRight()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                         onclick="goFull2()">
-                </div>
+                <?php } ?>
+                <?php if (count($gallery_2_imgs) > 0) { ?>
+                    <div id="carousel_2" class="group carousels hidden">
+                        <div class="carousel">
+                            <?php
+                            foreach ($gallery_2_imgs as $img) {
+                                ?>
+                                <div class="img-container"
+                                     style="background: url(<?php
+                                     $imgsrc = $img['src'];
+                                     echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
+                             id="left"
+                             onclick="goLeft()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                             id="right"
+                             onclick="goRight()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                             onclick="goFull2()">
+                    </div>
+                <?php } ?>
             </div>
         </div>
 

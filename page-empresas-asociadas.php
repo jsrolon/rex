@@ -124,28 +124,31 @@ the_post(); ?>
             <img src="/wp-content/themes/rex/img/vision_title.svg"/>
             <div class="text"><?php the_field('vision'); ?></div>
         </div>
-        <div class="proyecto">
-            <div class="general-info">
-                <div class="group">
-                    <div class="carousel">
-                        <?php foreach ($images as $image) {
-                            $attachment_img_src = wp_get_attachment_image_src($image, 'medium_large');
-                            $url = $attachment_img_src[0]; ?>
-                            <div class="img-container"
-                                 style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;">
-                            </div>
-                        <?php } ?>
+        <?php if (count($images) > 0) { ?>
+            <div class="proyecto">
+                <div class="general-info">
+                    <div class="group">
+                        <div class="carousel">
+                            <?php foreach ($images as $image) {
+                                $attachment_img_src = wp_get_attachment_image_src($image, 'medium_large');
+                                $url = $attachment_img_src[0]; ?>
+                                <div class="img-container"
+                                     style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;">
+                                </div>
+                            <?php } ?>
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
+                             id="left"
+                             onclick="goLeft()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                             id="right"
+                             onclick="goRight()">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                             onclick="goFull()">
                     </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
-                         onclick="goLeft()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
-                         id="right"
-                         onclick="goRight()">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                         onclick="goFull()">
                 </div>
             </div>
-        </div>
+        <?php } ?>
 
         <?php
         endwhile; //resetting the page loop

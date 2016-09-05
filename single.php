@@ -64,24 +64,27 @@ the_post(); ?>
                 <div class="label">ACTIVIDADES EJECUTADAS</div>
                 <div class="info"><?php the_field('actividades_ejecutadas'); ?></div>
             </div>
-            <div class="group">
-                <div class="carousel">
-                    <?php foreach ($images as $image) { ?>
-                        <div class="img-container"
-                             style="background: url(<?php
-                             $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
-                             $imgurl = $imgsrc[0];
-                             echo $imgurl; ?>) center center no-repeat; background-size: cover;">
-                        </div>
-                    <?php } ?>
+            <?php if (count($images) > 0) { ?>
+                <div class="group">
+                    <div class="carousel">
+                        <?php foreach ($images as $image) { ?>
+                            <div class="img-container"
+                                 style="background: url(<?php
+                                 $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
+                                 $imgurl = $imgsrc[0];
+                                 echo $imgurl; ?>) center center no-repeat; background-size: cover;">
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
+                         onclick="goLeft()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
+                         id="right"
+                         onclick="goRight()">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
+                         onclick="goFull()">
                 </div>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" id="left"
-                     onclick="goLeft()">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" id="right"
-                     onclick="goRight()">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/full.svg" class="control" id="full"
-                     onclick="goFull()">
-            </div>
+            <?php } ?>
         </div>
 
         <div class="section-div-top"></div>
@@ -104,10 +107,10 @@ the_post(); ?>
                 };
             </script>
             <div id="map-container">
-        </div>
-        <?php endwhile;
-        else: ?>
-            <?php _e('Sorry, no pages matched your criteria.', 'textdomain'); ?>
-        <?php endif; ?>
+            </div>
+            <?php endwhile;
+            else: ?>
+                <?php _e('Sorry, no pages matched your criteria.', 'textdomain'); ?>
+            <?php endif; ?>
 
-        <?php get_footer(); ?>
+            <?php get_footer(); ?>
