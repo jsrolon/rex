@@ -93,7 +93,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                 $ubi_2_lat = $ubi_2['lat'];
                 echo $ubi_2_lat; ?>,
                 lng: <?php
-                $ubi_2_lng = ['lng'];
+                $ubi_2_lng = $ubi_2['lng'];
                 echo $ubi_2_lng; ?>,
                 address: "<?php
                     $ubi_2_addr = $ubi_2['address'];
