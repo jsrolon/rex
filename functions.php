@@ -122,6 +122,14 @@ function rex_register_required_plugins() {
             'version' => '1.1.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+        ),
+        array(
+            'name' => 'Envira Gallery Lite', // The plugin name.
+            'slug' => 'envira-gallery-lite', // The plugin slug (typically the folder name).
+            'required' => true, // If false, the plugin is only 'recommended' instead of required.
+            'version' => '1.5.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
         )
     );
 
