@@ -28,6 +28,9 @@
                             style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
                             class="image">
                             <div class="nombre"><?php the_title(); ?></div>
+                            <div class="ver-mas">
+                                <a href="<?php the_permalink(); ?>">Ver más</a>
+                            </div>
                         </div>
                     </div>
                 <?php }
@@ -36,9 +39,6 @@
             wp_reset_postdata();
         }
         ?>
-    </div>
-    <div class="ver-mas">
-        Ver más
     </div>
 
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/circle_index.svg" class="circle"/>
