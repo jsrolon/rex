@@ -23,15 +23,15 @@
                     $do_not_duplicate[] = $post->ID;
                     ?>
                     <div class="cover">
-                        <div
-                            <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
-                            style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
-                            class="image">
-                            <div class="nombre"><?php the_title(); ?></div>
-                            <div class="ver-mas">
-                                <a href="<?php the_permalink(); ?>">Ver más</a>
+                        <a href="<?php the_permalink(); ?>">
+                            <div
+                                <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                                style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
+                                class="image">
+                                <div class="nombre"><?php the_title(); ?></div>
+
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php }
             }
