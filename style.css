@@ -946,7 +946,8 @@ table tr:nth-child(even) td {
 	#panel .index-carousel .cover .nombre {
 		display: inline-block;
 		padding: 12px;
-		padding-right: 110px;
+		/*padding-right: 110px;*/
+		background-color: rgba(61,63,6,0.5);
 	}
 	#panel .ver-mas {
 		top: 20px;
@@ -1667,7 +1668,8 @@ table tr:nth-child(even) td {
 	#panel .index-carousel .cover .nombre {
 		display: inline-block;
 		padding: 12px;
-		padding-right: 110px;
+		/*padding-right: 110px;*/
+		background-color: rgba(61,63,6,0.5);
 	}
 	#panel .ver-mas {
 		top: 20px;
