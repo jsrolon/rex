@@ -77,8 +77,8 @@ function rex_register_menus() {
 function rex_register_project_post_type() {
     register_post_type('rex-project', array(
         'labels' => array(
-            'name' => 'Projects',
-            'singular_name' => 'Project',
+            'name' => 'Proyectos',
+            'singular_name' => 'Proyecto',
         ),
         'description' => 'Engineering projects performed by Rex.',
         'public' => true,
