@@ -100,7 +100,7 @@ the_post(); ?>
                     echo $lat; ?>,
                     lng: <?php
                     $lng = $ubicacion['lng'];
-                    echo get_field('ubicacion')['lng']; ?>
+                    echo $lng; ?>
                 };
             </script>
             <div id="map-container">
