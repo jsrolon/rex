@@ -76,6 +76,8 @@ the_post(); ?>
         <div class="section">
             <img src="<?php the_field('logo'); ?>"/>
             <div class="right">
+                <div><b>Dirección: </b><?php the_field('direccion'); ?></div>
+                <div><b>Teléfono: </b><?php the_field('telefono'); ?></div>
                 <?php the_field('descripcion'); ?>
             </div>
         </div>
