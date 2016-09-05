@@ -42,7 +42,7 @@ $the_query = new WP_Query(
                             <div class="name">
                                 <?php echo get_the_title(); ?>
                             </div>
-                            <div class="date"><?php echo get_the_date(); ?></div>
+                            <div class="date"><?php echo get_field('fecha_de_ejecucion'); ?></div>
                         </div>
                         <div class="ver-mas-proyect" id="view_<?php echo $post_number; ?>">
                             Ver más
