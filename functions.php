@@ -239,6 +239,13 @@ function action_function_name($field) {
     echo '<p>Some extra HTML</p>';
 }
 
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyDT2PqryfP0hhyLldM1Uk6xOghblCY6R34';
+    return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 // after each one of the fields are rendered
 add_action('acf/render_field', 'action_function_name', 10, 1);
 
