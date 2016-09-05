@@ -128,9 +128,11 @@ the_post(); ?>
             <div class="general-info">
                 <div class="group">
                     <div class="carousel">
-                        <?php foreach ($images as $image) { ?>
+                        <?php foreach ($images as $image) {
+                            $attachment_img_src = wp_get_attachment_image_src($image, 'medium_large');
+                            $url = $attachment_img_src[0]; ?>
                             <div class="img-container"
-                                 style="background: url(<?php echo wp_get_attachment_image_src($image, 'medium_large')[0]; ?>) center center no-repeat; background-size: cover;">
+                                 style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;">
                             </div>
                         <?php } ?>
                     </div>

@@ -15,8 +15,11 @@ the_post(); ?>
 </div>
 <?php
 if (class_exists('Envira_Gallery_Lite')) {
-    $gallery_1_imgs = $envira_gallery_lite->get_gallery_by_slug('cantera-1')['gallery'];
-    $gallery_2_imgs = $envira_gallery_lite->get_gallery_by_slug('cantera-2')['gallery'];
+    $gallery_1 = $envira_gallery_lite->get_gallery_by_slug('cantera-1');
+    $gallery_2 = $envira_gallery_lite->get_gallery_by_slug('cantera-2');
+
+    $gallery_1_imgs = $gallery_1['gallery'];
+    $gallery_2_imgs = $gallery_2['gallery'];
 }
 ?>
 <div class="proyecto">
@@ -25,7 +28,9 @@ if (class_exists('Envira_Gallery_Lite')) {
             <div class="carousel carouselFull">
                 <?php foreach ($gallery_1_imgs as $image) { ?>
                     <div class="carousel-slide">
-                        <img data-lazy="<?php echo $image['src']; ?>">
+                        <img data-lazy="<?php
+                        $imgsrc = $image['src'];
+                        echo $imgsrc; ?>">
                     </div>
                 <?php } ?>
             </div>
@@ -48,7 +53,9 @@ if (class_exists('Envira_Gallery_Lite')) {
             <div class="carousel carouselFull">
                 <?php foreach ($gallery_2_imgs as $image) { ?>
                     <div class="carousel-slide">
-                        <img data-lazy="<?php echo $image['src']; ?>">
+                        <img data-lazy="<?php
+                        $imgsrc = $image['src'];
+                        echo $imgsrc; ?>">
                     </div>
                 <?php } ?>
             </div>
@@ -70,13 +77,27 @@ if (class_exists('Envira_Gallery_Lite')) {
     <div class="page-content-wrapper">
         <script type="text/javascript">
             var selectedLocations = [{
-                lat: <?php echo get_field('ubicacion_1')['lat']; ?>,
-                lng: <?php echo get_field('ubicacion_1')['lng']; ?>,
-                address: "<?php echo get_field('ubicacion_1')['address']; ?>"
+                lat: <?php
+                $ubi_1 = get_field('ubicacion_1');
+                $ubi_1_lat = $ubi_1['lat'];
+                echo $ubi_1_lat; ?>,
+                lng: <?php
+                $ubi_1_lng = $ubi_1['lng'];
+                echo $ubi_1_lng; ?>,
+                address: "<?php
+                    $ubi_1_addr = $ubi_1['address'];
+                    echo $ubi_1_addr; ?>"
             }, {
-                lat: <?php echo get_field('ubicacion_2')['lat']; ?>,
-                lng: <?php echo get_field('ubicacion_2')['lng']; ?>,
-                address: "<?php echo get_field('ubicacion_2')['address']; ?>"
+                lat: <?php
+                $ubi_2 = get_field('ubicacion_2');
+                $ubi_2_lat = $ubi_2['lat'];
+                echo $ubi_2_lat; ?>,
+                lng: <?php
+                $ubi_2_lng = ['lng'];
+                echo $ubi_2_lng; ?>,
+                address: "<?php
+                    $ubi_2_addr = $ubi_2['address'];
+                    echo $ubi_2_addr; ?>"
             }];
         </script>
         <div id="map">
@@ -105,7 +126,10 @@ if (class_exists('Envira_Gallery_Lite')) {
                         </div>
                         <div class="group">
                             <div class="label">UBICACIÓN</div>
-                            <div class="info"><?php echo get_field('ubicacion_' . $i)['address']; ?></div>
+                            <div class="info"><?php
+                                $ubi = get_field('ubicacion_' . $i);
+                                $addr = $ubi['address'];
+                                echo $addr; ?></div>
                         </div>
                         <div class="group">
                             <div class="label">FECHA DE EJECUCIÓN</div>
@@ -147,7 +171,9 @@ if (class_exists('Envira_Gallery_Lite')) {
                         foreach ($gallery_1_imgs as $img) {
                             ?>
                             <div class="img-container"
-                                 style="background: url(<?php echo $img['src']; ?>) center center no-repeat; background-size: cover;">
+                                 style="background: url(<?php
+                                 $imgsrc = $img['src'];
+                                 echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
                             </div>
                             <?php
                         }
@@ -168,7 +194,9 @@ if (class_exists('Envira_Gallery_Lite')) {
                         foreach ($gallery_2_imgs as $img) {
                             ?>
                             <div class="img-container"
-                                 style="background: url(<?php echo $img['src']; ?>) center center no-repeat; background-size: cover;">
+                                 style="background: url(<?php
+                                 $imgsrc = $img['src'];
+                                 echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
                             </div>
                             <?php
                         }

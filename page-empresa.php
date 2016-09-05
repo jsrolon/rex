@@ -12,12 +12,12 @@
 
         <div class="images-circle-wrapper">
             <div id="name_7" class="name">
-                <a href="/empresa/quienes-somos/">QUIENES
+                <a href="<?php echo get_site_url(); ?>/empresa/quienes-somos/">QUIENES
                         <div>SOMOS</div>
                 </a>
             </div>
             <div id="name_8" class="name">
-                <a href="/empresa/hseq/">GESTIÓN INTEGRAL
+                <a href="<?php echo get_site_url(); ?>/empresa/hseq/">GESTIÓN INTEGRAL
                     <div>HSEQ</div>
                 </a>
             </div>
