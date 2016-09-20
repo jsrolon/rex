@@ -694,12 +694,12 @@ a {
 }
 .proyecto .general-info .group .carousel .img-container {
 	width: 100%;
-	/*height: 200px;
-	background-color: red;*/
+	cursor: pointer;
 }
 .proyecto .general-info .group .carousel .img-container svg {
 	width: 100%;
 	height: 100%;
+
 }
 .proyecto .general-info .group #left {
 	position: absolute;

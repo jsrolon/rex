@@ -42,7 +42,7 @@ the_post(); ?>
 } ?>
 
 <div class="proyecto">
-    <div class="popup general-info hide-z-index" id="full-carousel">
+    <div class="popup general-info hide-z-index" id="full-carousel" onclick="exitFull(event)">
         <div class="group">
             <div class="carousel carouselFull">
                 <?php foreach ($images as $image) { ?>
@@ -61,7 +61,7 @@ the_post(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
                  onclick="goLeft()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
-                 onclick="exitFull()">
+                 id="full_exit">
             <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
                  onclick="goRight()">
         </div>
@@ -135,7 +135,7 @@ the_post(); ?>
                                 $attachment_img_src = wp_get_attachment_image_src($image, 'medium_large');
                                 $url = $attachment_img_src[0]; ?>
                                 <div class="img-container"
-                                     style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;">
+                                     style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;" onclick="goFull()">
                                 </div>
                             <?php } ?>
                         </div>

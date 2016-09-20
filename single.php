@@ -16,12 +16,14 @@ the_post(); ?>
 <?php if (function_exists('easy_image_gallery_get_image_ids')) {
     $images = easy_image_gallery_get_image_ids();
 } ?>
-<div class="popup general-info hide-z-index" id="full-carousel">
+<div class="popup general-info hide-z-index" id="full-carousel" onclick="exitFull(event)">
     <div class="group">
         <div class="carousel carouselFull">
             <?php foreach ($images as $image) { ?>
                 <div class="carousel-slide">
-                    <img data-lazy="<?php echo wp_get_attachment_url($image); ?>">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <image xlink:href="<?php echo wp_get_attachment_url($image); ?>" x="0" y="0" height="100%" width="100%"/>
+                    </svg>
                 </div>
             <?php } ?>
         </div>
@@ -31,7 +33,7 @@ the_post(); ?>
     </div>
     <div class="group">
         <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control" onclick="goLeft()">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" onclick="exitFull()">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control" id="full_exit">
         <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control" onclick="goRight()">
     </div>
 </div>
@@ -72,7 +74,7 @@ the_post(); ?>
                                  style="background: url(<?php
                                  $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
                                  $imgurl = $imgsrc[0];
-                                 echo $imgurl; ?>) center center no-repeat; background-size: cover;">
+                                 echo $imgurl; ?>) center center no-repeat; background-size: cover;" onclick="goFull()">
                             </div>
                         <?php } ?>
                     </div>
