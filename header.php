@@ -67,6 +67,10 @@ if (is_single()) {
             <div><a href="mailto:info@rexingenieria.com">info@rexingenieria.com</a></div>
             <div>BOGOTÁ D.C - COLOMBIA</div>
         </div>
+        <div class="idiomas">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/es.png" onclick="es()">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/en.png" onclick="en()">
+        </div>
     </header>
 </nav>
 <!--<div id="menu-icon" class="fixed">

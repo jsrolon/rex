@@ -53,10 +53,7 @@ the_post(); ?>
             </div>
             <div class="group">
                 <div class="label">UBICACIÓN</div>
-                <div class="info"><?php
-                    $ubicacion = get_field('ubicacion');
-                    $address = $ubicacion['address'];
-                    echo $address; ?></div>
+                <div class="info"><?php the_field('ubicacion_dir'); ?></div>
             </div>
             <div class="group">
                 <div class="label">FECHA DE EJECUCIÓN</div>
@@ -101,6 +98,7 @@ the_post(); ?>
             <script type="text/javascript">
                 var selectedLocation = {
                     lat: <?php
+                    $ubicacion = get_field('ubicacion');
                     $lat = $ubicacion['lat'];
                     echo $lat; ?>,
                     lng: <?php
