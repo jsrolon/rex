@@ -246,6 +246,13 @@ function my_acf_google_map_api( $api ){
     return $api;
 }
 
+// retrieves the attachment ID from the file URL
+function pippin_get_image_id($image_url) {
+    global $wpdb;
+    $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
+    return $attachment[0];
+}
+
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 // after each one of the fields are rendered
