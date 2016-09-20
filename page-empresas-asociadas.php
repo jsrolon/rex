@@ -17,7 +17,7 @@ the_post(); ?>
         </defs>
         <path
             d="M0,215l0,-215l1280,0l0,215l-94.944,-47.511l-146.801,47.511l-298.126,-36.751l-257.573,36.751l-89.855,-35.073l-234.519,35.073l-106.638,-38.059l-51.544,38.059Z"
-            style="fill:none;stroke-width:45px;stroke:#fff;"/>
+            style="fill:none;stroke-width:14px;stroke:#fff;"/>
         <rect width="1185" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"/>
         <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_cabecera'); ?>" x="0" y="0"
                width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
