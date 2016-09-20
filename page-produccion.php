@@ -23,14 +23,14 @@ if (class_exists('Envira_Gallery_Lite')) {
 }
 ?>
 <div class="proyecto">
-    <div class="popup general-info hide-z-index" id="full-carousel-1">
+    <div class="popup general-info hide-z-index" id="full-carousel-1" onclick="exitFull1(event)">
         <div class="group">
             <div class="carousel carouselFull">
                 <?php foreach ($gallery_1_imgs as $image) { ?>
                     <div class="carousel-slide">
-                        <img data-lazy="<?php
-                        $imgsrc = $image['src'];
-                        echo $imgsrc; ?>">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image xlink:href="<?php $imgsrc = $image['src']; echo $imgsrc; ?>" x="0" y="0" height="100%" width="100%"/>
+                        </svg>
                     </div>
                 <?php } ?>
             </div>
@@ -42,20 +42,20 @@ if (class_exists('Envira_Gallery_Lite')) {
             <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
                  onclick="goLeft()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
-                 onclick="exitFull1()">
+                 id="full_exit">
             <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
                  onclick="goRight()">
         </div>
     </div>
 
-    <div class="popup general-info hide-z-index" id="full-carousel-2">
+    <div class="popup general-info hide-z-index" id="full-carousel-2" onclick="exitFull2(event)">
         <div class="group">
             <div class="carousel carouselFull">
                 <?php foreach ($gallery_2_imgs as $image) { ?>
                     <div class="carousel-slide">
-                        <img data-lazy="<?php
-                        $imgsrc = $image['src'];
-                        echo $imgsrc; ?>">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image xlink:href="<?php $imgsrc = $image['src']; echo $imgsrc; ?>" x="0" y="0" height="100%" width="100%"/>
+                        </svg>
                     </div>
                 <?php } ?>
             </div>
@@ -67,7 +67,7 @@ if (class_exists('Envira_Gallery_Lite')) {
             <img src="<?php echo get_template_directory_uri(); ?>/img/left_white.svg" class="control"
                  onclick="goLeft()">
             <img src="<?php echo get_template_directory_uri(); ?>/img/full_exit.svg" class="control"
-                 onclick="exitFull2()">
+                 id="full_exit">
             <img src="<?php echo get_template_directory_uri(); ?>/img/right_white.svg" class="control"
                  onclick="goRight()">
         </div>
@@ -174,7 +174,9 @@ if (class_exists('Envira_Gallery_Lite')) {
                                 <div class="img-container"
                                      style="background: url(<?php
                                      $imgsrc = $img['src'];
-                                     echo $imgsrc; ?>) center center no-repeat; background-size: cover;">
+                                     echo $imgsrc; ?>) center center no-repeat; background-size: cover;" 
+                                     onclick="goFull1()">
+                                    
                                 </div>
                                 <?php
                             }

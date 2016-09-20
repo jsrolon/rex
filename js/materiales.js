@@ -163,6 +163,8 @@ window.onload = function() {
             jQuery(jQuery(rows[i]).children()[0]).addClass('tableFirst');
         }
     }
+
+    jQuery('.popup').css('opacity', '1');
 }
 
 function goLeft() {
@@ -173,12 +175,17 @@ function goRight() {
     jQuery('.carousel').slick('slickNext');
 }
 
-function exitFull1() {
-    jQuery('#full-carousel-1').addClass('hide-z-index');
+function exitFull1(event) {
+    if(event.target.className != 'control' || event.target.id == 'full_exit') {
+        jQuery('#full-carousel-1').addClass('hide-z-index');
+    }
+    //
 }
 
-function exitFull2() {
-    jQuery('#full-carousel-2').addClass('hide-z-index');
+function exitFull2(event) {
+    if(event.target.className != 'control' || event.target.id == 'full_exit') {
+        jQuery('#full-carousel-2').addClass('hide-z-index');
+    }
 }
 
 function goFull1() {
@@ -187,4 +194,25 @@ function goFull1() {
 
 function goFull2() {
     jQuery('#full-carousel-2').removeClass('hide-z-index');
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+       // left arrow
+        goLeft();
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       goRight();
+    }
+    else if (e.keyCode == '27') {
+        jQuery('#full-carousel-1').addClass('hide-z-index');
+        jQuery('#full-carousel-2').addClass('hide-z-index');
+    }
+
 }

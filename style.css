@@ -697,6 +697,10 @@ a {
 	/*height: 200px;
 	background-color: red;*/
 }
+.proyecto .general-info .group .carousel .img-container svg {
+	width: 100%;
+	height: 100%;
+}
 .proyecto .general-info .group #left {
 	position: absolute;
 	left: 5px;
@@ -826,6 +830,10 @@ table tr:nth-child(even) td {
 	height: auto;
 	max-height: 600px;
 }
+.proyecto .popup .carousel svg {
+	width: 100%;
+    height: 100%;
+}
 .proyecto .popup .carousel .carousel-slide {
 	display: flex;
 	-ms-flex-direction: row;
@@ -853,6 +861,7 @@ table tr:nth-child(even) td {
 	z-index: -1 !important;
 }
 .popup {
+	opacity: 0;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -1425,7 +1434,7 @@ table tr:nth-child(even) td {
 .materiales .general-info .group .carousel .img-container {
 	width: 100%;
 	height: 200px;
-	background-color: red;
+	cursor: pointer;
 }
 .materiales .general-info .group #left {
 	position: absolute;
@@ -1444,6 +1453,7 @@ table tr:nth-child(even) td {
 	right: 25px;
 	bottom: 5px;
 	cursor: pointer;
+	z-index: 10;
 }
 .materiales .general-info .group .control {
 	width: 32px;
@@ -1986,7 +1996,7 @@ table tr:nth-child(even) td {
 	}
 	.materiales .general-info .group .carousel .img-container {
 		width: 100%;
-		height: 400px;
+		height: 350px;
 	}
 	.materiales .general-info .group #left {
 		left: 0;

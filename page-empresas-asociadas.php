@@ -47,7 +47,9 @@ the_post(); ?>
             <div class="carousel carouselFull">
                 <?php foreach ($images as $image) { ?>
                     <div class="carousel-slide">
-                        <img data-lazy="<?php echo wp_get_attachment_url($image); ?>">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image xlink:href="<?php echo wp_get_attachment_url($image); ?>" x="0" y="0" height="100%" width="100%"/>
+                        </svg>
                     </div>
                 <?php } ?>
             </div>
