@@ -149,3 +149,21 @@ function checkKey(e) {
     }
 
 }
+
+function es() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/es' + location.pathname.substring(3, location.pathname.lenght);
+        console.log(new_href);
+        window.location.href = new_href;
+    }
+}
+
+function en() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(!location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/en' + location.pathname;
+        console.log(new_href);
+        window.location.href = new_href;
+    }
+}
