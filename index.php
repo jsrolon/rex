@@ -20,7 +20,7 @@
                 $do_not_duplicate[] = $post->ID;
                 ?>
                 <div class="cover">
-                    <a href="<?php the_permalink(); ?>">
+                    <a class="index-page-carousel-link" href="<?php the_permalink(); ?>">
                         <div
                             <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
                             style="background: url(<?php echo $url; ?>) center center; background-size: cover;"

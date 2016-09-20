@@ -3,6 +3,10 @@ Theme URI: http://rexingenieria.com
 Version: 0.1
 */
 
+a.index-page-carousel-link:hover {
+	font-weight: normal !important;
+}
+
 .options > .menu > ul {
 	text-transform: uppercase;
 	list-style: none;
