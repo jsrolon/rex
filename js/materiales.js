@@ -86,7 +86,7 @@ window.onload = function() {
     });
 
     var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
-    marker2.bindPopup("<b>Dirección:</b> " + selectedLocations[1]['address'] + " <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80").openPopup();
+    marker2.bindPopup("<b>Dirección:</b> " + selectedLocations[1]['address'] + " <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80 <hr><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[1]['lat'] + "+" + selectedLocations[1]['lng'] + "/@" + selectedLocations[1]['lat'] + "," + selectedLocations[1]['lng'] + ",15z'>Ver en Google Maps</a>").openPopup();
     marker2.addTo(mymap);
     marker2.on('click', function(e) {
         marker2.setIcon(greenIcon);
@@ -215,4 +215,22 @@ function checkKey(e) {
         jQuery('#full-carousel-2').addClass('hide-z-index');
     }
 
+}
+
+function es() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/es' + location.pathname.substring(3, location.pathname.lenght);
+        console.log(new_href);
+        window.location.href = new_href;
+    }
+}
+
+function en() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(!location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/en' + location.pathname;
+        console.log(new_href);
+        window.location.href = new_href;
+    }
 }

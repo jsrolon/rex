@@ -71,6 +71,8 @@ jQuery("document").ready(function () {
 
     jQuery('.carousel-slide').height(jQuery('.slick-track').height());
     //jQuery('#full-carousel').hide();
+
+    jQuery('.popup').css('opacity', '1');
 });
 
 var originalHeight = jQuery('.description').height();
@@ -91,8 +93,10 @@ function goRight() {
     jQuery('.carousel').slick('slickNext');
 }
 
-function exitFull() {
-    jQuery('#full-carousel').addClass('hide-z-index');
+function exitFull(event) {
+    if(event.target.className != 'control' || event.target.id == 'full_exit') {
+        jQuery('#full-carousel').addClass('hide-z-index');
+    }
 }
 
 function goFull() {
@@ -108,5 +112,43 @@ document.getElementById('panel').onscroll = function () {
     else {
         jQuery('.quarry-header-image').height(95);
         jQuery('.quarry-header-image-background').height(95);
+    }
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+       // left arrow
+        goLeft();
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       goRight();
+    }
+    else if (e.keyCode == '27') {
+        jQuery('#full-carousel').addClass('hide-z-index');
+    }
+
+}
+
+function es() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/es' + location.pathname.substring(3, location.pathname.lenght);
+        console.log(new_href);
+        window.location.href = new_href;
+    }
+}
+
+function en() {
+    console.log(location.hostname + '-' + location.pathname);
+    if(!location.pathname.startsWith("/en")) {//english
+        var new_href = 'http://' + location.hostname + '/en' + location.pathname;
+        console.log(new_href);
+        window.location.href = new_href;
     }
 }

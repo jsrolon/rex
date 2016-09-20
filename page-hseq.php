@@ -35,16 +35,15 @@ the_post(); ?>
             </div>
         </div>
 
-        <div class="mision-vision" id="section"
-             style=" background: url(<?php echo get_template_directory_uri(); ?>/img/calidad_section.svg) center  no-repeat; background-size: cover;">
-            <div class="text">
+        <div class="section-div-top"></div>
+        <div class="section section-grey">
                 <?php the_field('segunda_seccion'); ?>
-            </div>
         </div>
+        <div class="section-div-bottom"></div>
 
         <div class="section">
             <div class="left">
-                <?php the_field('primera_seccion'); ?>
+                <?php the_field('tercera_seccion'); ?>
             </div>
             <img src="<?php the_field('imagen_premio'); ?>"/>
         </div>

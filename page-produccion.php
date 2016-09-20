@@ -126,10 +126,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                         </div>
                         <div class="group">
                             <div class="label">UBICACIÓN</div>
-                            <div class="info"><?php
-                                $ubi = get_field('ubicacion_' . $i);
-                                $addr = $ubi['address'];
-                                echo $addr; ?></div>
+                            <div class="info"><?php the_field('ubicacion_dir_' . $i) ?></div>
                         </div>
                         <div class="group">
                             <div class="label">FECHA DE EJECUCIÓN</div>
