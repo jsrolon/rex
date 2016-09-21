@@ -19,16 +19,17 @@ the_post(); ?>
             d="M0,215l0,-215l1280,0l0,215l-94.944,-47.511l-146.801,47.511l-298.126,-36.751l-257.573,36.751l-89.855,-35.073l-234.519,35.073l-106.638,-38.059l-51.544,38.059Z"
             style="fill:none;stroke-width:14px;stroke:#fff;"/>
         <rect width="1185" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"/>
-        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_cabecera'); ?>" x="0" y="0"
+        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+        $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_cabecera'));
+        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+        $img_url = $img_src_arr[0];
+        echo $img_url;
+        ?>" x="0" y="0"
                width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
         <rect width="1185" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"/>
     </svg>
 
 </div>
-<!--<div class="quarry-header-image fixed"
-     style=" background: url(<?php the_field('imagen_de_cabecera'); ?>) center bottom no-repeat; background-size: cover;">
-         <div class="dark"></div>
-     </div>-->
 
 <div class="title fixed"><?php the_title(); ?></div>
 <div id="menu-icon" class="fixed menu-icon">
@@ -48,7 +49,12 @@ the_post(); ?>
                 <?php foreach ($images as $image) { ?>
                     <div class="carousel-slide">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <image xlink:href="<?php echo wp_get_attachment_url($image); ?>" x="0" y="0" height="100%" width="100%"/>
+                            <image xlink:href="<?php
+                            $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
+                            $img_url = $img_src_arr[0];
+                            echo $img_url;
+
+                            ?>" x="0" y="0" height="100%" width="100%"/>
                         </svg>
                     </div>
                 <?php } ?>
@@ -76,7 +82,12 @@ the_post(); ?>
             <h2 style="width:100%; text-align: center;">REX CARGO</h2>
         </div>
         <div class="section">
-            <img src="<?php the_field('logo'); ?>"/>
+            <img src="<?php
+            $img_id = fjarrett_get_attachment_id_by_url(get_field('logo'));
+            $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+            $img_url = $img_src_arr[0];
+            echo $img_url;
+            ?>"/>
             <div class="right">
                 <div><b>Dirección: </b><?php the_field('direccion'); ?></div>
                 <div><b>Teléfono: </b><?php the_field('telefono'); ?></div>
@@ -95,7 +106,12 @@ the_post(); ?>
                                 style="fill:none;stroke-width:1px;stroke:#000;"/>
                         </clipPath>
                     </defs>
-                    <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_mision'); ?>"
+                    <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                    $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_mision'));
+                    $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                    $img_url = $img_src_arr[0];
+                    echo $img_url;
+                    ?>"
                            x="0" y="0" width="1185" height="335" clip-path="url(#svgPath11)" viewbox="0 0 1185 335"/>
                     <rect width="1185" height="335" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath11)"/>
                 </svg>
@@ -117,7 +133,12 @@ the_post(); ?>
                                 style="fill:none;stroke-width:1px;stroke:#000;"/>
                         </clipPath>
                     </defs>
-                    <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_vision'); ?>"
+                    <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                    $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_vision'));
+                    $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                    $img_url = $img_src_arr[0];
+                    echo $img_url;
+                    ?>"
                            x="0" y="0" width="1185" height="335" clip-path="url(#svgPath12)" viewbox="0 0 1185 335"/>
                     <rect width="1185" height="335" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath12)"/>
                 </svg>
