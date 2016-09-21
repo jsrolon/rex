@@ -14,7 +14,12 @@ the_post(); ?>
         </defs>
         <path d="M0,215l0,-215l1280,0l0,215l-94.944,-47.511l-146.801,47.511l-298.126,-36.751l-257.573,36.751l-89.855,-35.073l-234.519,35.073l-106.638,-38.059l-51.544,38.059Z" style="fill:none;stroke-width:14px;stroke:#fff;"/>
         <rect width="1185" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"/>
-        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_cabecera'); ?>" x="0" y="0" width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
+        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+        $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_cabecera'));
+        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+        $img_url = $img_src_arr[0];
+        echo $img_url;
+        ?>" x="0" y="0" width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
         <rect width="1185" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"/>
     </svg>
 </div>
@@ -29,7 +34,12 @@ the_post(); ?>
         <div class="padding-top"></div>
 
         <div class="section">
-            <img src="<?php the_field('imagen_certificado'); ?>"/>
+            <img src="<?php
+            $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_certificado'));
+            $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
+            $img_url = $img_src_arr[0];
+            echo $img_url;
+            ?>"/>
             <div class="right">
                 <?php the_field('primera_seccion'); ?>
             </div>
@@ -45,7 +55,12 @@ the_post(); ?>
             <div class="left">
                 <?php the_field('tercera_seccion'); ?>
             </div>
-            <img src="<?php the_field('imagen_premio'); ?>"/>
+            <img src="<?php
+            $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_premio'));
+            $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
+            $img_url = $img_src_arr[0];
+            echo $img_url;
+            ?>"/>
         </div>
 
         <?php
