@@ -68,27 +68,57 @@
                     
                   </defs>
                   <a href="<?php echo get_category_link(get_cat_ID('Rehabilitaciones Ambientales')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_rehabilitaciones_ambientales'); ?>" x="200" y="0" width="174" height="150" clip-path="url(#svgPath1)" viewbox="0 0 174 150" class="imagesCircle" id="image_1"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_rehabilitaciones_ambientales'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="200" y="0" width="174" height="150" clip-path="url(#svgPath1)" viewbox="0 0 174 150" class="imagesCircle" id="image_1"/>
                   </a>
 
                   <a href="<?php echo get_category_link(get_cat_ID('Obras Hidráulicas')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_obras_hidraulicas'); ?>" x="286.6" y="100" width="134" height="200" clip-path="url(#svgPath2)" viewbox="0 0 134 200" class="imagesCircle" id="image_2"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_obras_hidraulicas'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="286.6" y="100" width="134" height="200" clip-path="url(#svgPath2)" viewbox="0 0 134 200" class="imagesCircle" id="image_2"/>
                   </a>
 
                   <a href="<?php echo get_category_link(get_cat_ID('Movimientos de Tierras')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_movimientos_tierra'); ?>" x="200" y="250" width="174" height="150" clip-path="url(#svgPath3)" viewbox="0 0 174 150" class="imagesCircle" id="image_3"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_movimientos_tierra'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="200" y="250" width="174" height="150" clip-path="url(#svgPath3)" viewbox="0 0 174 150" class="imagesCircle" id="image_3"/>
                   </a>
 
                   <a href="<?php echo get_category_link(get_cat_ID('Excavaciones Profundas')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_excavaciones_profundas'); ?>" x="26.8" y="250" width="174" height="150" clip-path="url(#svgPath4)" viewbox="0 0 174 150" class="imagesCircle" id="image_4"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_excavaciones_profundas'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="26.8" y="250" width="174" height="150" clip-path="url(#svgPath4)" viewbox="0 0 174 150" class="imagesCircle" id="image_4"/>
                   </a>
 
                   <a href="<?php echo get_category_link(get_cat_ID('Obras de Estabilización')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_obras_estabilizacion'); ?>" x="0" y="100" width="134" height="200"  clip-path="url(#svgPath5)" viewbox="0 0 134 200" class="imagesCircle" id="image_5"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_obras_estabilizacion'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="0" y="100" width="134" height="200"  clip-path="url(#svgPath5)" viewbox="0 0 134 200" class="imagesCircle" id="image_5"/>
                   </a>
 
                   <a href="<?php echo get_category_link(get_cat_ID('Edificación y Urbanismo')); ?>">
-                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_edificacion_urbanismo'); ?>" x="26.8" y="0" width="174" height="150" clip-path="url(#svgPath6)" viewbox="0 0 174 150" class="imagesCircle" id="image_6"/>
+                  <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                  $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_edificacion_urbanismo'));
+                  $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
+                  $img_url = $img_src_arr[0];
+                  echo $img_url;
+                  ?>" x="26.8" y="0" width="174" height="150" clip-path="url(#svgPath6)" viewbox="0 0 174 150" class="imagesCircle" id="image_6"/>
                   </a>
 
                 </svg>

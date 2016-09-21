@@ -11,6 +11,9 @@ function rex_theme_prefix_setup() {
     // each post has a featured imaged
     add_theme_support('post-thumbnails');
 
+    // add new image sizes
+    add_image_size('medium-large', 600, 600);
+
     // representative image
     add_theme_support('custom-header', array(
         'width' => 500,
