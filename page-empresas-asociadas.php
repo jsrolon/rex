@@ -101,7 +101,7 @@ the_post(); ?>
                 </svg>
             </div>
             <!--<div class="dark"></div>-->
-            <img src="/wp-content/themes/rex/img/mision_title.svg"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/mision_title.svg"/>
             <div class="text"><?php the_field('mision'); ?>
             </div>
         </div>
@@ -123,7 +123,7 @@ the_post(); ?>
                 </svg>
             </div>
             <!--<div class="dark"></div>-->
-            <img src="/wp-content/themes/rex/img/vision_title.svg"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/vision_title.svg"/>
             <div class="text"><?php the_field('vision'); ?></div>
         </div>
         <?php if (count($images) > 0) { ?>

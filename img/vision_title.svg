@@ -3,5 +3,5 @@
         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 240 84">
     <path d="M0,83.402l68.131,-83.402l170.881,55.335l-239.012,28.067Z" style="fill: rgba(124, 126, 46, 0.9);"/>
-    <text x="61.867px" y="50.378px" style="font-family:'Avenir-Book', 'Avenir';font-size:18px;fill:#fff;">VISIÓN</text>
+    <text x="61.867px" y="50.378px" style="font-family:'Calibri';font-size:18px;fill:#fff;">VISIÓN</text>
 </svg>
