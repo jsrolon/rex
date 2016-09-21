@@ -256,7 +256,7 @@ body,html {
 	fill: black !important;
 }
 .page-content-wrapper {
-	min-height: calc(100% - 191px);
+	min-height: calc(100% - 212px);
 }
 .proyectos .page-content-wrapper {
 	min-height: calc(100% - 132px);
@@ -433,7 +433,7 @@ a {
 	transform: translate3d(256px, 0px, 0px);
 }
 .proyects-list {
-	padding-top: 59px;
+	padding-top: 80px;
 }
 .proyects-list .proyect {
 	width: calc(100% - 20px);
