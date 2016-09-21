@@ -216,7 +216,8 @@ if (class_exists('Envira_Gallery_Lite')) {
                                      $img_id = fjarrett_get_attachment_id_by_url($imgsrc);
                                      $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
                                      $img_url = $img_src_arr[0];
-                                     echo $img_url; ?>) center center no-repeat; background-size: cover;">
+                                     echo $img_url; ?>) center center no-repeat; background-size: cover;"
+                                     onclick="goFull2()">
                                 </div>
                                 <?php
                             }
