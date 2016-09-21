@@ -414,6 +414,7 @@ a {
 	font-size: 13px;
 	margin-top: 10px;
 	overflow-y: hidden;
+	font-family: 'Calibri';
 }
 .fixed {
 	position: fixed;
