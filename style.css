@@ -854,7 +854,7 @@ table tr:nth-child(even) td {
 }
 .proyecto #footer {
 	z-index: 2;
-	margin-bottom: 46px;
+	/*margin-bottom: 46px;*/
 }
 .proyecto .popup .group {
 	margin-left: 0px !important;
@@ -1308,7 +1308,7 @@ table tr:nth-child(even) td {
     	margin-bottom: 15px;
 	}
 	.proyecto #footer {
-		margin-bottom: 32px;
+		/*margin-bottom: 32px;*/
 	}
 	.quienes .section-grey {
 		margin-left: 0 !important;
