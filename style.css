@@ -90,6 +90,15 @@ body,html {
 	height: calc(62% - 120px);
 	overflow-x: hidden;
 	overflow-y: auto;
+	display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
 .options .menu ul li {
 	padding-bottom: 10px;
