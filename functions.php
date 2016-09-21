@@ -13,6 +13,7 @@ function rex_theme_prefix_setup() {
 
     // add new image sizes
     add_image_size('medium-large', 600, 600);
+    add_image_size('full-hd', 1200, 1080);
 
     // representative image
     add_theme_support('custom-header', array(

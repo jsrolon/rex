@@ -22,7 +22,8 @@
                 <div class="cover">
                     <a class="index-page-carousel-link" href="<?php the_permalink(); ?>">
                         <div
-                            <?php $url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>
+                            <?php $src = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID(), 'full-hd'), 'full-hd');
+                            $url = $src[0]; ?>
                             style="background: url(<?php echo $url; ?>) center center; background-size: cover;"
                             class="image">
                             <div class="nombre"><?php the_title(); ?></div>
