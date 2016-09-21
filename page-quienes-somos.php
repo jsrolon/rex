@@ -13,7 +13,12 @@ the_post(); ?>
         </defs>
         <path d="M0,215l0,-215l1280,0l0,215l-94.944,-47.511l-146.801,47.511l-298.126,-36.751l-257.573,36.751l-89.855,-35.073l-234.519,35.073l-106.638,-38.059l-51.544,38.059Z" style="fill:none;stroke-width:14px;stroke:#fff;"/>
         <rect width="1185" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"/>
-        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_cabecera'); ?>" x="0" y="0" width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
+        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+        $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_cabecera'));
+        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+        $img_url = $img_src_arr[0];
+        echo $img_url;
+        ?>" x="0" y="0" width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 1185 215"/>
         <rect width="1185" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"/>
     </svg>
 
@@ -41,7 +46,12 @@ the_post(); ?>
                                 <path d="M0,0l145.251,33.723l191.38,-27.515l161.624,47.48l305.062,-53.688l208.772,22.715l172.911,-22.715l0,335l-173.02,-37.932l-241.055,37.932l-201.114,-52.15l-225.864,41.556l-200.316,-24.325l-143.631,34.919" style="fill:none;stroke-width:1px;stroke:#000;"/>
                             </clipPath>
                         </defs>
-                        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_mision'); ?>" x="0" y="0" width="1185" height="335" clip-path="url(#svgPath11)" viewbox="0 0 1185 335"/>
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                        $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_mision'));
+                        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                        $img_url = $img_src_arr[0];
+                        echo $img_url;
+                        ?>" x="0" y="0" width="1185" height="335" clip-path="url(#svgPath11)" viewbox="0 0 1185 335"/>
                         <rect width="1185" height="335" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath11)"/>
                     </svg>
                 </div>
@@ -58,7 +68,12 @@ the_post(); ?>
                                  <path d="M0,335l202.153,-30.922l132.847,29.85l139.005,-38.007l413.117,40.128l211.506,-33.563l86.372,32.514l0,-282.85l-173.02,-37.932l-241.055,37.932l-201.114,-52.15l-225.864,41.557l-200.316,-24.325l-143.631,34.918" style="fill:none;stroke-width:1px;stroke:#000;"/>
                             </clipPath>
                         </defs>
-                        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php the_field('imagen_de_vision'); ?>" x="0" y="0" width="1185" height="335" clip-path="url(#svgPath12)" viewbox="0 0 1185 335"/>
+                        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+                        $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_vision'));
+                        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                        $img_url = $img_src_arr[0];
+                        echo $img_url;
+                        ?>" x="0" y="0" width="1185" height="335" clip-path="url(#svgPath12)" viewbox="0 0 1185 335"/>
                         <rect width="1185" height="335" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath12)"/>
                     </svg>
                 </div>
