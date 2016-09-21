@@ -1479,7 +1479,7 @@ table tr:nth-child(even) td {
 	padding-bottom: 10px;
 }
 .materiales span {
-	color: #9fa14e;
+	/*color: #9fa14e;*/
 }
 .materiales .general-info .group {
 	width: calc(100% - 20px);
