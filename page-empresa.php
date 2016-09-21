@@ -34,7 +34,7 @@
                     
                   </defs>
 
-                  <a href="/empresa/quienes-somos/">
+                  <a href="<?php echo get_template_directory_uri(); ?>/empresa/quienes-somos/">
                   <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
                   $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_quienes_somos'));
                   $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
@@ -43,7 +43,7 @@
                   ?>" x="0" y="0" width="200" height="400" clip-path="url(#svgPath7)" viewbox="0 0 200 400" class="imagesCircle" id="image_7"/>
                   </a>
 
-                  <a href="/empresa/hseq/">
+                  <a href="<?php echo get_template_directory_uri(); ?>/empresa/hseq/">
                   <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
                   $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_hseq'));
                   $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium-large' );
