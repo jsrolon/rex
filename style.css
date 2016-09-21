@@ -27,6 +27,11 @@ a.index-page-carousel-link:hover {
 	src: url('fonts/pirulen.ttf');
 	font-weight: normal;
 }
+@font-face {
+	font-family: 'Calibri';
+	src: url('fonts/Calibri.ttf');
+	font-weight: normal;
+}
 body,html {
 	margin: 0;
 	padding: 0;
