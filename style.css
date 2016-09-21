@@ -211,6 +211,9 @@ body,html {
 #panel .index-carousel .cover .nombre {
 	color: white;
 	margin: 20px;
+	display: inline-block;
+    background-color: rgba(61,63,6,0.5);
+    padding: 12px;
 }
 #panel .index-carousel .image {
 	width: 100%;
