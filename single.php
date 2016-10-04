@@ -21,13 +21,18 @@ the_post(); ?>
         <div class="carousel carouselFull">
             <?php foreach ($images as $image) { ?>
                 <div class="carousel-slide">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <img src="<?php
+                        $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
+                        $img_url = $img_src_arr[0];
+                        echo $img_url;
+                        ?>">
+                    <!--<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <image xlink:href="<?php
                         $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
                         $img_url = $img_src_arr[0];
                         echo $img_url;
                         ?>" x="0" y="0" height="100%" width="100%"/>
-                    </svg>
+                    </svg>-->
                 </div>
             <?php } ?>
         </div>
