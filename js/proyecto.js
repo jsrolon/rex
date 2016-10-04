@@ -99,6 +99,7 @@ window.onload = function () {
     }
 
     jQuery('.popup').css('opacity', '1');
+
 }
 
 var originalHeight = jQuery('.description').height();

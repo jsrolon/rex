@@ -468,8 +468,8 @@ a {
 	width: 100%;
 	overflow: hidden !important;
 	display: inline-block;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+	/*white-space: nowrap;
+	text-overflow: ellipsis;*/
 }
 .proyects-list .proyect .info hr {
 	border: 0;

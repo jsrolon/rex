@@ -30,23 +30,34 @@ window.onload = function() {
         jQuery('.fixed').removeClass('fixed-open');
     });
 
-    _.each(jQuery('.proyect'), function(proyect) {
-        if(w >= 900) {
-            jQuery('#' + proyect.id).mouseenter(moveRightCircle);
-            jQuery('#' + proyect.id).mouseleave(moveLeftCircle);
+    _.each(jQuery('.info'), function(key, value) {
+        if(key.id) {
+            var h = jQuery(jQuery(key).children()[0]).height();
+            jQuery(key).height(h);
+
+            var w = window.innerWidth;
+            if(w >= 900) {
+                console.log(jQuery(key).parent());
+                jQuery(key).parent().mouseenter(moveRightCircle);
+                jQuery(key).parent().mouseleave(moveLeftCircle);
+            }
+            else {
+                jQuery(key).height(h+20);
+            }
         }
-    });
+
+    })
 }
 
 
 function moveRightCircle() {
-    var info = document.getElementById('info_' + this.id);
-    jQuery('#info_' + this.id).addClass('info-tall');
-    jQuery('#view_' + this.id).addClass('show-opacity');
+    var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
+    jQuery(jQuery(this).children()[0]).height(h + 20);
+    //jQuery('#info_' + this.id).addClass('info-tall');
+    //jQuery('#view_' + this.id).addClass('show-opacity');
 }
 
 function moveLeftCircle() {
-    var info = document.getElementById('info_' + this.id);
-    jQuery('#info_' + this.id).removeClass('info-tall');
-    jQuery('#view_' + this.id).removeClass('show-opacity');
+    var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
+    jQuery(jQuery(this).children()[0]).height(h);
 }
