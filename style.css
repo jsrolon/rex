@@ -1624,7 +1624,7 @@ table tr:nth-child(even) td {
 .materiales #map-container {
 	z-index: 1;
 	height: 500px;
-
+	max-height: 60vh;
 }
 .materiales .tab-container {
 	margin-top: 10px;
@@ -1683,6 +1683,13 @@ table tr:nth-child(even) td {
 }
 .emptyProjectsList {
 	margin: 0 20px;
+}
+.popup-leaflet {
+	font-size: 11px;
+	/*margin: 9px 19px;*/
+}
+.proyecto #map {
+	max-height: 50vh;
 }
 
 @media (min-width: 430px) {
@@ -2120,6 +2127,12 @@ table tr:nth-child(even) td {
 		margin-right: 50px;
 		display: inline-block;
 		vertical-align: middle;
+	}
+	.materiales #map-container {
+		max-height: none;
+	}
+	.proyecto #map {
+		max-height: none;
 	}
 }
 

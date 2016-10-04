@@ -84,9 +84,16 @@ window.onload = function() {
         iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
         popupAnchor:  [0, -40]
     });
-
+    var h = window.innerHeight;
+    console.log(h*0.15);
     var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
-    marker2.bindPopup("<b>Dirección:</b> " + selectedLocations[1]['address'] + " <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80 <hr><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[1]['lat'] + "+" + selectedLocations[1]['lng'] + "/@" + selectedLocations[1]['lat'] + "," + selectedLocations[1]['lng'] + ",15z'>Ver en Google Maps</a>").openPopup();
+    var popup2 = L.popup({
+        maxWidth:200,
+        maxHeight:h*0.1,
+        className:'popup-leaflet'
+    }).setContent("<b>Dirección:</b><br> " + selectedLocations[1]['address'] + " <br><b>Atención al cliente:</b><br> 312 235 22 12<br><b>Cantera:</b><br> 320 449 80 05 / 310 500 27 80 <br><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[1]['lat'] + "+" + selectedLocations[1]['lng'] + "/@" + selectedLocations[1]['lat'] + "," + selectedLocations[1]['lng'] + ",15z'>Ver en Google Maps</a>");
+    marker2.bindPopup(popup2).openPopup();
+    //marker2.bindPopup("<b>Dirección:</b> " + selectedLocations[1]['address'] + " <hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 320 449 80 05 / 310 500 27 80 <hr><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[1]['lat'] + "+" + selectedLocations[1]['lng'] + "/@" + selectedLocations[1]['lat'] + "," + selectedLocations[1]['lng'] + ",15z'>Ver en Google Maps</a>").openPopup();
     marker2.addTo(mymap);
     marker2.on('click', function(e) {
         marker2.setIcon(greenIcon);
@@ -103,7 +110,12 @@ window.onload = function() {
     //4.1011504, -73.6392484
 
     var marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
-    marker.bindPopup("<b>Dirección:</b> " + selectedLocations[0]['address'] + "<hr><b>Atención al cliente:</b> 312 235 22 12<hr><b>Cantera:</b> 312 235 34 19<hr><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[0]['lat'] + "+" + selectedLocations[0]['lng'] + "/@" + selectedLocations[0]['lat'] + "," + selectedLocations[0]['lng'] + ",15z'>Ver en Google Maps</a>").openPopup();
+    var popup1 = L.popup({
+        maxWidth:200,
+        maxHeight:h*0.1,
+        className:'popup-leaflet'
+    }).setContent("<b>Dirección:</b><br> " + selectedLocations[0]['address'] + " <br><b>Atención al cliente:</b><br> 312 235 22 12<br><b>Cantera:</b><br> 320 449 80 05 / 310 500 27 80 <br><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[0]['lat'] + "+" + selectedLocations[0]['lng'] + "/@" + selectedLocations[0]['lat'] + "," + selectedLocations[0]['lng'] + ",15z'>Ver en Google Maps</a>");
+    marker.bindPopup(popup1).openPopup();
     marker.addTo(mymap);
     marker.on('click', function(e) {
         marker.setIcon(greenIcon);
