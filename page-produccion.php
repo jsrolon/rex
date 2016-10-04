@@ -28,14 +28,12 @@ if (class_exists('Envira_Gallery_Lite')) {
             <div class="carousel carouselFull">
                 <?php foreach ($gallery_1_imgs as $image) { ?>
                     <div class="carousel-slide">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <image xlink:href="<?php $imgsrc = $image['src'];
+                            <img data-lazy="<?php $imgsrc = $image['src'];
                             $img_id = fjarrett_get_attachment_id_by_url($imgsrc);
                             $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
                             $img_url = $img_src_arr[0];
                             echo $img_url;
-                            ?>" x="0" y="0" height="100%" width="100%"/>
-                        </svg>
+                            ?>"/>
                     </div>
                 <?php } ?>
             </div>
@@ -210,14 +208,13 @@ if (class_exists('Envira_Gallery_Lite')) {
                             <?php
                             foreach ($gallery_2_imgs as $img) {
                                 ?>
-                                <div class="img-container"
-                                     style="background: url(<?php
-                                     $imgsrc = $img['src'];
-                                     $img_id = fjarrett_get_attachment_id_by_url($imgsrc);
-                                     $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
-                                     $img_url = $img_src_arr[0];
-                                     echo $img_url; ?>) center center no-repeat; background-size: cover;"
-                                     onclick="goFull2()">
+                                <div class="carousel-slide" onclick="goFull2()">
+                                    <img data-lazy="<?php
+                                    $imgsrc = $img['src'];
+                                    $img_id = fjarrett_get_attachment_id_by_url($imgsrc);
+                                    $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
+                                    $img_url = $img_src_arr[0];
+                                    echo $img_url; ?>" class="img-small-carousel">
                                 </div>
                                 <?php
                             }
