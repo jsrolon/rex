@@ -21,7 +21,7 @@ the_post(); ?>
         <rect width="1185" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"/>
         <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
         $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_cabecera'));
-        $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+        $img_src_arr = wp_get_attachment_image_src($img_id, 'full-hd');
         $img_url = $img_src_arr[0];
         echo $img_url;
         ?>" x="0" y="0"
@@ -48,14 +48,12 @@ the_post(); ?>
             <div class="carousel carouselFull">
                 <?php foreach ($images as $image) { ?>
                     <div class="carousel-slide">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <image xlink:href="<?php
-                            $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
-                            $img_url = $img_src_arr[0];
-                            echo $img_url;
+                        <img data-lazy="<?php
+                        $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
+                        $img_url = $img_src_arr[0];
+                        echo $img_url;
 
-                            ?>" x="0" y="0" height="100%" width="100%"/>
-                        </svg>
+                        ?>"/>
                     </div>
                 <?php } ?>
             </div>
@@ -84,7 +82,7 @@ the_post(); ?>
         <div class="section">
             <img src="<?php
             $img_id = fjarrett_get_attachment_id_by_url(get_field('logo'));
-            $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+            $img_src_arr = wp_get_attachment_image_src($img_id, 'full-hd');
             $img_url = $img_src_arr[0];
             echo $img_url;
             ?>"/>
@@ -108,7 +106,7 @@ the_post(); ?>
                     </defs>
                     <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
                     $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_mision'));
-                    $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                    $img_src_arr = wp_get_attachment_image_src($img_id, 'full-hd');
                     $img_url = $img_src_arr[0];
                     echo $img_url;
                     ?>"
@@ -135,7 +133,7 @@ the_post(); ?>
                     </defs>
                     <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
                     $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_vision'));
-                    $img_src_arr = wp_get_attachment_image_src( $img_id, 'full-hd' );
+                    $img_src_arr = wp_get_attachment_image_src($img_id, 'full-hd');
                     $img_url = $img_src_arr[0];
                     echo $img_url;
                     ?>"
@@ -155,8 +153,9 @@ the_post(); ?>
                             <?php foreach ($images as $image) {
                                 $attachment_img_src = wp_get_attachment_image_src($image, 'medium_large');
                                 $url = $attachment_img_src[0]; ?>
-                                <div class="img-container"
-                                     style="background: url(<?php echo $url; ?>) center center no-repeat; background-size: cover;" onclick="goFull()">
+                                <div class="carousel-slide" onclick="goFull()">
+                                    <img data-lazy="<?php
+                                    echo $url; ?>" class="img-small-carousel">
                                 </div>
                             <?php } ?>
                         </div>
