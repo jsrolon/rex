@@ -21,7 +21,7 @@ the_post(); ?>
         <div class="carousel carouselFull">
             <?php foreach ($images as $image) { ?>
                 <div class="carousel-slide">
-                    <img src="<?php
+                    <img data-lazy="<?php
                         $img_src_arr = wp_get_attachment_image_src($image, 'full-hd');
                         $img_url = $img_src_arr[0];
                         echo $img_url;
@@ -76,11 +76,17 @@ the_post(); ?>
                 <div class="group">
                     <div class="carousel">
                         <?php foreach ($images as $image) { ?>
-                            <div class="img-container"
+                            <!--<div class="img-container"
                                  style="background: url(<?php
                                  $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
                                  $imgurl = $imgsrc[0];
                                  echo $imgurl; ?>) center center no-repeat; background-size: cover;" onclick="goFull()">
+                            </div>-->
+                            <div class="carousel-slide" onclick="goFull()">
+                                <img data-lazy="<?php
+                                 $imgsrc = wp_get_attachment_image_src($image, 'medium_large');
+                                 $imgurl = $imgsrc[0];
+                                 echo $imgurl; ?>" class="img-small-carousel">
                             </div>
                         <?php } ?>
                     </div>
