@@ -1603,23 +1603,12 @@ table tr:nth-child(even) td {
 	margin: 0 !important;
 }
 .materiales .popup .carousel img {
-	width: 100%;
+	/*width: 100%;
 	height: auto;
-	max-height: 600px;
+	max-height: 600px;*/
 }
 .materiales .popup .carousel .carousel-slide {
-	display: -ms-flexbox;
-	display: -webkit-flexbox;
-	display: flex;
-	-ms-flex-direction: row;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
+	
 }
 .materiales .popup .img-container {
 	width: 100%;
@@ -2106,9 +2095,9 @@ table tr:nth-child(even) td {
 		margin-top: 43px;
 	}
 	.materiales .popup .carousel img {
-		width: auto;
+		/*width: auto;
 		height: 100%;
-		max-height: 600px;
+		max-height: 600px;*/
 	}
 	.quienes .section {
 		width: calc(100% - 100px);

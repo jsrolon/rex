@@ -175,7 +175,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                             <?php
                             foreach ($gallery_1_imgs as $img) {
                                 ?>
-                                <div class="carousel-slide" onclick="goFull()">
+                                <div class="carousel-slide" onclick="goFull1()">
                                     <img data-lazy="<?php
                                     $imgsrc = $img['src'];
                                     $img_id = fjarrett_get_attachment_id_by_url($imgsrc);
