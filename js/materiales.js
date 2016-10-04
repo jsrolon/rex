@@ -90,7 +90,7 @@ window.onload = function() {
         iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
         popupAnchor:  [0, -40]
     });
-    var h = window.innerHeight;
+    //var h = window.innerHeight;
     
     var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
     var popup2 = L.popup({
@@ -167,7 +167,10 @@ window.onload = function() {
     });
 
     jQuery('.tab').mouseenter(function(event) {
-        jQuery(this).addClass("selected-hover");
+        var w = window.innerWidth;
+        if(w >= 900) {
+            jQuery(this).addClass("selected-hover");
+        }
     });
 
     jQuery('.tab').mouseleave(function(event) {

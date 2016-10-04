@@ -15,14 +15,12 @@ jQuery("document").ready(function () {
         'touch': false
     });
 
-    jQuery('#menu-icon').click(function () {
-        console.log(':)');
+    jQuery('#menu-icon').click(function() {
         slideout.toggle();
     });
 
-    slideout.on('beforeopen', function () {
+    slideout.on('beforeopen', function() {
         jQuery('.fixed').addClass('fixed-open');
-        console.log(jQuery('.fixed'));
     });
 
     slideout.on('beforeclose', function () {
@@ -46,25 +44,6 @@ jQuery("document").ready(function () {
         lazyLoad: 'ondemand',
     });
 
-    var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
-        'padding': 256,
-        'tolerance': 70,
-        'touch': false
-    });
-
-    jQuery('#menu-icon').click(function () {
-        slideout.toggle();
-    });
-
-    slideout.on('beforeopen', function () {
-        jQuery('.fixed').addClass('fixed-open');
-    });
-
-    slideout.on('beforeclose', function () {
-        jQuery('.fixed').removeClass('fixed-open');
-    });
 
     var h = jQuery('.title').height() + 40 + jQuery('.quarry-header-image').height();
     //jQuery('.padding-top').height(h);
