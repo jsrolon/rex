@@ -53,6 +53,7 @@ window.onload = function() {
 function moveRightCircle() {
     var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
     jQuery(jQuery(this).children()[0]).height(h + 20);
+    jQuery('#view_' + this.id).addClass('show-opacity');
     //jQuery('#info_' + this.id).addClass('info-tall');
     //jQuery('#view_' + this.id).addClass('show-opacity');
 }
@@ -60,4 +61,5 @@ function moveRightCircle() {
 function moveLeftCircle() {
     var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
     jQuery(jQuery(this).children()[0]).height(h);
+    jQuery('#view_' + this.id).removeClass('show-opacity');
 }
