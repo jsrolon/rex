@@ -960,6 +960,18 @@ table tr:nth-child(even) td {
 	height: auto;
 	cursor: pointer;
 }
+.quienes .title-section {
+	font-family: 'Pirulen';
+	text-align: center;
+	font-size: 16px;
+}
+.quienes .title-section-grey {
+	background-color: #ebebeb;
+	margin-top: -2px;
+}
+.quienes .title-section-white {
+	margin-bottom: 18px;
+}
 @media (min-width: 430px) {
 
 	.images-circle-wrapper {

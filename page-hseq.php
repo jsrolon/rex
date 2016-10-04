@@ -46,6 +46,7 @@ the_post(); ?>
         </div>
 
         <div class="section-div-top"></div>
+        <div class="title-section title-section-grey"><?php the_field('titulo_segunda_seccion'); ?></div>
         <div class="section section-grey">
                 <?php the_field('segunda_seccion'); ?>
         </div>
@@ -53,6 +54,7 @@ the_post(); ?>
 
         <div class="section">
             <div class="left">
+                <div class="title-section title-section-white"><?php the_field('titulo_tercera_seccion'); ?></div>
                 <?php the_field('tercera_seccion'); ?>
             </div>
             <img src="<?php
