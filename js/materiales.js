@@ -71,6 +71,12 @@ window.onload = function() {
         maxZoom: 19
     }).addTo(mymap);
     new L.Control.Zoom({ position: 'bottomleft' }).addTo(mymap);
+    mymap.on('popupopen', function(e) {
+        console.log('popupopen', e.popup);
+        var px = mymap.project(e.popup._latlng); // find the pixel location on the map where the popup anchor is
+        px.y -= e.popup._container.clientHeight/2 + 50 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
+        mymap.panTo(mymap.unproject(px),{animate: true}); // pan to new center
+    });
 
     var greenIcon = L.icon({
         iconUrl: WP_GLOBALS.templateUri + '/img/marker.svg',
@@ -85,11 +91,11 @@ window.onload = function() {
         popupAnchor:  [0, -40]
     });
     var h = window.innerHeight;
-    console.log(h*0.15);
+    
     var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
     var popup2 = L.popup({
         maxWidth:200,
-        maxHeight:h*0.1,
+        //maxHeight:h,
         className:'popup-leaflet'
     }).setContent("<b>Dirección:</b><br> " + selectedLocations[1]['address'] + " <br><b>Atención al cliente:</b><br> 312 235 22 12<br><b>Cantera:</b><br> 320 449 80 05 / 310 500 27 80 <br><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[1]['lat'] + "+" + selectedLocations[1]['lng'] + "/@" + selectedLocations[1]['lat'] + "," + selectedLocations[1]['lng'] + ",15z'>Ver en Google Maps</a>");
     marker2.bindPopup(popup2).openPopup();
@@ -112,7 +118,7 @@ window.onload = function() {
     var marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
     var popup1 = L.popup({
         maxWidth:200,
-        maxHeight:h*0.1,
+        //maxHeight:h*0.1,
         className:'popup-leaflet'
     }).setContent("<b>Dirección:</b><br> " + selectedLocations[0]['address'] + " <br><b>Atención al cliente:</b><br> 312 235 22 12<br><b>Cantera:</b><br> 320 449 80 05 / 310 500 27 80 <br><a target='_blank' href='https://maps.google.com/maps/place/" + selectedLocations[0]['lat'] + "+" + selectedLocations[0]['lng'] + "/@" + selectedLocations[0]['lat'] + "," + selectedLocations[0]['lng'] + ",15z'>Ver en Google Maps</a>");
     marker.bindPopup(popup1).openPopup();
