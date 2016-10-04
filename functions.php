@@ -62,6 +62,7 @@ function rex_add_theme_scripts() {
     }
 
     if (is_single()) {
+        wp_enqueue_script('object-fit-images', get_template_directory_uri() . '/js/ofi.browser.js', NULL, '', true);
         wp_enqueue_script('proyecto', get_template_directory_uri() . '/js/proyecto.js', NULL, '', true);
     }
 
