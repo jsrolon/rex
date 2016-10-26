@@ -92,8 +92,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                 $ubi_1_lng = $ubi_1['lng'];
                 echo $ubi_1_lng; ?>,
                 address: "<?php
-                    $ubi_1_addr = $ubi_1['address'];
-                    echo $ubi_1_addr; ?>"
+                    the_field('ubicacion_dir_1'); ?>"
             }, {
                 lat: <?php
                 $ubi_2 = get_field('ubicacion_2');
@@ -103,8 +102,7 @@ if (class_exists('Envira_Gallery_Lite')) {
                 $ubi_2_lng = $ubi_2['lng'];
                 echo $ubi_2_lng; ?>,
                 address: "<?php
-                    $ubi_2_addr = $ubi_2['address'];
-                    echo $ubi_2_addr; ?>"
+                    the_field('ubicacion_dir_2'); ?>"
             }];
         </script>
         <div id="map">

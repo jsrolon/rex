@@ -1065,7 +1065,7 @@ table tr:nth-child(even) td {
 		min-height: calc(100% - 202px);
 	}
 	.proyectos .page-content-wrapper {
-		min-height: calc(100% - 143px);
+		min-height: calc(100% - 144px);
 	}
 	.contacto .page-content-wrapper {
 		height: calc(100% - 132px);
