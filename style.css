@@ -1437,9 +1437,47 @@ table tr:nth-child(even) td {
 	}
 }
 
+@media (min-width: 600px) {
+	.proyectos .images-circle-wrapper {
+		width: 400px;
+		height: 400px;
+		position: relative;
+		top: -20px;
+		padding-top: 0;
+	}
+	.proyectos .images-circle-wrapper #name_1 {
+		top: 2px;
+    	left: 302px;
+	}
+	.proyectos .images-circle-wrapper #name_2 {
+		top: 180px;
+    	left: 408px;
+	}
+	.proyectos .images-circle-wrapper #name_3 {
+		top: 354px;
+    	left: 338px;
+	}
+	.proyectos .images-circle-wrapper #name_4 {
+		 top: 354px;
+    	right: 338px;
 
-@media (max-resolution: 1dppx) {
-
+	}
+	.proyectos .images-circle-wrapper #name_5 {
+		top: 180px;
+		right: 408px;
+	}
+	.proyectos .images-circle-wrapper #name_6 {
+		top: 2px;
+    	right: 308px;
+	}
+	.proyectos .images-circle-wrapper #name_7 {
+		top: 200px;
+		right: 410px;
+	}
+	.proyectos .images-circle-wrapper #name_8 {
+		top: 200px;
+		left: 410px;
+	}
 }
 
 @font-face {
