@@ -34,35 +34,55 @@ the_post(); ?>
         <div class="padding-top"></div>
 
         <div class="section">
+            <div class="left">
+                <?php the_field('primera_seccion'); ?>
+            </div>
             <img src="<?php
             $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_certificado'));
             $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
             $img_url = $img_src_arr[0];
             echo $img_url;
             ?>"/>
-            <div class="right">
-                <?php the_field('primera_seccion'); ?>
-            </div>
         </div>
 
         <div class="section-div-top"></div>
-        <div class="title-section title-section-grey"><?php the_field('titulo_segunda_seccion'); ?></div>
         <div class="section section-grey">
+            <img src="<?php
+            $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_segunda_seccion'));
+            $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
+            $img_url = $img_src_arr[0];
+            echo $img_url;
+            ?>"/>
+            <div class="right">
+                <div class="title-section title-section-white"><?php the_field('titulo_segunda_seccion'); ?></div>
                 <?php the_field('segunda_seccion'); ?>
+            </div>
         </div>
-        <div class="section-div-bottom"></div>
-
-        <div class="section">
+        <div class="section section-grey">
             <div class="left">
                 <div class="title-section title-section-white"><?php the_field('titulo_tercera_seccion'); ?></div>
                 <?php the_field('tercera_seccion'); ?>
             </div>
+            <img src="<?php
+            $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_tercera_seccion'));
+            $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
+            $img_url = $img_src_arr[0];
+            echo $img_url;
+            ?>"/>
+        </div>
+        <div class="section-div-bottom"></div>
+
+        <div class="section">
             <img src="<?php
             $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_premio'));
             $img_src_arr = wp_get_attachment_image_src( $img_id, 'medium_large' );
             $img_url = $img_src_arr[0];
             echo $img_url;
             ?>"/>
+            <div class="right">
+                <div class="title-section title-section-white"><?php the_field('titulo_cuarta_seccion'); ?></div>
+                <?php the_field('cuarta_seccion'); ?>
+            </div>
         </div>
 
         <?php

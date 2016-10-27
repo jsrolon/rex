@@ -18,7 +18,6 @@
             </div>
             <div id="name_8" class="name">
                 <a href="<?php echo get_site_url(); ?>/empresa/hseq/">GESTIÓN INTEGRAL
-                    <div>HSEQ</div>
                 </a>
             </div>
             

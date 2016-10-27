@@ -33,16 +33,20 @@ window.onload = function() {
     _.each(jQuery('.info'), function(key, value) {
         if(key.id) {
             var h = jQuery(jQuery(key).children()[0]).height();
-            jQuery(key).height(h);
+            //jQuery(key).height(h);
+            //jQuery(key).css('height',h+24);
 
             var w = window.innerWidth;
             if(w >= 900) {
-                console.log(jQuery(key).parent());
+                console.log("hor");
                 jQuery(key).parent().mouseenter(moveRightCircle);
                 jQuery(key).parent().mouseleave(moveLeftCircle);
+                //jQuery(key).css('height',h);
             }
             else {
-                jQuery(key).height(h+20);
+                console.log("ver");
+                //jQuery(key).css('height',h+24);
+                
             }
         }
 
@@ -50,9 +54,10 @@ window.onload = function() {
 }
 
 
+
 function moveRightCircle() {
     var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
-    jQuery(jQuery(this).children()[0]).height(h + 20);
+    //jQuery(jQuery(this).children()[0]).height(h + 20);
     jQuery('#view_' + this.id).addClass('show-opacity');
     //jQuery('#info_' + this.id).addClass('info-tall');
     //jQuery('#view_' + this.id).addClass('show-opacity');
@@ -60,6 +65,6 @@ function moveRightCircle() {
 
 function moveLeftCircle() {
     var h = jQuery(jQuery(jQuery(this).children()[0]).children()[0]).height();
-    jQuery(jQuery(this).children()[0]).height(h);
+    //jQuery(jQuery(this).children()[0]).height(h);
     jQuery('#view_' + this.id).removeClass('show-opacity');
 }

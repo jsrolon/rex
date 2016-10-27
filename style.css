@@ -1121,14 +1121,16 @@ table tr:nth-child(even) td {
 		text-align: center;
 	}
 	.proyects-list .proyect {
+		position: relative;
 		width: calc(calc(100% - 40px) / 3);
 		margin-right: 0;
 		margin-right: -4px;
 		font-weight: 400 !important;
 	}
 	.proyects-list .proyect .info {
+		position: absolute;
+    	top: 0;
 		overflow-y: hidden;
-		height: 15px;
 		transition-property: height;
 		transition-duration: 0.5s;
 		transition-timing-function: exponential;
@@ -1231,7 +1233,7 @@ table tr:nth-child(even) td {
 	}
 	.proyectos .title {
 		top: calc(50% - 116px);
-		margin-left: calc(50% + 78px);
+		margin-left: calc(50% + 28px);
 		width: 200px !important;
 	}
 	.page-content-wrapper .text {
@@ -1348,6 +1350,9 @@ table tr:nth-child(even) td {
 	.quienes .section-grey {
 		margin-left: 0 !important;
 		padding: 20px 50px;
+	}
+	.proyectos .fixed {
+		position: absolute;
 	}
 }
 
@@ -1892,7 +1897,6 @@ table tr:nth-child(even) td {
 	}
 	.proyects-list .proyect .info {
 		overflow-y: hidden;
-		height: 15px;
 		transition-property: height;
 		transition-duration: 0.5s;
 		transition-timing-function: exponential;
@@ -1995,7 +1999,7 @@ table tr:nth-child(even) td {
 	}
 	.proyectos .title {
 		top: calc(50% - 116px);
-		margin-left: calc(256px + calc(50% - 228px));
+		margin-left: calc(50% + 28px);
 		width: 200px !important;
 	}
 	.page-content-wrapper .text {
