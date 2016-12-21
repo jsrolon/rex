@@ -33,7 +33,7 @@ a.index-page-carousel-link:hover {
 	font-weight: normal;
 }
 td:nth-child(1), table tr td:nth-child(2) {
-    width: calc(80vw - 40px - 72px - 23vw - 2px) !important;
+    /*width: calc(80vw - 40px - 72px - 23vw - 2px) !important;*/
 }
 .img-small-carousel {
 	width: 100%;
@@ -798,10 +798,11 @@ table tr .tableFirst {
     background-color: #9FA14E !important;
     font-weight: bold !important;
     text-align: left;
-    width: 23vw !important;
+    /*width: 23vw !important;*/
 }
 table {
 	width: 100% !important;
+	text-align: center;
 	font-size: 14px;
 	table-layout: fixed;
 }
@@ -809,16 +810,16 @@ table,th,td {
 	border: 1px solid black;
 	border-collapse: collapse;
 	height: auto !important;
-	text-align: center;
+	text-align: center !important;
 }
 table tr td[rowspan] {
 	background-color: #9FA14E !important;
 	font-weight: bold;
 	text-align: left;
-	width: 23vw !important;
+	/*width: 23vw !important;*/
 }
 table tr td:nth-child(3), table tr td:nth-child(4) {
-	width: 36px !important;
+	/*width: 36px !important;*/
 }
 table tr:nth-child(odd) td {
     background-color: #EBEBEB;
@@ -829,6 +830,9 @@ table tr:nth-child(even) td {
     background-color: white;
     font-weight: normal;
     text-align: center;
+}
+table tr td:first-child {
+	max-width: 40%;
 }
 /*.proyecto .section table tr, .proyecto .section table tbody {
 	width: 100% !important;
@@ -1339,7 +1343,7 @@ table tr:nth-child(even) td {
 		max-height: 600px;*/
 	}
 	table tr td:first-child {
-		width: 6vw !important;
+		/*width: 6vw !important;*/
 	}
 	.quienes #footer {
     	margin-bottom: 15px;
@@ -2171,18 +2175,18 @@ table tr:nth-child(even) td {
 		margin-left: 50px;
 	}
 	.quienes .section img {
-		width: calc(50% - 29px);
+		width: calc(30% - 29px);
 		vertical-align: middle;
 	}
 	.quienes .section .right {
-		width: calc(50% - 25px);
+		width: calc(70% - 25px);
 		margin: 0;
 		margin-left: 50px;
 		display: inline-block;
 		vertical-align: middle;
 	}
 	.quienes .section .left {
-		width: calc(50% - 25px);
+		width: calc(70% - 25px);
 		margin: 0;
 		margin-right: 50px;
 		display: inline-block;
