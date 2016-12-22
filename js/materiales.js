@@ -2,6 +2,37 @@
  * Created by jsrolon on 26-08-2016.
  */
 
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=', 2);
+        if (p.length == 1)
+            b[p[0]] = "";
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+
+var marker;
+var marker2;
+
+var greenIcon = L.icon({
+    iconUrl: WP_GLOBALS.templateUri + '/img/marker.svg',
+    iconSize:     [28,40], // size of the icon
+    iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0, -40]
+});
+
+var greyIcon = L.icon({
+    iconUrl: WP_GLOBALS.templateUri + '/img/marker_grey.svg',
+    iconSize:     [28,40], // size of the icon
+    iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0, -40]
+});
+
 window.onload = function() {
 
     var h = window.innerHeight - 100;
@@ -78,21 +109,9 @@ window.onload = function() {
         mymap.panTo(mymap.unproject(px),{animate: true}); // pan to new center
     });
 
-    var greenIcon = L.icon({
-        iconUrl: WP_GLOBALS.templateUri + '/img/marker.svg',
-        iconSize:     [28,40], // size of the icon
-        iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
-        popupAnchor:  [0, -40]
-    });
-    var greyIcon = L.icon({
-        iconUrl: WP_GLOBALS.templateUri + '/img/marker_grey.svg',
-        iconSize:     [28,40], // size of the icon
-        iconAnchor:   [14,40], // point of the icon which will correspond to marker's location
-        popupAnchor:  [0, -40]
-    });
     //var h = window.innerHeight;
     
-    var marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
+    marker2 = L.marker([selectedLocations[1]['lat'], selectedLocations[1]['lng']], {icon: greyIcon}).addTo(mymap);
     var popup2 = L.popup({
         maxWidth:200,
         //maxHeight:h,
@@ -115,7 +134,7 @@ window.onload = function() {
 
     //4.1011504, -73.6392484
 
-    var marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
+    marker = L.marker([selectedLocations[0]['lat'], selectedLocations[0]['lng']], {icon: greenIcon}).addTo(mymap);
     var popup1 = L.popup({
         maxWidth:200,
         //maxHeight:h*0.1,
@@ -186,6 +205,28 @@ window.onload = function() {
     }
 
     jQuery('.popup').css('opacity', '1');
+
+    onClickCantera(qs['numCant']);
+}
+
+function onClickCantera(num) {
+    if(num) {
+        num = parseInt(num);
+        var str = num === 1 ? '' : 2;
+        var str2 = num === 1 ? 2 : '';
+    } else {
+        num = 1;
+    }
+
+    window['marker' + str].setIcon(greenIcon);
+    window['marker' + str2].setIcon(greyIcon);
+    window['marker' + str].openPopup();
+    jQuery('.tab').removeClass("selected");
+    jQuery('#' + num).addClass("selected");
+    jQuery('.tab-content').addClass('hidden');
+    jQuery('#desc_' + num).removeClass('hidden');
+    jQuery('.section-white').addClass('hidden');
+    jQuery('#table_' + num).removeClass('hidden');
 }
 
 function goLeft() {

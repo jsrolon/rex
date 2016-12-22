@@ -298,13 +298,16 @@ body,html {
 	text-align: justify;
 	font-size: 14px;
 	padding: 20px 0;
+    text-align: center;
 }
 .quienes .section img {
-	width: 100%;
+	/*width: 100%;*/
 	margin-bottom: 10px;
+    max-height: 200px;
 }
 .quienes .section .right, .quienes .section .left {
 	margin: 20px 0;
+    text-align: left;
 }
 .page-content-wrapper .text p {
 	margin: 0;
@@ -729,6 +732,7 @@ a {
     margin: 0;
     padding: 20px 20px;
     margin-top: -2px;
+    text-align: center;
 }
 .proyecto .section {
 	background-color: #EBEBEB;
@@ -1712,13 +1716,15 @@ table tr td:first-child {
 	flex: 1;
 }
 .materiales .selected {
-	color: black;
+	/*color: black;*/
+    color: white;
+    background-color: rgba(122, 131, 57, 0.7);
 }
 .materiales .subtitle {
 	text-align: center;
 	padding: 20px 0;
 }
-.materiales .selected::after {
+/*.materiales .selected::after {
 	content: "";
 	width: 100%;
 	height: 2px;
@@ -1726,8 +1732,8 @@ table tr td:first-child {
 	position: absolute;
 	bottom: 6px;
 	right: 0;
-}
-.materiales .selected-hover::after {
+}*/
+/*.materiales .selected-hover::after {
 	content: "";
 	width: 100%;
 	height: 2px;
@@ -1735,7 +1741,7 @@ table tr td:first-child {
 	position: absolute;
 	bottom: 6px;
 	right: 0;
-}
+}*/
 .proyectos .facts {
 	position: absolute;
     bottom: -9vh;
@@ -2175,7 +2181,7 @@ table tr td:first-child {
 		margin-left: 50px;
 	}
 	.quienes .section img {
-		width: calc(30% - 29px);
+		max-width: calc(30% - 29px);
 		vertical-align: middle;
 	}
 	.quienes .section .right {
@@ -2193,7 +2199,7 @@ table tr td:first-child {
 		vertical-align: middle;
 	}
 	.materiales #map-container {
-		max-height: none;
+		/*max-height: none;*/
 	}
 	.proyecto #map {
 		max-height: none;
