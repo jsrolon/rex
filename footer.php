@@ -1,3 +1,10 @@
+<div class="remodal" data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <img style="width: 23%" src="<?php echo get_template_directory_uri(); ?>/img/rex_icon.png">
+    <h1 style="margin: 0 auto;">Página en construcción</h1>
+    <br>
+    <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+</div>
 <div id="footer">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/rex_dinosaurio_blanco.png">
                 <div class="info">

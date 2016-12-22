@@ -26,6 +26,8 @@ function rex_theme_prefix_setup() {
 
 function rex_add_theme_styles() {
     wp_enqueue_style('slick', get_template_directory_uri() . '/css/slick.css');
+    wp_enqueue_style('remodal_default', get_template_directory_uri() . '/css/remodal-default-theme.css');
+    wp_enqueue_style('remodal', get_template_directory_uri() . '/css/remodal.css');
 }
 
 function rex_add_theme_scripts() {
@@ -34,6 +36,7 @@ function rex_add_theme_scripts() {
     wp_enqueue_script('lodash', get_template_directory_uri() . '/js/lodash.js', NULL, '', true);
 
     wp_enqueue_script('localization', get_template_directory_uri() . '/js/localization.js', NULL, '', true);
+    wp_enqueue_script('remodal', get_template_directory_uri() . '/js/remodal.min.js', NULL, '', true);
 
     if (is_home()) {
         wp_enqueue_script('index-script', get_template_directory_uri() . '/js/index.js', NULL, '', true);

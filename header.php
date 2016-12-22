@@ -69,7 +69,7 @@ if (is_single()) {
         </div>
         <div class="idiomas">
             <img src="<?php echo get_template_directory_uri(); ?>/img/es.png" onclick="es()">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/en.png" onclick="en()">
+            <a href="#modal"><img src="<?php echo get_template_directory_uri(); ?>/img/en.png" onclick="en()"></a>
         </div>
     </header>
 </nav>
