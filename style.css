@@ -3,6 +3,10 @@ Theme URI: http://rexingenieria.com
 Version: 0.1
 */
 
+.current-rex-project-parent {
+	text-decoration: underline;
+}
+
 a.index-page-carousel-link:hover {
 	font-weight: normal !important;
 }

@@ -108,6 +108,10 @@ window.onload = function () {
             }
         }
     }
+
+    jQuery('a').filter(function() {
+        return this.href.match(/.*\/proyectos\//);
+    }).siblings('ul.sub-menu').css('display', 'block');
 }
 
 var originalHeight = jQuery('.description').height();
