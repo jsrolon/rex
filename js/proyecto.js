@@ -96,11 +96,15 @@ window.onload = function () {
         if (jQuery(rows[i]).children().length == firstLenght) {
             jQuery(jQuery(rows[i]).children()[0]).addClass('tableFirst');
         } else {
-            for (var j = 0; j < jQuery(rows[i]).children().length; j++) {
-                var attr = jQuery(jQuery(rows[i]).children()[j]).attr("colspan");
-                if (typeof attr !== typeof undefined && attr !== false) {
-                    jQuery(jQuery(rows[i]).children()[0]).addClass('tableFirst');
+            if (jQuery(rows[i]).children().length > 1) {
+                for (var j = 0; j < jQuery(rows[i]).children().length; j++) {
+                    var attr = jQuery(jQuery(rows[i]).children()[j]).attr("colspan");
+                    if (typeof attr !== typeof undefined && attr !== false) {
+                        jQuery(jQuery(rows[i]).children()[0]).addClass('tableFirst');
+                    }
                 }
+            } else {
+                jQuery(jQuery(rows[i]).children()[0]).css("background-color", "white");
             }
         }
     }
