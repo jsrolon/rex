@@ -130,6 +130,8 @@ window.onload = function() {
         jQuery('#desc_2').removeClass('hidden');
         jQuery('.section-white').addClass('hidden');
         jQuery('#table_2').removeClass('hidden');
+        jQuery('.carousels').addClass('hidden');
+        jQuery('#carousel_2').removeClass('hidden');
     });
 
     //4.1011504, -73.6392484
@@ -152,6 +154,8 @@ window.onload = function() {
         jQuery('#desc_1').removeClass('hidden');
         jQuery('.section-white').addClass('hidden');
         jQuery('#table_1').removeClass('hidden');
+        jQuery('.carousels').addClass('hidden');
+        jQuery('#carousel_1').removeClass('hidden');
     });
 
     function onMapClick(e) {
@@ -227,6 +231,10 @@ function onClickCantera(num) {
     jQuery('#desc_' + num).removeClass('hidden');
     jQuery('.section-white').addClass('hidden');
     jQuery('#table_' + num).removeClass('hidden');
+
+    // carousels
+    jQuery('.carousels').addClass('hidden');
+    jQuery('#carousel_' + num).removeClass('hidden');
 }
 
 function goLeft() {

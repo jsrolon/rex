@@ -815,6 +815,7 @@ table,th,td {
 	border-collapse: collapse;
 	height: auto !important;
 	text-align: center !important;
+	padding: 8px;
 }
 table tr td[rowspan] {
 	background-color: #9FA14E !important;
