@@ -632,11 +632,11 @@ a {
 }
 .quienes #mision {
 	position: relative;
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 }
 .quienes #mision img {
 	position: absolute;
-	top: 65px;
+	top: 50px;
 	left: 20px;
     width: 234px;
 }
@@ -644,20 +644,20 @@ a {
 	width: 220px;
 	fill: rgba(124, 126, 46, 0.9);
 	position: absolute;
-	top: 65px;
+	top: 40px;
 	right: 20px;
 }
 .quienes #vision {
 	position: relative;
-	margin-top: -45px;
-	/*top: -52px;
-	margin-bottom: -30px;*/
+	/*margin-top: 10px;*/
+	/*top: -52px;*/
+	margin-bottom: -20px;
 }
 .quienes .padding-top {
 	height: 215px;
 }
 .quienes .mision-vision .text {
-	color: white;
+	color: black;
 	height: calc(100% - 200px);
 	display: flex;
 	position: absolute;
