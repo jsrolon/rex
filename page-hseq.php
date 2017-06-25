@@ -6,7 +6,7 @@ the_post(); ?>
 <!--<div class="quarry-header-image fixed"
      style=" background: url(<?php the_field('imagen_cabecera'); ?>) center bottom no-repeat; background-size: cover;"></div>-->
 <div class="quarry-header-image fixed" style="width: 100%; height: 215px; overflow: hidden; position: relative;">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 2304px; height: 215px; position:absolute; transform: translateX(-50%); bottom: 0px; left: 50%;" viewBox="0 0 2304 215">
+    <svg id="outer-svg-element" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 2304px; height: 215px; position:absolute; transform: translateX(-50%); bottom: 0px; left: 50%;" viewBox="0 0 2304 215">
         <defs>
             <clipPath id="svgPath10" clipPathUnits="objectBoundingBox">
                 <path d="M0,1l0,-1l1,0l0,1l-0.07417,-0.2209l-0.1146,0.2209l-0.2329,-0.1709l-0.2012,0.1709l-0.07019,-0.1631l-0.1832,0.1631l-0.0833,-0.177l-0.04026,0.177Z" style="fill:none;stroke-width:1px;stroke:#000;"></path>
@@ -17,7 +17,7 @@ the_post(); ?>
         </svg>
         <rect width="2304" height="215" style="fill:rgb(255,255,255);" clip-path="url(#svgPath10)"></rect>
         <rect width="2304" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"></rect>
-        <image preserveAspectRatio="xMidYMid slice" xlink:href="<?php
+        <image id="inner-svg-image" preserveAspectRatio="xMidYMid slice" xlink:href="<?php
         $img_id = fjarrett_get_attachment_id_by_url(get_field('imagen_de_cabecera'));
         $img_src_arr = wp_get_attachment_image_src($img_id, 'full-hd');
         $img_url = $img_src_arr[0];
