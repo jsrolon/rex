@@ -54,10 +54,12 @@ function rex_add_theme_scripts() {
     // quienes etc
     if (is_page('hseq') || is_page('quienes-somos')) {
         wp_enqueue_script('quienes', get_template_directory_uri() . '/js/quienes.js', NULL, '', true);
+        wp_enqueue_script('fix-svg-scaling', get_template_directory_uri() . '/js/fixSVGScaling.js', NULL, '', true);
     }
 
     if (is_page('empresas-asociadas')) {
         wp_enqueue_script('empresas-asociadas', get_template_directory_uri() . '/js/empresasAsociadas.js', NULL, '', true);
+        wp_enqueue_script('fix-svg-scaling', get_template_directory_uri() . '/js/fixSVGScaling.js', NULL, '', true);
     }
 
     if (is_category()) {
