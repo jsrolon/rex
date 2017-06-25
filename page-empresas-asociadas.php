@@ -90,7 +90,7 @@ the_post(); ?>
         </div>
 
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             style="width: 1185px; height: 335px; bottom: 0px; margin-top: 30px; left: 50%;"
+             style="width: 1185px; height: 335px; bottom: 0px; margin-top: 30px; left: 50%; display: block; margin: auto;"
              viewbox="0 0 1185 335">
             <defs>
                 <clipPath id="svgPath11">
@@ -118,7 +118,7 @@ the_post(); ?>
         </div>
 
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             style="width: 1185px; height: 335px; bottom: 0px; left: 50%;"
+             style="width: 1185px; height: 335px; bottom: 0px; left: 50%; display: block; margin: auto;"
              viewbox="0 0 1185 335">
             <defs>
                 <clipPath id="svgPath12">
