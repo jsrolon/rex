@@ -22,5 +22,5 @@ var recalculateSVGElementsWidths = function() {
     image.setAttribute('viewBox', viewboxString);
 };
 
-window.addEventListener('load', recalculateSVGElementsWidths);
+recalculateSVGElementsWidths();
 window.addEventListener('resize', recalculateSVGElementsWidths);
