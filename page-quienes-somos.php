@@ -49,7 +49,7 @@ the_post(); ?>
         <div class="padding-top"></div>
         <div style="margin-top: 45px; margin-bottom: 30px;" class="text"><?php the_field('descripcion'); ?></div>
 
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg class="scalable-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              style="width: 1185px; height: 335px; display: block;"
              viewbox="0 0 1185 335">
             <defs>
@@ -75,7 +75,7 @@ the_post(); ?>
             </div>
         </div>
 
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg class="scalable-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              style="width: 1185px; height: 335px; display: block;"
              viewbox="0 0 1185 335">
             <defs>
