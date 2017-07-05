@@ -22,8 +22,8 @@ the_post(); ?>
         $img_url = $img_src_arr[0];
         echo $img_url;
         ?>" x="0" y="0"
-               width="1185" height="215" clip-path="url(#svgPath10)" viewbox="0 0 2304 215"/>
-        <rect width="1185" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"/>
+               width="2304" height="215" clip-path="url(#svgPath10)" viewbox="0 0 2304 215"/>
+        <rect width="2304" height="215" style="fill:rgba(0,0,0,0.2);" clip-path="url(#svgPath10)"/>
     </svg>
 </div>
 
